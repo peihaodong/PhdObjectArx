@@ -1,0 +1,961 @@
+
+#ifndef __ACPI_H__
+#define __ACPI_H__
+
+#include "../inc/zacpi.h"
+
+#ifndef ACPI_ACAD_DYN
+#define ACPI_ACAD_DYN		ZCPI_ZCAD_DYN
+#endif //#ifndef ACPI_ACAD_DYN
+
+#ifndef ACPI_CLEARCACHE_DYNAMIC
+#define ACPI_CLEARCACHE_DYNAMIC		ZCPI_CLEARCACHE_DYNAMIC
+#endif //#ifndef ACPI_CLEARCACHE_DYNAMIC
+
+#ifndef ACPI_CLEARCACHE_INCLUDED
+#define ACPI_CLEARCACHE_INCLUDED		ZCPI_CLEARCACHE_INCLUDED
+#endif //#ifndef ACPI_CLEARCACHE_INCLUDED
+
+#ifndef ACPI_CLEARCACHE_REFRESH
+#define ACPI_CLEARCACHE_REFRESH		ZCPI_CLEARCACHE_REFRESH
+#endif //#ifndef ACPI_CLEARCACHE_REFRESH
+
+#ifndef ACPI_COLOR_3DSHADOW
+#define ACPI_COLOR_3DSHADOW		ZCPI_COLOR_3DSHADOW
+#endif //#ifndef ACPI_COLOR_3DSHADOW
+
+#ifndef ACPI_COLOR_BACK_CONTROL
+#define ACPI_COLOR_BACK_CONTROL		ZCPI_COLOR_BACK_CONTROL
+#endif //#ifndef ACPI_COLOR_BACK_CONTROL
+
+#ifndef ACPI_COLOR_BACK_HIGHLIGHT
+#define ACPI_COLOR_BACK_HIGHLIGHT		ZCPI_COLOR_BACK_HIGHLIGHT
+#endif //#ifndef ACPI_COLOR_BACK_HIGHLIGHT
+
+#ifndef ACPI_COLOR_BORDER
+#define ACPI_COLOR_BORDER		ZCPI_COLOR_BORDER
+#endif //#ifndef ACPI_COLOR_BORDER
+
+#ifndef ACPI_COLOR_BORDER_ITEM
+#define ACPI_COLOR_BORDER_ITEM		ZCPI_COLOR_BORDER_ITEM
+#endif //#ifndef ACPI_COLOR_BORDER_ITEM
+
+#ifndef ACPI_COLOR_CATEGORY
+#define ACPI_COLOR_CATEGORY		ZCPI_COLOR_CATEGORY
+#endif //#ifndef ACPI_COLOR_CATEGORY
+
+#ifndef ACPI_COLOR_DOUBLECHEVRON1
+#define ACPI_COLOR_DOUBLECHEVRON1		ZCPI_COLOR_DOUBLECHEVRON1
+#endif //#ifndef ACPI_COLOR_DOUBLECHEVRON1
+
+#ifndef ACPI_COLOR_DOUBLECHEVRON2
+#define ACPI_COLOR_DOUBLECHEVRON2		ZCPI_COLOR_DOUBLECHEVRON2
+#endif //#ifndef ACPI_COLOR_DOUBLECHEVRON2
+
+#ifndef ACPI_COLOR_FORE_HIGHLIGHT
+#define ACPI_COLOR_FORE_HIGHLIGHT		ZCPI_COLOR_FORE_HIGHLIGHT
+#endif //#ifndef ACPI_COLOR_FORE_HIGHLIGHT
+
+#ifndef ACPI_COLOR_ITEM
+#define ACPI_COLOR_ITEM		ZCPI_COLOR_ITEM
+#endif //#ifndef ACPI_COLOR_ITEM
+
+#ifndef ACPI_COLOR_SCROLLARROW
+#define ACPI_COLOR_SCROLLARROW		ZCPI_COLOR_SCROLLARROW
+#endif //#ifndef ACPI_COLOR_SCROLLARROW
+
+#ifndef ACPI_COLOR_SCROLLBACKGROUND
+#define ACPI_COLOR_SCROLLBACKGROUND		ZCPI_COLOR_SCROLLBACKGROUND
+#endif //#ifndef ACPI_COLOR_SCROLLBACKGROUND
+
+#ifndef ACPI_COLOR_SCROLLTHUMB
+#define ACPI_COLOR_SCROLLTHUMB		ZCPI_COLOR_SCROLLTHUMB
+#endif //#ifndef ACPI_COLOR_SCROLLTHUMB
+
+#ifndef ACPI_COLOR_SINGLECHEVRON
+#define ACPI_COLOR_SINGLECHEVRON		ZCPI_COLOR_SINGLECHEVRON
+#endif //#ifndef ACPI_COLOR_SINGLECHEVRON
+
+#ifndef ACPI_COLOR_TEXT_CATEGORY
+#define ACPI_COLOR_TEXT_CATEGORY		ZCPI_COLOR_TEXT_CATEGORY
+#endif //#ifndef ACPI_COLOR_TEXT_CATEGORY
+
+#ifndef ACPI_COLOR_TEXT_ITEM
+#define ACPI_COLOR_TEXT_ITEM		ZCPI_COLOR_TEXT_ITEM
+#endif //#ifndef ACPI_COLOR_TEXT_ITEM
+
+#ifndef ACPI_COLOR_TEXT_TOP
+#define ACPI_COLOR_TEXT_TOP		ZCPI_COLOR_TEXT_TOP
+#endif //#ifndef ACPI_COLOR_TEXT_TOP
+
+#ifndef ACPI_COLOR_TOP
+#define ACPI_COLOR_TOP		ZCPI_COLOR_TOP
+#endif //#ifndef ACPI_COLOR_TOP
+
+#ifndef ACPI_DEFAULT
+#define ACPI_DEFAULT		ZCPI_DEFAULT
+#endif //#ifndef ACPI_DEFAULT
+
+#ifndef ACPI_REFRESH
+#define ACPI_REFRESH		ZCPI_REFRESH
+#endif //#ifndef ACPI_REFRESH
+
+#ifndef ACPI_SCROLLTOCONTROL
+#define ACPI_SCROLLTOCONTROL		ZCPI_SCROLLTOCONTROL
+#endif //#ifndef ACPI_SCROLLTOCONTROL
+
+#ifndef ACPI_SETCONTROLFOCUS
+#define ACPI_SETCONTROLFOCUS		ZCPI_SETCONTROLFOCUS
+#endif //#ifndef ACPI_SETCONTROLFOCUS
+
+#ifndef ACPI_SORTBYNAME
+#define ACPI_SORTBYNAME		ZCPI_SORTBYNAME
+#endif //#ifndef ACPI_SORTBYNAME
+
+#ifndef ACPI_SORTBYWEIGHT
+#define ACPI_SORTBYWEIGHT		ZCPI_SORTBYWEIGHT
+#endif //#ifndef ACPI_SORTBYWEIGHT
+
+#ifndef ACPI_UNION
+#define ACPI_UNION		ZCPI_UNION
+#endif //#ifndef ACPI_UNION
+
+#ifndef ACPI_COLOR_TOP_GRADIENT1
+#define ACPI_COLOR_TOP_GRADIENT1 ZCPI_COLOR_TOP_GRADIENT1
+#endif //ifndef ACPI_COLOR_TOP_GRADIENT1
+
+#ifndef ACPI_COLOR_TOP_GRADIENT2
+#define ACPI_COLOR_TOP_GRADIENT2 ZCPI_COLOR_TOP_GRADIENT2
+#endif //ifndef ACPI_COLOR_TOP_GRADIENT2
+
+#ifndef ACPI_COLOR_TOP_CLOSED_OUTER_BORDER
+#define ACPI_COLOR_TOP_CLOSED_OUTER_BORDER ZCPI_COLOR_TOP_CLOSED_OUTER_BORDER
+#endif //ifndef ACPI_COLOR_TOP_CLOSED_OUTER_BORDER
+
+#ifndef ACPI_COLOR_TOP_OPEN_OUTER_BORDER
+#define ACPI_COLOR_TOP_OPEN_OUTER_BORDER ZCPI_COLOR_TOP_OPEN_OUTER_BORDER
+#endif //ifndef ACPI_COLOR_TOP_OPEN_OUTER_BORDER
+
+#ifndef ACPI_COLOR_TOP_INNER_BORDER
+#define ACPI_COLOR_TOP_INNER_BORDER ZCPI_COLOR_TOP_INNER_BORDER
+#endif //ifndef ACPI_COLOR_TOP_INNER_BORDER
+
+#ifndef ACPI_COLOR_SCROLL_BACKGROUNDBORDER
+#define ACPI_COLOR_SCROLL_BACKGROUNDBORDER ZCPI_COLOR_SCROLL_BACKGROUNDBORDER
+#endif //ifndef ACPI_COLOR_SCROLL_BACKGROUNDBORDER
+
+#ifndef ACPI_COLOR_SCROLL_BACKGROUNDGRADIENT1
+#define ACPI_COLOR_SCROLL_BACKGROUNDGRADIENT1 ZCPI_COLOR_SCROLL_BACKGROUNDGRADIENT1
+#endif //ifndef ACPI_COLOR_SCROLL_BACKGROUNDGRADIENT1
+
+#ifndef ACPI_COLOR_SCROLL_BACKGROUNDGRADIENT2
+#define ACPI_COLOR_SCROLL_BACKGROUNDGRADIENT2 ZCPI_COLOR_SCROLL_BACKGROUNDGRADIENT2
+#endif //ifndef ACPI_COLOR_SCROLL_BACKGROUNDGRADIENT2
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_INACTIVE	
+#define ACPI_COLOR_SCROLL_SLIDER_INACTIVE	 ZCPI_COLOR_SCROLL_SLIDER_INACTIVE	
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_INACTIVE	
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERBORDER
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERBORDER ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERBORDER
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERBORDER
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT1
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT1 ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT1
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT1
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT2
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT2 ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT2
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT2
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT3
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT3 ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT3
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT3
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT4
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT4 ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT4
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_OUTERGRADIENT4
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT1
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT1 ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT1
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT1
+
+#ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT2
+#define ACPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT2 ZCPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT2
+#endif //ifndef ACPI_COLOR_SCROLL_SLIDER_ACTIVE_INNERGRADIENT2
+
+#ifndef ACPI_COLOR_TEXT_LABEL
+#define ACPI_COLOR_TEXT_LABEL ZCPI_COLOR_TEXT_LABEL
+#endif //ifndef ACPI_COLOR_TEXT_LABEL
+
+#ifndef ACPI_COLOR_CELL_HIGHLIGHT
+#define ACPI_COLOR_CELL_HIGHLIGHT ZCPI_COLOR_CELL_HIGHLIGHT
+#endif //ifndef ACPI_COLOR_CELL_HIGHLIGHT
+
+#ifndef ACPI_COLOR_DISABLED_TEXT_ITEM
+#define ACPI_COLOR_DISABLED_TEXT_ITEM ZCPI_COLOR_DISABLED_TEXT_ITEM
+#endif //ifndef ACPI_COLOR_DISABLED_TEXT_ITEM
+
+
+#ifndef AC_TVS_CALCULATOR
+#define AC_TVS_CALCULATOR		ZC_TVS_CALCULATOR
+#endif //#ifndef AC_TVS_CALCULATOR
+
+#ifndef AC_TVS_GRID
+#define AC_TVS_GRID		ZC_TVS_GRID
+#endif //#ifndef AC_TVS_GRID
+
+#ifndef AC_TVS_GRIDLINES
+#define AC_TVS_GRIDLINES		ZC_TVS_GRIDLINES
+#endif //#ifndef AC_TVS_GRIDLINES
+
+#ifndef AC_TVS_GRIDMARKER
+#define AC_TVS_GRIDMARKER		ZC_TVS_GRIDMARKER
+#endif //#ifndef AC_TVS_GRIDMARKER
+
+#ifndef AC_TVS_GRIDROUNDSTYLE
+#define AC_TVS_GRIDROUNDSTYLE		ZC_TVS_GRIDROUNDSTYLE
+#endif //#ifndef AC_TVS_GRIDROUNDSTYLE
+
+#ifndef AC_TVS_GRIDSCROLLRIGHT
+#define AC_TVS_GRIDSCROLLRIGHT		ZC_TVS_GRIDSCROLLRIGHT
+#endif //#ifndef AC_TVS_GRIDSCROLLRIGHT
+
+#ifndef AC_TVS_GRIDSTATUSBAR
+#define AC_TVS_GRIDSTATUSBAR		ZC_TVS_GRIDSTATUSBAR
+#endif //#ifndef AC_TVS_GRIDSTATUSBAR
+
+#ifndef AC_TVS_SELHIGHLIGHT
+#define AC_TVS_SELHIGHLIGHT		ZC_TVS_SELHIGHLIGHT
+#endif //#ifndef AC_TVS_SELHIGHLIGHT
+
+#ifndef AC_TVS_TOOLTIPS
+#define AC_TVS_TOOLTIPS		ZC_TVS_TOOLTIPS
+#endif //#ifndef AC_TVS_TOOLTIPS
+
+#ifndef AcPiColorIndex
+#define AcPiColorIndex		ZcPiColorIndex
+#endif //#ifndef AcPiColorIndex
+
+#ifndef AcPiPropertyInspector
+#define AcPiPropertyInspector		ZcPiPropertyInspector
+#endif //#ifndef AcPiPropertyInspector
+
+#ifndef CLSID_AcPiPropertyInspector
+#define CLSID_AcPiPropertyInspector		CLSID_ZcPiPropertyInspector
+#endif //#ifndef CLSID_AcPiPropertyInspector
+
+#ifndef IAcPiCategorizeProperties
+#define IAcPiCategorizeProperties		IZcPiCategorizeProperties
+#endif //#ifndef IAcPiCategorizeProperties
+
+#ifndef IAcPiCategorizePropertiesVtbl
+#define IAcPiCategorizePropertiesVtbl		IZcPiCategorizePropertiesVtbl
+#endif //#ifndef IAcPiCategorizePropertiesVtbl
+
+#ifndef IAcPiCategorizeProperties_AddRef
+#define IAcPiCategorizeProperties_AddRef		IZcPiCategorizeProperties_AddRef
+#endif //#ifndef IAcPiCategorizeProperties_AddRef
+
+#ifndef IAcPiCategorizeProperties_GetCategoryDescription
+#define IAcPiCategorizeProperties_GetCategoryDescription		IZcPiCategorizeProperties_GetCategoryDescription
+#endif //#ifndef IAcPiCategorizeProperties_GetCategoryDescription
+
+#ifndef IAcPiCategorizeProperties_GetCategoryName
+#define IAcPiCategorizeProperties_GetCategoryName		IZcPiCategorizeProperties_GetCategoryName
+#endif //#ifndef IAcPiCategorizeProperties_GetCategoryName
+
+#ifndef IAcPiCategorizeProperties_GetCategoryWeight
+#define IAcPiCategorizeProperties_GetCategoryWeight		IZcPiCategorizeProperties_GetCategoryWeight
+#endif //#ifndef IAcPiCategorizeProperties_GetCategoryWeight
+
+#ifndef IAcPiCategorizeProperties_GetCommandButtons
+#define IAcPiCategorizeProperties_GetCommandButtons		IZcPiCategorizeProperties_GetCommandButtons
+#endif //#ifndef IAcPiCategorizeProperties_GetCommandButtons
+
+#ifndef IAcPiCategorizeProperties_GetParentCategory
+#define IAcPiCategorizeProperties_GetParentCategory		IZcPiCategorizeProperties_GetParentCategory
+#endif //#ifndef IAcPiCategorizeProperties_GetParentCategory
+
+#ifndef IAcPiCategorizeProperties_GetUniqueID
+#define IAcPiCategorizeProperties_GetUniqueID		IZcPiCategorizeProperties_GetUniqueID
+#endif //#ifndef IAcPiCategorizeProperties_GetUniqueID
+
+#ifndef IAcPiCategorizeProperties_MapPropertyToCategory
+#define IAcPiCategorizeProperties_MapPropertyToCategory		IZcPiCategorizeProperties_MapPropertyToCategory
+#endif //#ifndef IAcPiCategorizeProperties_MapPropertyToCategory
+
+#ifndef IAcPiCategorizeProperties_QueryInterface
+#define IAcPiCategorizeProperties_QueryInterface		IZcPiCategorizeProperties_QueryInterface
+#endif //#ifndef IAcPiCategorizeProperties_QueryInterface
+
+#ifndef IAcPiCategorizeProperties_Release
+#define IAcPiCategorizeProperties_Release		IZcPiCategorizeProperties_Release
+#endif //#ifndef IAcPiCategorizeProperties_Release
+
+#ifndef IAcPiCommandButton
+#define IAcPiCommandButton		IZcPiCommandButton
+#endif //#ifndef IAcPiCommandButton
+
+#ifndef IAcPiCommandButton2
+#define IAcPiCommandButton2		IZcPiCommandButton2
+#endif //#ifndef IAcPiCommandButton2
+
+#ifndef IAcPiCommandButton2Vtbl
+#define IAcPiCommandButton2Vtbl		IZcPiCommandButton2Vtbl
+#endif //#ifndef IAcPiCommandButton2Vtbl
+
+#ifndef IAcPiCommandButton2_AddRef
+#define IAcPiCommandButton2_AddRef		IZcPiCommandButton2_AddRef
+#endif //#ifndef IAcPiCommandButton2_AddRef
+
+#ifndef IAcPiCommandButton2_QueryInterface
+#define IAcPiCommandButton2_QueryInterface		IZcPiCommandButton2_QueryInterface
+#endif //#ifndef IAcPiCommandButton2_QueryInterface
+
+#ifndef IAcPiCommandButton2_Release
+#define IAcPiCommandButton2_Release		IZcPiCommandButton2_Release
+#endif //#ifndef IAcPiCommandButton2_Release
+
+#ifndef IAcPiCommandButton2_get_CheckedPicture
+#define IAcPiCommandButton2_get_CheckedPicture		IZcPiCommandButton2_get_CheckedPicture
+#endif //#ifndef IAcPiCommandButton2_get_CheckedPicture
+
+#ifndef IAcPiCommandButton2_get_UncheckedPicture
+#define IAcPiCommandButton2_get_UncheckedPicture		IZcPiCommandButton2_get_UncheckedPicture
+#endif //#ifndef IAcPiCommandButton2_get_UncheckedPicture
+
+#ifndef IAcPiCommandButtonVtbl
+#define IAcPiCommandButtonVtbl		IZcPiCommandButtonVtbl
+#endif //#ifndef IAcPiCommandButtonVtbl
+
+#ifndef IAcPiCommandButton_AddRef
+#define IAcPiCommandButton_AddRef		IZcPiCommandButton_AddRef
+#endif //#ifndef IAcPiCommandButton_AddRef
+
+#ifndef IAcPiCommandButton_Execute
+#define IAcPiCommandButton_Execute		IZcPiCommandButton_Execute
+#endif //#ifndef IAcPiCommandButton_Execute
+
+#ifndef IAcPiCommandButton_GetName
+#define IAcPiCommandButton_GetName		IZcPiCommandButton_GetName
+#endif //#ifndef IAcPiCommandButton_GetName
+
+#ifndef IAcPiCommandButton_QueryInterface
+#define IAcPiCommandButton_QueryInterface		IZcPiCommandButton_QueryInterface
+#endif //#ifndef IAcPiCommandButton_QueryInterface
+
+#ifndef IAcPiCommandButton_Release
+#define IAcPiCommandButton_Release		IZcPiCommandButton_Release
+#endif //#ifndef IAcPiCommandButton_Release
+
+#ifndef IAcPiCommandButton_get_ButtonStyle
+#define IAcPiCommandButton_get_ButtonStyle		IZcPiCommandButton_get_ButtonStyle
+#endif //#ifndef IAcPiCommandButton_get_ButtonStyle
+
+#ifndef IAcPiCommandButton_get_Checked
+#define IAcPiCommandButton_get_Checked		IZcPiCommandButton_get_Checked
+#endif //#ifndef IAcPiCommandButton_get_Checked
+
+#ifndef IAcPiCommandButton_get_DisabledPicture
+#define IAcPiCommandButton_get_DisabledPicture		IZcPiCommandButton_get_DisabledPicture
+#endif //#ifndef IAcPiCommandButton_get_DisabledPicture
+
+#ifndef IAcPiCommandButton_get_Enabled
+#define IAcPiCommandButton_get_Enabled		IZcPiCommandButton_get_Enabled
+#endif //#ifndef IAcPiCommandButton_get_Enabled
+
+#ifndef IAcPiCommandButton_get_EnabledPicture
+#define IAcPiCommandButton_get_EnabledPicture		IZcPiCommandButton_get_EnabledPicture
+#endif //#ifndef IAcPiCommandButton_get_EnabledPicture
+
+
+#ifndef IAcPiCommandButton_put_Checked
+#define IAcPiCommandButton_put_Checked		IZcPiCommandButton_put_Checked
+#endif //#ifndef IAcPiCommandButton_put_Checked
+
+#ifndef IAcPiCommandButton_put_Enabled
+#define IAcPiCommandButton_put_Enabled		IZcPiCommandButton_put_Enabled
+#endif //#ifndef IAcPiCommandButton_put_Enabled
+
+#ifndef IAcPiPropCommandButtons
+#define IAcPiPropCommandButtons		IZcPiPropCommandButtons
+#endif //#ifndef IAcPiPropCommandButtons
+
+#ifndef IAcPiPropCommandButtonsVtbl
+#define IAcPiPropCommandButtonsVtbl		IZcPiPropCommandButtonsVtbl
+#endif //#ifndef IAcPiPropCommandButtonsVtbl
+
+#ifndef IAcPiPropCommandButtons_AddRef
+#define IAcPiPropCommandButtons_AddRef		IZcPiPropCommandButtons_AddRef
+#endif //#ifndef IAcPiPropCommandButtons_AddRef
+
+#ifndef IAcPiPropCommandButtons_GetButtons
+#define IAcPiPropCommandButtons_GetButtons		IZcPiPropCommandButtons_GetButtons
+#endif //#ifndef IAcPiPropCommandButtons_GetButtons
+
+#ifndef IAcPiPropCommandButtons_QueryInterface
+#define IAcPiPropCommandButtons_QueryInterface		IZcPiPropCommandButtons_QueryInterface
+#endif //#ifndef IAcPiPropCommandButtons_QueryInterface
+
+#ifndef IAcPiPropCommandButtons_Release
+#define IAcPiPropCommandButtons_Release		IZcPiPropCommandButtons_Release
+#endif //#ifndef IAcPiPropCommandButtons_Release
+
+#ifndef IAcPiPropertyDisplay
+#define IAcPiPropertyDisplay		IZcPiPropertyDisplay
+#endif //#ifndef IAcPiPropertyDisplay
+
+#ifndef IAcPiPropertyDisplayVtbl
+#define IAcPiPropertyDisplayVtbl		IZcPiPropertyDisplayVtbl
+#endif //#ifndef IAcPiPropertyDisplayVtbl
+
+#ifndef IAcPiPropertyDisplay_AddRef
+#define IAcPiPropertyDisplay_AddRef		IZcPiPropertyDisplay_AddRef
+#endif //#ifndef IAcPiPropertyDisplay_AddRef
+
+#ifndef IAcPiPropertyDisplay_GetCustomPropertyCtrl
+#define IAcPiPropertyDisplay_GetCustomPropertyCtrl		IZcPiPropertyDisplay_GetCustomPropertyCtrl
+#endif //#ifndef IAcPiPropertyDisplay_GetCustomPropertyCtrl
+
+#ifndef IAcPiPropertyDisplay_GetPropTextColor
+#define IAcPiPropertyDisplay_GetPropTextColor		IZcPiPropertyDisplay_GetPropTextColor
+#endif //#ifndef IAcPiPropertyDisplay_GetPropTextColor
+
+#ifndef IAcPiPropertyDisplay_GetPropertyIcon
+#define IAcPiPropertyDisplay_GetPropertyIcon		IZcPiPropertyDisplay_GetPropertyIcon
+#endif //#ifndef IAcPiPropertyDisplay_GetPropertyIcon
+
+#ifndef IAcPiPropertyDisplay_GetPropertyWeight
+#define IAcPiPropertyDisplay_GetPropertyWeight		IZcPiPropertyDisplay_GetPropertyWeight
+#endif //#ifndef IAcPiPropertyDisplay_GetPropertyWeight
+
+#ifndef IAcPiPropertyDisplay_IsFullView
+#define IAcPiPropertyDisplay_IsFullView		IZcPiPropertyDisplay_IsFullView
+#endif //#ifndef IAcPiPropertyDisplay_IsFullView
+
+#ifndef IAcPiPropertyDisplay_QueryInterface
+#define IAcPiPropertyDisplay_QueryInterface		IZcPiPropertyDisplay_QueryInterface
+#endif //#ifndef IAcPiPropertyDisplay_QueryInterface
+
+#ifndef IAcPiPropertyDisplay_Release
+#define IAcPiPropertyDisplay_Release		IZcPiPropertyDisplay_Release
+#endif //#ifndef IAcPiPropertyDisplay_Release
+
+#ifndef IAcPiPropertyEditControl
+#define IAcPiPropertyEditControl		IZcPiPropertyEditControl
+#endif //#ifndef IAcPiPropertyEditControl
+
+#ifndef IAcPiPropertyEditControlVtbl
+#define IAcPiPropertyEditControlVtbl		IZcPiPropertyEditControlVtbl
+#endif //#ifndef IAcPiPropertyEditControlVtbl
+
+#ifndef IAcPiPropertyEditControl_AddRef
+#define IAcPiPropertyEditControl_AddRef		IZcPiPropertyEditControl_AddRef
+#endif //#ifndef IAcPiPropertyEditControl_AddRef
+
+#ifndef IAcPiPropertyEditControl_GetIDsOfNames
+#define IAcPiPropertyEditControl_GetIDsOfNames		IZcPiPropertyEditControl_GetIDsOfNames
+#endif //#ifndef IAcPiPropertyEditControl_GetIDsOfNames
+
+#ifndef IAcPiPropertyEditControl_GetTypeInfo
+#define IAcPiPropertyEditControl_GetTypeInfo		IZcPiPropertyEditControl_GetTypeInfo
+#endif //#ifndef IAcPiPropertyEditControl_GetTypeInfo
+
+#ifndef IAcPiPropertyEditControl_GetTypeInfoCount
+#define IAcPiPropertyEditControl_GetTypeInfoCount		IZcPiPropertyEditControl_GetTypeInfoCount
+#endif //#ifndef IAcPiPropertyEditControl_GetTypeInfoCount
+
+#ifndef IAcPiPropertyEditControl_InitEditControl
+#define IAcPiPropertyEditControl_InitEditControl		IZcPiPropertyEditControl_InitEditControl
+#endif //#ifndef IAcPiPropertyEditControl_InitEditControl
+
+#ifndef IAcPiPropertyEditControl_Invoke
+#define IAcPiPropertyEditControl_Invoke		IZcPiPropertyEditControl_Invoke
+#endif //#ifndef IAcPiPropertyEditControl_Invoke
+
+#ifndef IAcPiPropertyEditControl_QueryInterface
+#define IAcPiPropertyEditControl_QueryInterface		IZcPiPropertyEditControl_QueryInterface
+#endif //#ifndef IAcPiPropertyEditControl_QueryInterface
+
+#ifndef IAcPiPropertyEditControl_Refresh
+#define IAcPiPropertyEditControl_Refresh		IZcPiPropertyEditControl_Refresh
+#endif //#ifndef IAcPiPropertyEditControl_Refresh
+
+#ifndef IAcPiPropertyEditControl_Release
+#define IAcPiPropertyEditControl_Release		IZcPiPropertyEditControl_Release
+#endif //#ifndef IAcPiPropertyEditControl_Release
+
+#ifndef IAcPiPropertyEditControl_get_BackColor
+#define IAcPiPropertyEditControl_get_BackColor		IZcPiPropertyEditControl_get_BackColor
+#endif //#ifndef IAcPiPropertyEditControl_get_BackColor
+
+#ifndef IAcPiPropertyEditControl_get_Font
+#define IAcPiPropertyEditControl_get_Font		IZcPiPropertyEditControl_get_Font
+#endif //#ifndef IAcPiPropertyEditControl_get_Font
+
+#ifndef IAcPiPropertyEditControl_get_ForeColor
+#define IAcPiPropertyEditControl_get_ForeColor		IZcPiPropertyEditControl_get_ForeColor
+#endif //#ifndef IAcPiPropertyEditControl_get_ForeColor
+
+#ifndef IAcPiPropertyEditControl_get_KeepFocus
+#define IAcPiPropertyEditControl_get_KeepFocus		IZcPiPropertyEditControl_get_KeepFocus
+#endif //#ifndef IAcPiPropertyEditControl_get_KeepFocus
+
+#ifndef IAcPiPropertyEditControl_get_ReadOnlyBackColor
+#define IAcPiPropertyEditControl_get_ReadOnlyBackColor		IZcPiPropertyEditControl_get_ReadOnlyBackColor
+#endif //#ifndef IAcPiPropertyEditControl_get_ReadOnlyBackColor
+
+#ifndef IAcPiPropertyEditControl_get_ReadOnlyForeColor
+#define IAcPiPropertyEditControl_get_ReadOnlyForeColor		IZcPiPropertyEditControl_get_ReadOnlyForeColor
+#endif //#ifndef IAcPiPropertyEditControl_get_ReadOnlyForeColor
+
+#ifndef IAcPiPropertyEditControl_put_BackColor
+#define IAcPiPropertyEditControl_put_BackColor		IZcPiPropertyEditControl_put_BackColor
+#endif //#ifndef IAcPiPropertyEditControl_put_BackColor
+
+#ifndef IAcPiPropertyEditControl_put_Font
+#define IAcPiPropertyEditControl_put_Font		IZcPiPropertyEditControl_put_Font
+#endif //#ifndef IAcPiPropertyEditControl_put_Font
+
+#ifndef IAcPiPropertyEditControl_put_ForeColor
+#define IAcPiPropertyEditControl_put_ForeColor		IZcPiPropertyEditControl_put_ForeColor
+#endif //#ifndef IAcPiPropertyEditControl_put_ForeColor
+
+#ifndef IAcPiPropertyEditControl_put_ReadOnlyBackColor
+#define IAcPiPropertyEditControl_put_ReadOnlyBackColor		IZcPiPropertyEditControl_put_ReadOnlyBackColor
+#endif //#ifndef IAcPiPropertyEditControl_put_ReadOnlyBackColor
+
+#ifndef IAcPiPropertyEditControl_put_ReadOnlyForeColor
+#define IAcPiPropertyEditControl_put_ReadOnlyForeColor		IZcPiPropertyEditControl_put_ReadOnlyForeColor
+#endif //#ifndef IAcPiPropertyEditControl_put_ReadOnlyForeColor
+
+#ifndef IAcPiPropertyEditEventsSink
+#define IAcPiPropertyEditEventsSink		IZcPiPropertyEditEventsSink
+#endif //#ifndef IAcPiPropertyEditEventsSink
+
+#ifndef IAcPiPropertyEditEventsSinkVtbl
+#define IAcPiPropertyEditEventsSinkVtbl		IZcPiPropertyEditEventsSinkVtbl
+#endif //#ifndef IAcPiPropertyEditEventsSinkVtbl
+
+#ifndef IAcPiPropertyEditEventsSink_AddRef
+#define IAcPiPropertyEditEventsSink_AddRef		IZcPiPropertyEditEventsSink_AddRef
+#endif //#ifndef IAcPiPropertyEditEventsSink_AddRef
+
+#ifndef IAcPiPropertyEditEventsSink_OnBeginPropertyUpdate
+#define IAcPiPropertyEditEventsSink_OnBeginPropertyUpdate		IZcPiPropertyEditEventsSink_OnBeginPropertyUpdate
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnBeginPropertyUpdate
+
+#ifndef IAcPiPropertyEditEventsSink_OnClick
+#define IAcPiPropertyEditEventsSink_OnClick		IZcPiPropertyEditEventsSink_OnClick
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnClick
+
+#ifndef IAcPiPropertyEditEventsSink_OnDblClick
+#define IAcPiPropertyEditEventsSink_OnDblClick		IZcPiPropertyEditEventsSink_OnDblClick
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnDblClick
+
+#ifndef IAcPiPropertyEditEventsSink_OnEndPropertyUpdate
+#define IAcPiPropertyEditEventsSink_OnEndPropertyUpdate		IZcPiPropertyEditEventsSink_OnEndPropertyUpdate
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnEndPropertyUpdate
+
+#ifndef IAcPiPropertyEditEventsSink_OnKeyDown
+#define IAcPiPropertyEditEventsSink_OnKeyDown		IZcPiPropertyEditEventsSink_OnKeyDown
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnKeyDown
+
+#ifndef IAcPiPropertyEditEventsSink_OnKeyUp
+#define IAcPiPropertyEditEventsSink_OnKeyUp		IZcPiPropertyEditEventsSink_OnKeyUp
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnKeyUp
+
+#ifndef IAcPiPropertyEditEventsSink_OnMButtonDown
+#define IAcPiPropertyEditEventsSink_OnMButtonDown		IZcPiPropertyEditEventsSink_OnMButtonDown
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnMButtonDown
+
+#ifndef IAcPiPropertyEditEventsSink_OnRButtonDown
+#define IAcPiPropertyEditEventsSink_OnRButtonDown		IZcPiPropertyEditEventsSink_OnRButtonDown
+#endif //#ifndef IAcPiPropertyEditEventsSink_OnRButtonDown
+
+#ifndef IAcPiPropertyEditEventsSink_QueryInterface
+#define IAcPiPropertyEditEventsSink_QueryInterface		IZcPiPropertyEditEventsSink_QueryInterface
+#endif //#ifndef IAcPiPropertyEditEventsSink_QueryInterface
+
+#ifndef IAcPiPropertyEditEventsSink_Release
+#define IAcPiPropertyEditEventsSink_Release		IZcPiPropertyEditEventsSink_Release
+#endif //#ifndef IAcPiPropertyEditEventsSink_Release
+
+#ifndef IAcPiPropertyInspector
+#define IAcPiPropertyInspector		IZcPiPropertyInspector
+#endif //#ifndef IAcPiPropertyInspector
+
+#ifndef IAcPiPropertyInspectorEventsSink
+#define IAcPiPropertyInspectorEventsSink		IZcPiPropertyInspectorEventsSink
+#endif //#ifndef IAcPiPropertyInspectorEventsSink
+
+#ifndef IAcPiPropertyInspectorEventsSinkVtbl
+#define IAcPiPropertyInspectorEventsSinkVtbl		IZcPiPropertyInspectorEventsSinkVtbl
+#endif //#ifndef IAcPiPropertyInspectorEventsSinkVtbl
+
+#ifndef IAcPiPropertyInspectorEventsSink_AddRef
+#define IAcPiPropertyInspectorEventsSink_AddRef		IZcPiPropertyInspectorEventsSink_AddRef
+#endif //#ifndef IAcPiPropertyInspectorEventsSink_AddRef
+
+#ifndef IAcPiPropertyInspectorEventsSink_GetPropertyControl
+#define IAcPiPropertyInspectorEventsSink_GetPropertyControl		IZcPiPropertyInspectorEventsSink_GetPropertyControl
+#endif //#ifndef IAcPiPropertyInspectorEventsSink_GetPropertyControl
+
+#ifndef IAcPiPropertyInspectorEventsSink_QueryInterface
+#define IAcPiPropertyInspectorEventsSink_QueryInterface		IZcPiPropertyInspectorEventsSink_QueryInterface
+#endif //#ifndef IAcPiPropertyInspectorEventsSink_QueryInterface
+
+#ifndef IAcPiPropertyInspectorEventsSink_Rebuild
+#define IAcPiPropertyInspectorEventsSink_Rebuild		IZcPiPropertyInspectorEventsSink_Rebuild
+#endif //#ifndef IAcPiPropertyInspectorEventsSink_Rebuild
+
+#ifndef IAcPiPropertyInspectorEventsSink_RefreshControl
+#define IAcPiPropertyInspectorEventsSink_RefreshControl		IZcPiPropertyInspectorEventsSink_RefreshControl
+#endif //#ifndef IAcPiPropertyInspectorEventsSink_RefreshControl
+
+#ifndef IAcPiPropertyInspectorEventsSink_Release
+#define IAcPiPropertyInspectorEventsSink_Release		IZcPiPropertyInspectorEventsSink_Release
+#endif //#ifndef IAcPiPropertyInspectorEventsSink_Release
+
+#ifndef IAcPiPropertyInspectorInputEventSink
+#define IAcPiPropertyInspectorInputEventSink		IZcPiPropertyInspectorInputEventSink
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink
+
+#ifndef IAcPiPropertyInspectorInputEventSinkVtbl
+#define IAcPiPropertyInspectorInputEventSinkVtbl		IZcPiPropertyInspectorInputEventSinkVtbl
+#endif //#ifndef IAcPiPropertyInspectorInputEventSinkVtbl
+
+#ifndef IAcPiPropertyInspectorInputEventSink_AddRef
+#define IAcPiPropertyInspectorInputEventSink_AddRef		IZcPiPropertyInspectorInputEventSink_AddRef
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink_AddRef
+
+#ifndef IAcPiPropertyInspectorInputEventSink_OnContextMenuCommand
+#define IAcPiPropertyInspectorInputEventSink_OnContextMenuCommand		IZcPiPropertyInspectorInputEventSink_OnContextMenuCommand
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink_OnContextMenuCommand
+
+#ifndef IAcPiPropertyInspectorInputEventSink_OnKeyDown
+#define IAcPiPropertyInspectorInputEventSink_OnKeyDown		IZcPiPropertyInspectorInputEventSink_OnKeyDown
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink_OnKeyDown
+
+#ifndef IAcPiPropertyInspectorInputEventSink_OnPopulateContextMenu
+#define IAcPiPropertyInspectorInputEventSink_OnPopulateContextMenu		IZcPiPropertyInspectorInputEventSink_OnPopulateContextMenu
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink_OnPopulateContextMenu
+
+#ifndef IAcPiPropertyInspectorInputEventSink_QueryInterface
+#define IAcPiPropertyInspectorInputEventSink_QueryInterface		IZcPiPropertyInspectorInputEventSink_QueryInterface
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink_QueryInterface
+
+#ifndef IAcPiPropertyInspectorInputEventSink_Release
+#define IAcPiPropertyInspectorInputEventSink_Release		IZcPiPropertyInspectorInputEventSink_Release
+#endif //#ifndef IAcPiPropertyInspectorInputEventSink_Release
+
+#ifndef IAcPiPropertyInspectorVtbl
+#define IAcPiPropertyInspectorVtbl		IZcPiPropertyInspectorVtbl
+#endif //#ifndef IAcPiPropertyInspectorVtbl
+
+#ifndef IAcPiPropertyInspector_AddRef
+#define IAcPiPropertyInspector_AddRef		IZcPiPropertyInspector_AddRef
+#endif //#ifndef IAcPiPropertyInspector_AddRef
+
+#ifndef IAcPiPropertyInspector_GetColor
+#define IAcPiPropertyInspector_GetColor		IZcPiPropertyInspector_GetColor
+#endif //#ifndef IAcPiPropertyInspector_GetColor
+
+#ifndef IAcPiPropertyInspector_GetIDsOfNames
+#define IAcPiPropertyInspector_GetIDsOfNames		IZcPiPropertyInspector_GetIDsOfNames
+#endif //#ifndef IAcPiPropertyInspector_GetIDsOfNames
+
+#ifndef IAcPiPropertyInspector_GetPersistence
+#define IAcPiPropertyInspector_GetPersistence		IZcPiPropertyInspector_GetPersistence
+#endif //#ifndef IAcPiPropertyInspector_GetPersistence
+
+#ifndef IAcPiPropertyInspector_GetTypeInfo
+#define IAcPiPropertyInspector_GetTypeInfo		IZcPiPropertyInspector_GetTypeInfo
+#endif //#ifndef IAcPiPropertyInspector_GetTypeInfo
+
+#ifndef IAcPiPropertyInspector_GetTypeInfoCount
+#define IAcPiPropertyInspector_GetTypeInfoCount		IZcPiPropertyInspector_GetTypeInfoCount
+#endif //#ifndef IAcPiPropertyInspector_GetTypeInfoCount
+
+#ifndef IAcPiPropertyInspector_Invoke
+#define IAcPiPropertyInspector_Invoke		IZcPiPropertyInspector_Invoke
+#endif //#ifndef IAcPiPropertyInspector_Invoke
+
+#ifndef IAcPiPropertyInspector_QueryInterface
+#define IAcPiPropertyInspector_QueryInterface		IZcPiPropertyInspector_QueryInterface
+#endif //#ifndef IAcPiPropertyInspector_QueryInterface
+
+#ifndef IAcPiPropertyInspector_Release
+#define IAcPiPropertyInspector_Release		IZcPiPropertyInspector_Release
+#endif //#ifndef IAcPiPropertyInspector_Release
+
+#ifndef IAcPiPropertyInspector_Reset
+#define IAcPiPropertyInspector_Reset		IZcPiPropertyInspector_Reset
+#endif //#ifndef IAcPiPropertyInspector_Reset
+
+#ifndef IAcPiPropertyInspector_SetColor
+#define IAcPiPropertyInspector_SetColor		IZcPiPropertyInspector_SetColor
+#endif //#ifndef IAcPiPropertyInspector_SetColor
+
+#ifndef IAcPiPropertyInspector_SetPersistence
+#define IAcPiPropertyInspector_SetPersistence		IZcPiPropertyInspector_SetPersistence
+#endif //#ifndef IAcPiPropertyInspector_SetPersistence
+
+#ifndef IAcPiPropertyInspector_get_BoldFont
+#define IAcPiPropertyInspector_get_BoldFont		IZcPiPropertyInspector_get_BoldFont
+#endif //#ifndef IAcPiPropertyInspector_get_BoldFont
+
+#ifndef IAcPiPropertyInspector_get_DelayRefresh
+#define IAcPiPropertyInspector_get_DelayRefresh		IZcPiPropertyInspector_get_DelayRefresh
+#endif //#ifndef IAcPiPropertyInspector_get_DelayRefresh
+
+#ifndef IAcPiPropertyInspector_get_Font
+#define IAcPiPropertyInspector_get_Font		IZcPiPropertyInspector_get_Font
+#endif //#ifndef IAcPiPropertyInspector_get_Font
+
+#ifndef IAcPiPropertyInspector_get_KeepFocus
+#define IAcPiPropertyInspector_get_KeepFocus		IZcPiPropertyInspector_get_KeepFocus
+#endif //#ifndef IAcPiPropertyInspector_get_KeepFocus
+
+#ifndef IAcPiPropertyInspector_get_Style
+#define IAcPiPropertyInspector_get_Style		IZcPiPropertyInspector_get_Style
+#endif //#ifndef IAcPiPropertyInspector_get_Style
+
+#ifndef IAcPiPropertyInspector_put_BoldFont
+#define IAcPiPropertyInspector_put_BoldFont		IZcPiPropertyInspector_put_BoldFont
+#endif //#ifndef IAcPiPropertyInspector_put_BoldFont
+
+#ifndef IAcPiPropertyInspector_put_DelayRefresh
+#define IAcPiPropertyInspector_put_DelayRefresh		IZcPiPropertyInspector_put_DelayRefresh
+#endif //#ifndef IAcPiPropertyInspector_put_DelayRefresh
+
+#ifndef IAcPiPropertyInspector_put_Font
+#define IAcPiPropertyInspector_put_Font		IZcPiPropertyInspector_put_Font
+#endif //#ifndef IAcPiPropertyInspector_put_Font
+
+#ifndef IAcPiPropertyInspector_put_Style
+#define IAcPiPropertyInspector_put_Style		IZcPiPropertyInspector_put_Style
+#endif //#ifndef IAcPiPropertyInspector_put_Style
+
+#ifndef IAcPiPropertyInspectorTheme
+#define IAcPiPropertyInspectorTheme		IZcPiPropertyInspectorTheme
+#endif //#ifndef IAcPiPropertyInspectorTheme
+
+#ifndef IAcPiPropertyInspectorThemeVtbl
+#define IAcPiPropertyInspectorThemeVtbl		IZcPiPropertyInspectorThemeVtbl
+#endif //#ifndef IAcPiPropertyInspectorThemeVtbl
+
+#ifndef IAcPiPropertyInspectorTheme_QueryInterface
+#define IAcPiPropertyInspectorTheme_QueryInterface		IZcPiPropertyInspectorTheme_QueryInterface
+#endif //#ifndef IAcPiPropertyInspectorTheme_QueryInterface
+
+#ifndef IAcPiPropertyInspectorTheme_AddRef
+#define IAcPiPropertyInspectorTheme_AddRef		IZcPiPropertyInspectorTheme_AddRef
+#endif //#ifndef IAcPiPropertyInspectorTheme_AddRef
+
+#ifndef IAcPiPropertyInspectorTheme_Release
+#define IAcPiPropertyInspectorTheme_Release		IZcPiPropertyInspectorTheme_Release
+#endif //#ifndef IAcPiPropertyInspectorTheme_Release
+
+#ifndef IAcPiPropertyInspectorTheme_SetTheme
+#define IAcPiPropertyInspectorTheme_SetTheme		IZcPiPropertyInspectorTheme_SetTheme
+#endif //#ifndef IAcPiPropertyInspectorTheme_SetTheme
+
+#ifndef IAcPiPropertyUnspecified
+#define IAcPiPropertyUnspecified		IZcPiPropertyUnspecified
+#endif //#ifndef IAcPiPropertyUnspecified
+
+#ifndef IAcPiPropertyUnspecifiedVtbl
+#define IAcPiPropertyUnspecifiedVtbl		IZcPiPropertyUnspecifiedVtbl
+#endif //#ifndef IAcPiPropertyUnspecifiedVtbl
+
+#ifndef IAcPiPropertyUnspecified_AddRef
+#define IAcPiPropertyUnspecified_AddRef		IZcPiPropertyUnspecified_AddRef
+#endif //#ifndef IAcPiPropertyUnspecified_AddRef
+
+#ifndef IAcPiPropertyUnspecified_GetUnspecifiedString
+#define IAcPiPropertyUnspecified_GetUnspecifiedString		IZcPiPropertyUnspecified_GetUnspecifiedString
+#endif //#ifndef IAcPiPropertyUnspecified_GetUnspecifiedString
+
+#ifndef IAcPiPropertyUnspecified_IsUnspecifiedAllowed
+#define IAcPiPropertyUnspecified_IsUnspecifiedAllowed		IZcPiPropertyUnspecified_IsUnspecifiedAllowed
+#endif //#ifndef IAcPiPropertyUnspecified_IsUnspecifiedAllowed
+
+#ifndef IAcPiPropertyUnspecified_IsValueUnspecified
+#define IAcPiPropertyUnspecified_IsValueUnspecified		IZcPiPropertyUnspecified_IsValueUnspecified
+#endif //#ifndef IAcPiPropertyUnspecified_IsValueUnspecified
+
+#ifndef IAcPiPropertyUnspecified_QueryInterface
+#define IAcPiPropertyUnspecified_QueryInterface		IZcPiPropertyUnspecified_QueryInterface
+#endif //#ifndef IAcPiPropertyUnspecified_QueryInterface
+
+#ifndef IAcPiPropertyUnspecified_Release
+#define IAcPiPropertyUnspecified_Release		IZcPiPropertyUnspecified_Release
+#endif //#ifndef IAcPiPropertyUnspecified_Release
+
+#ifndef IAcPiPropertyUnspecified_SetUnspecified
+#define IAcPiPropertyUnspecified_SetUnspecified		IZcPiPropertyUnspecified_SetUnspecified
+#endif //#ifndef IAcPiPropertyUnspecified_SetUnspecified
+
+#ifndef IID_IAcPiCategorizeProperties
+#define IID_IAcPiCategorizeProperties		IID_IZcPiCategorizeProperties
+#endif //#ifndef IID_IAcPiCategorizeProperties
+
+#ifndef IID_IAcPiCommandButton
+#define IID_IAcPiCommandButton		IID_IZcPiCommandButton
+#endif //#ifndef IID_IAcPiCommandButton
+
+#ifndef IID_IAcPiCommandButton2
+#define IID_IAcPiCommandButton2		IID_IZcPiCommandButton2
+#endif //#ifndef IID_IAcPiCommandButton2
+
+#ifndef IID_IAcPiPropCommandButtons
+#define IID_IAcPiPropCommandButtons		IID_IZcPiPropCommandButtons
+#endif //#ifndef IID_IAcPiPropCommandButtons
+
+#ifndef IID_IAcPiPropertyDisplay
+#define IID_IAcPiPropertyDisplay		IID_IZcPiPropertyDisplay
+#endif //#ifndef IID_IAcPiPropertyDisplay
+
+#ifndef IID_IAcPiPropertyEditControl
+#define IID_IAcPiPropertyEditControl		IID_IZcPiPropertyEditControl
+#endif //#ifndef IID_IAcPiPropertyEditControl
+
+#ifndef IID_IAcPiPropertyEditEventsSink
+#define IID_IAcPiPropertyEditEventsSink		IID_IZcPiPropertyEditEventsSink
+#endif //#ifndef IID_IAcPiPropertyEditEventsSink
+
+#ifndef IID_IAcPiPropertyInspector
+#define IID_IAcPiPropertyInspector		IID_IZcPiPropertyInspector
+#endif //#ifndef IID_IAcPiPropertyInspector
+
+#ifndef IID_IAcPiPropertyInspectorTheme
+#define IID_IAcPiPropertyInspectorTheme		IID_IZcPiPropertyInspectorTheme
+#endif //#ifndef IID_IAcPiPropertyInspectorTheme
+
+#ifndef IID_IAcPiPropertyInspectorEventsSink
+#define IID_IAcPiPropertyInspectorEventsSink		IID_IZcPiPropertyInspectorEventsSink
+#endif //#ifndef IID_IAcPiPropertyInspectorEventsSink
+
+#ifndef IID_IAcPiPropertyInspectorInputEventSink
+#define IID_IAcPiPropertyInspectorInputEventSink		IID_IZcPiPropertyInspectorInputEventSink
+#endif //#ifndef IID_IAcPiPropertyInspectorInputEventSink
+
+#ifndef IID_IAcPiPropertyUnspecified
+#define IID_IAcPiPropertyUnspecified		IID_IZcPiPropertyUnspecified
+#endif //#ifndef IID_IAcPiPropertyUnspecified
+
+#ifndef PI_ACAD_DYN
+#define PI_ACAD_DYN		PI_ZCAD_DYN
+#endif //#ifndef PI_ACAD_DYN
+
+#ifndef ZCPI_ACAD_DYN
+#define ZCPI_ACAD_DYN		ZCPI_ZCAD_DYN
+#endif //#ifndef ZCPI_ACAD_DYN
+
+#ifndef __AcPiPropertyInspector_FWD_DEFINED__
+#define __AcPiPropertyInspector_FWD_DEFINED__		__ZcPiPropertyInspector_FWD_DEFINED__
+#endif //#ifndef __AcPiPropertyInspector_FWD_DEFINED__
+
+#ifndef __IAcPiCategorizeProperties_FWD_DEFINED__
+#define __IAcPiCategorizeProperties_FWD_DEFINED__		__IZcPiCategorizeProperties_FWD_DEFINED__
+#endif //#ifndef __IAcPiCategorizeProperties_FWD_DEFINED__
+
+#ifndef __IAcPiCategorizeProperties_INTERFACE_DEFINED__
+#define __IAcPiCategorizeProperties_INTERFACE_DEFINED__		__IZcPiCategorizeProperties_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiCategorizeProperties_INTERFACE_DEFINED__
+
+#ifndef __IAcPiCommandButton2_FWD_DEFINED__
+#define __IAcPiCommandButton2_FWD_DEFINED__		__IZcPiCommandButton2_FWD_DEFINED__
+#endif //#ifndef __IAcPiCommandButton2_FWD_DEFINED__
+
+#ifndef __IAcPiCommandButton2_INTERFACE_DEFINED__
+#define __IAcPiCommandButton2_INTERFACE_DEFINED__		__IZcPiCommandButton2_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiCommandButton2_INTERFACE_DEFINED__
+
+#ifndef __IAcPiCommandButton_FWD_DEFINED__
+#define __IAcPiCommandButton_FWD_DEFINED__		__IZcPiCommandButton_FWD_DEFINED__
+#endif //#ifndef __IAcPiCommandButton_FWD_DEFINED__
+
+#ifndef __IAcPiCommandButton_INTERFACE_DEFINED__
+#define __IAcPiCommandButton_INTERFACE_DEFINED__		__IZcPiCommandButton_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiCommandButton_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropCommandButtons_FWD_DEFINED__
+#define __IAcPiPropCommandButtons_FWD_DEFINED__		__IZcPiPropCommandButtons_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropCommandButtons_FWD_DEFINED__
+
+#ifndef __IAcPiPropCommandButtons_INTERFACE_DEFINED__
+#define __IAcPiPropCommandButtons_INTERFACE_DEFINED__		__IZcPiPropCommandButtons_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropCommandButtons_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyDisplay_FWD_DEFINED__
+#define __IAcPiPropertyDisplay_FWD_DEFINED__		__IZcPiPropertyDisplay_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyDisplay_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyDisplay_INTERFACE_DEFINED__
+#define __IAcPiPropertyDisplay_INTERFACE_DEFINED__		__IZcPiPropertyDisplay_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyDisplay_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyEditControl_FWD_DEFINED__
+#define __IAcPiPropertyEditControl_FWD_DEFINED__		__IZcPiPropertyEditControl_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyEditControl_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyEditControl_INTERFACE_DEFINED__
+#define __IAcPiPropertyEditControl_INTERFACE_DEFINED__		__IZcPiPropertyEditControl_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyEditControl_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyEditEventsSink_FWD_DEFINED__
+#define __IAcPiPropertyEditEventsSink_FWD_DEFINED__		__IZcPiPropertyEditEventsSink_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyEditEventsSink_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyEditEventsSink_INTERFACE_DEFINED__
+#define __IAcPiPropertyEditEventsSink_INTERFACE_DEFINED__		__IZcPiPropertyEditEventsSink_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyEditEventsSink_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyInspectorEventsSink_FWD_DEFINED__
+#define __IAcPiPropertyInspectorEventsSink_FWD_DEFINED__		__IZcPiPropertyInspectorEventsSink_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspectorEventsSink_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyInspectorEventsSink_INTERFACE_DEFINED__
+#define __IAcPiPropertyInspectorEventsSink_INTERFACE_DEFINED__		__IZcPiPropertyInspectorEventsSink_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspectorEventsSink_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyInspectorInputEventSink_FWD_DEFINED__
+#define __IAcPiPropertyInspectorInputEventSink_FWD_DEFINED__		__IZcPiPropertyInspectorInputEventSink_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspectorInputEventSink_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyInspectorInputEventSink_INTERFACE_DEFINED__
+#define __IAcPiPropertyInspectorInputEventSink_INTERFACE_DEFINED__		__IZcPiPropertyInspectorInputEventSink_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspectorInputEventSink_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyInspector_FWD_DEFINED__
+#define __IAcPiPropertyInspector_FWD_DEFINED__		__IZcPiPropertyInspector_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspector_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyInspector_INTERFACE_DEFINED__
+#define __IAcPiPropertyInspector_INTERFACE_DEFINED__		__IZcPiPropertyInspector_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspector_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyInspectorTheme_INTERFACE_DEFINED__
+#define __IAcPiPropertyInspectorTheme_INTERFACE_DEFINED__		__IZcPiPropertyInspectorTheme_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyInspectorTheme_INTERFACE_DEFINED__
+
+#ifndef __IAcPiPropertyUnspecified_FWD_DEFINED__
+#define __IAcPiPropertyUnspecified_FWD_DEFINED__		__IZcPiPropertyUnspecified_FWD_DEFINED__
+#endif //#ifndef __IAcPiPropertyUnspecified_FWD_DEFINED__
+
+#ifndef __IAcPiPropertyUnspecified_INTERFACE_DEFINED__
+#define __IAcPiPropertyUnspecified_INTERFACE_DEFINED__		__IZcPiPropertyUnspecified_INTERFACE_DEFINED__
+#endif //#ifndef __IAcPiPropertyUnspecified_INTERFACE_DEFINED__
+
+#ifndef LIBID_ACPILib
+#define LIBID_ACPILib		LIBID_ZCPILib
+#endif //#ifndef IID LIBID_ACPILib
+
+#ifndef __ACPILib_LIBRARY_DEFINED__
+#define __ACPILib_LIBRARY_DEFINED__		__ZCPILib_LIBRARY_DEFINED__
+#endif //#ifndef __ACPILib_LIBRARY_DEFINED__
+
+#endif //#ifndef __ACPI_H__

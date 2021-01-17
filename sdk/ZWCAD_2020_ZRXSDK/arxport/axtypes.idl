@@ -1,0 +1,2911 @@
+
+#ifndef __AXTYPES_IDL__
+#define __AXTYPES_IDL__
+
+#include "../inc/zaxtypes.idl"
+
+#ifndef ACAD_ANGLE
+#define ACAD_ANGLE		ZCAD_ANGLE
+#endif //#ifndef ACAD_ANGLE
+
+#ifndef ACAD_COLOR
+#define ACAD_COLOR		ZCAD_COLOR
+#endif //#ifndef ACAD_COLOR
+
+#ifndef ACAD_DISTANCE
+#define ACAD_DISTANCE		ZCAD_DISTANCE
+#endif //#ifndef ACAD_DISTANCE
+
+#ifndef ACAD_LAYER
+#define ACAD_LAYER		ZCAD_LAYER
+#endif //#ifndef ACAD_LAYER
+
+#ifndef ACAD_LTYPE
+#define ACAD_LTYPE		ZCAD_LTYPE
+#endif //#ifndef ACAD_LTYPE
+
+#ifndef ACAD_LWEIGHT
+#define ACAD_LWEIGHT		ZCAD_LWEIGHT
+#endif //#ifndef ACAD_LWEIGHT
+
+#ifndef ACAD_NOUNITS
+#define ACAD_NOUNITS		ZCAD_NOUNITS
+#endif //#ifndef ACAD_NOUNITS
+
+#ifndef ACAD_NULL
+#define ACAD_NULL		ZCAD_NULL
+#endif //#ifndef ACAD_NULL
+
+#ifndef ACAD_POINT
+#define ACAD_POINT		ZCAD_POINT
+#endif //#ifndef ACAD_POINT
+
+#ifndef Ac3DPolylineType
+#define Ac3DPolylineType		Zc3DPolylineType
+#endif //#ifndef Ac3DPolylineType
+
+#ifndef AcARXDemandLoad
+#define AcARXDemandLoad		b(w*)ZcZRX(w*)b
+#endif //#ifndef AcARXDemandLoad
+
+#ifndef AcActiveSpace
+#define AcActiveSpace		ZcActiveSpace
+#endif //#ifndef AcActiveSpace
+
+#ifndef AcAlignment
+#define AcAlignment		ZcAlignment
+#endif //#ifndef AcAlignment
+
+#ifndef AcAlignmentPointAcquisition
+#define AcAlignmentPointAcquisition		ZcAlignmentPointAcquisition
+#endif //#ifndef AcAlignmentPointAcquisition
+
+#ifndef AcAngleUnits
+#define AcAngleUnits		ZcAngleUnits
+#endif //#ifndef AcAngleUnits
+
+#ifndef AcAttachmentPoint
+#define AcAttachmentPoint		ZcAttachmentPoint
+#endif //#ifndef AcAttachmentPoint
+
+#ifndef AcAttributeMode
+#define AcAttributeMode		ZcAttributeMode
+#endif //#ifndef AcAttributeMode
+
+#ifndef AcBoolean
+#define AcBoolean		ZcBoolean
+#endif //#ifndef AcBoolean
+
+#ifndef AcBooleanType
+#define AcBooleanType		ZcBooleanType
+#endif //#ifndef AcBooleanType
+
+#ifndef AcCellAlignment
+#define AcCellAlignment		ZcCellAlignment
+#endif //#ifndef AcCellAlignment
+
+#ifndef AcCellEdgeMask
+#define AcCellEdgeMask		ZcCellEdgeMask
+#endif //#ifndef AcCellEdgeMask
+
+#ifndef AcCellType
+#define AcCellType		ZcCellType
+#endif //#ifndef AcCellType
+
+#ifndef AcColor
+#define AcColor		ZcColor
+#endif //#ifndef AcColor
+
+#ifndef AcCoordinateSystem
+#define AcCoordinateSystem		ZcCoordinateSystem
+#endif //#ifndef AcCoordinateSystem
+
+#ifndef AcDimArcLengthSymbol
+#define AcDimArcLengthSymbol		ZcDimArcLengthSymbol
+#endif //#ifndef AcDimArcLengthSymbol
+
+#ifndef AcDimArrowheadType
+#define AcDimArrowheadType		ZcDimArrowheadType
+#endif //#ifndef AcDimArrowheadType
+
+#ifndef AcDimCenterType
+#define AcDimCenterType		ZcDimCenterType
+#endif //#ifndef AcDimCenterType
+
+#ifndef AcDimFit
+#define AcDimFit		ZcDimFit
+#endif //#ifndef AcDimFit
+
+#ifndef AcDimFractionType
+#define AcDimFractionType		ZcDimFractionType
+#endif //#ifndef AcDimFractionType
+
+#ifndef AcDimHorizontalJustification
+#define AcDimHorizontalJustification		ZcDimHorizontalJustification
+#endif //#ifndef AcDimHorizontalJustification
+
+#ifndef AcDimLUnits
+#define AcDimLUnits		ZcDimLUnits
+#endif //#ifndef AcDimLUnits
+
+#ifndef AcDimPrecision
+#define AcDimPrecision		ZcDimPrecision
+#endif //#ifndef AcDimPrecision
+
+#ifndef AcDimTextMovement
+#define AcDimTextMovement		ZcDimTextMovement
+#endif //#ifndef AcDimTextMovement
+
+#ifndef AcDimToleranceJustify
+#define AcDimToleranceJustify		ZcDimToleranceJustify
+#endif //#ifndef AcDimToleranceJustify
+
+#ifndef AcDimToleranceMethod
+#define AcDimToleranceMethod		ZcDimToleranceMethod
+#endif //#ifndef AcDimToleranceMethod
+
+#ifndef AcDimUnits
+#define AcDimUnits		ZcDimUnits
+#endif //#ifndef AcDimUnits
+
+#ifndef AcDimVerticalJustification
+#define AcDimVerticalJustification		ZcDimVerticalJustification
+#endif //#ifndef AcDimVerticalJustification
+
+#ifndef AcDragDisplayMode
+#define AcDragDisplayMode		ZcDragDisplayMode
+#endif //#ifndef AcDragDisplayMode
+
+#ifndef AcDrawingAreaSCMCommand
+#define AcDrawingAreaSCMCommand		ZcDrawingAreaSCMCommand
+#endif //#ifndef AcDrawingAreaSCMCommand
+
+#ifndef AcDrawingAreaSCMDefault
+#define AcDrawingAreaSCMDefault		ZcDrawingAreaSCMDefault
+#endif //#ifndef AcDrawingAreaSCMDefault
+
+#ifndef AcDrawingAreaSCMEdit
+#define AcDrawingAreaSCMEdit		ZcDrawingAreaSCMEdit
+#endif //#ifndef AcDrawingAreaSCMEdit
+
+#ifndef AcDrawingAreaShortCutMenu
+#define AcDrawingAreaShortCutMenu		ZcDrawingAreaShortCutMenu
+#endif //#ifndef AcDrawingAreaShortCutMenu
+
+#ifndef AcDrawingDirection
+#define AcDrawingDirection		ZcDrawingDirection
+#endif //#ifndef AcDrawingDirection
+
+#ifndef AcEntityName
+#define AcEntityName		ZcEntityName
+#endif //#ifndef AcEntityName
+
+#ifndef AcExtendOption
+#define AcExtendOption		ZcExtendOption
+#endif //#ifndef AcExtendOption
+
+#ifndef AcGradientPatternType
+#define AcGradientPatternType		ZcGradientPatternType
+#endif //#ifndef AcGradientPatternType
+
+#ifndef AcGridLineType
+#define AcGridLineType		ZcGridLineType
+#endif //#ifndef AcGridLineType
+
+#ifndef AcHatchObjectType
+#define AcHatchObjectType		ZcHatchObjectType
+#endif //#ifndef AcHatchObjectType
+
+#ifndef AcHatchStyle
+#define AcHatchStyle		ZcHatchStyle
+#endif //#ifndef AcHatchStyle
+
+#ifndef AcHorizontalAlignment
+#define AcHorizontalAlignment		ZcHorizontalAlignment
+#endif //#ifndef AcHorizontalAlignment
+
+#ifndef AcISOPenWidth
+#define AcISOPenWidth		ZcISOPenWidth
+#endif //#ifndef AcISOPenWidth
+
+#ifndef AcInsertUnits
+#define AcInsertUnits		ZcInsertUnits
+#endif //#ifndef AcInsertUnits
+
+#ifndef AcInsertUnitsAction
+#define AcInsertUnitsAction		ZcInsertUnitsAction
+#endif //#ifndef AcInsertUnitsAction
+
+#ifndef AcKeyboardAccelerator
+#define AcKeyboardAccelerator		ZcKeyboardAccelerator
+#endif //#ifndef AcKeyboardAccelerator
+
+#ifndef AcKeyboardPriority
+#define AcKeyboardPriority		ZcKeyboardPriority
+#endif //#ifndef AcKeyboardPriority
+
+#ifndef AcLayerStateMask
+#define AcLayerStateMask		ZcLayerStateMask
+#endif //#ifndef AcLayerStateMask
+
+#ifndef AcLeaderType
+#define AcLeaderType		ZcLeaderType
+#endif //#ifndef AcLeaderType
+
+#ifndef AcLineSpacingStyle
+#define AcLineSpacingStyle		ZcLineSpacingStyle
+#endif //#ifndef AcLineSpacingStyle
+
+#ifndef AcLineWeight
+#define AcLineWeight		ZcLineWeight
+#endif //#ifndef AcLineWeight
+
+#ifndef AcLoadPalette
+#define AcLoadPalette		ZcLoadPalette
+#endif //#ifndef AcLoadPalette
+
+#ifndef AcLoopType
+#define AcLoopType		ZcLoopType
+#endif //#ifndef AcLoopType
+
+#ifndef AcMeasurementUnits
+#define AcMeasurementUnits		ZcMeasurementUnits
+#endif //#ifndef AcMeasurementUnits
+
+#ifndef AcMenuFileType
+#define AcMenuFileType		ZcMenuFileType
+#endif //#ifndef AcMenuFileType
+
+#ifndef AcMenuGroupType
+#define AcMenuGroupType		ZcMenuGroupType
+#endif //#ifndef AcMenuGroupType
+
+#ifndef AcMenuItemType
+#define AcMenuItemType		ZcMenuItemType
+#endif //#ifndef AcMenuItemType
+
+#ifndef AcOlePlotQuality
+#define AcOlePlotQuality		ZcOlePlotQuality
+#endif //#ifndef AcOlePlotQuality
+
+#ifndef AcOleQuality
+#define AcOleQuality		ZcOleQuality
+#endif //#ifndef AcOleQuality
+
+#ifndef AcOleType
+#define AcOleType		ZcOleType
+#endif //#ifndef AcOleType
+
+#ifndef AcOnOff
+#define AcOnOff		ZcOnOff
+#endif //#ifndef AcOnOff
+
+#ifndef AcPatternType
+#define AcPatternType		ZcPatternType
+#endif //#ifndef AcPatternType
+
+#ifndef AcPlotOrientation
+#define AcPlotOrientation		ZcPlotOrientation
+#endif //#ifndef AcPlotOrientation
+
+#ifndef AcPlotPaperUnits
+#define AcPlotPaperUnits		ZcPlotPaperUnits
+#endif //#ifndef AcPlotPaperUnits
+
+#ifndef AcPlotPolicy
+#define AcPlotPolicy		ZcPlotPolicy
+#endif //#ifndef AcPlotPolicy
+
+#ifndef AcPlotPolicyForLegacyDwgs
+#define AcPlotPolicyForLegacyDwgs		ZcPlotPolicyForLegacyDwgs
+#endif //#ifndef AcPlotPolicyForLegacyDwgs
+
+#ifndef AcPlotPolicyForNewDwgs
+#define AcPlotPolicyForNewDwgs		ZcPlotPolicyForNewDwgs
+#endif //#ifndef AcPlotPolicyForNewDwgs
+
+#ifndef AcPlotRotation
+#define AcPlotRotation		ZcPlotRotation
+#endif //#ifndef AcPlotRotation
+
+#ifndef AcPlotScale
+#define AcPlotScale		ZcPlotScale
+#endif //#ifndef AcPlotScale
+
+#ifndef AcPlotType
+#define AcPlotType		ZcPlotType
+#endif //#ifndef AcPlotType
+
+#ifndef AcPolylineType
+#define AcPolylineType		ZcPolylineType
+#endif //#ifndef AcPolylineType
+
+#ifndef AcPolymeshType
+#define AcPolymeshType		ZcPolymeshType
+#endif //#ifndef AcPolymeshType
+
+#ifndef AcPreviewMode
+#define AcPreviewMode		ZcPreviewMode
+#endif //#ifndef AcPreviewMode
+
+#ifndef AcPrinterSpoolAlert
+#define AcPrinterSpoolAlert		ZcPrinterSpoolAlert
+#endif //#ifndef AcPrinterSpoolAlert
+
+#ifndef AcProxyImage
+#define AcProxyImage		ZcProxyImage
+#endif //#ifndef AcProxyImage
+
+#ifndef AcRegenType
+#define AcRegenType		ZcRegenType
+#endif //#ifndef AcRegenType
+
+#ifndef AcRotationAngle
+#define AcRotationAngle		ZcRotationAngle
+#endif //#ifndef AcRotationAngle
+
+#ifndef AcRowType
+#define AcRowType		ZcRowType
+#endif //#ifndef AcRowType
+
+#ifndef AcSaveAsType
+#define AcSaveAsType		ZcSaveAsType
+#endif //#ifndef AcSaveAsType
+
+#ifndef AcSelect
+#define AcSelect		ZcSelect
+#endif //#ifndef AcSelect
+
+#ifndef AcSelectType
+#define AcSelectType		ZcSelectType
+#endif //#ifndef AcSelectType
+
+#ifndef AcShadePlot
+#define AcShadePlot		ZcShadePlot
+#endif //#ifndef AcShadePlot
+
+#ifndef AcTableDirection
+#define AcTableDirection		ZcTableDirection
+#endif //#ifndef AcTableDirection
+
+#ifndef AcTableStyleOverrides
+#define AcTableStyleOverrides		ZcTableStyleOverrides
+#endif //#ifndef AcTableStyleOverrides
+
+#ifndef AcTextFontStyle
+#define AcTextFontStyle		ZcTextFontStyle
+#endif //#ifndef AcTextFontStyle
+
+#ifndef AcTextGenerationFlag
+#define AcTextGenerationFlag		ZcTextGenerationFlag
+#endif //#ifndef AcTextGenerationFlag
+
+#ifndef AcToolbarDockStatus
+#define AcToolbarDockStatus		ZcToolbarDockStatus
+#endif //#ifndef AcToolbarDockStatus
+
+#ifndef AcToolbarItemType
+#define AcToolbarItemType		ZcToolbarItemType
+#endif //#ifndef AcToolbarItemType
+
+#ifndef AcUnits
+#define AcUnits		ZcUnits
+#endif //#ifndef AcUnits
+
+#ifndef AcVerticalAlignment
+#define AcVerticalAlignment		ZcVerticalAlignment
+#endif //#ifndef AcVerticalAlignment
+
+#ifndef AcViewportScale
+#define AcViewportScale		ZcViewportScale
+#endif //#ifndef AcViewportScale
+
+#ifndef AcViewportSplitType
+#define AcViewportSplitType		ZcViewportSplitType
+#endif //#ifndef AcViewportSplitType
+
+#ifndef AcWindowState
+#define AcWindowState		ZcWindowState
+#endif //#ifndef AcWindowState
+
+#ifndef AcXRefDemandLoad
+#define AcXRefDemandLoad		ZcXRefDemandLoad
+#endif //#ifndef AcXRefDemandLoad
+
+#ifndef AcZoomScaleType
+#define AcZoomScaleType		ZcZoomScaleType
+#endif //#ifndef AcZoomScaleType
+
+#ifndef acAbove
+#define acAbove		zcAbove
+#endif //#ifndef acAbove
+
+#ifndef acActiveViewport
+#define acActiveViewport		zcActiveViewport
+#endif //#ifndef acActiveViewport
+
+#ifndef acAlignPntAcquisitionAutomatic
+#define acAlignPntAcquisitionAutomatic		zcAlignPntAcquisitionAutomatic
+#endif //#ifndef acAlignPntAcquisitionAutomatic
+
+#ifndef acAlignPntAcquisitionShiftToAcquire
+#define acAlignPntAcquisitionShiftToAcquire		zcAlignPntAcquisitionShiftToAcquire
+#endif //#ifndef acAlignPntAcquisitionShiftToAcquire
+
+#ifndef acAlignmentAligned
+#define acAlignmentAligned		zcAlignmentAligned
+#endif //#ifndef acAlignmentAligned
+
+#ifndef acAlignmentBottomCenter
+#define acAlignmentBottomCenter		zcAlignmentBottomCenter
+#endif //#ifndef acAlignmentBottomCenter
+
+#ifndef acAlignmentBottomLeft
+#define acAlignmentBottomLeft		zcAlignmentBottomLeft
+#endif //#ifndef acAlignmentBottomLeft
+
+#ifndef acAlignmentBottomRight
+#define acAlignmentBottomRight		zcAlignmentBottomRight
+#endif //#ifndef acAlignmentBottomRight
+
+#ifndef acAlignmentCenter
+#define acAlignmentCenter		zcAlignmentCenter
+#endif //#ifndef acAlignmentCenter
+
+#ifndef acAlignmentFit
+#define acAlignmentFit		zcAlignmentFit
+#endif //#ifndef acAlignmentFit
+
+#ifndef acAlignmentLeft
+#define acAlignmentLeft		zcAlignmentLeft
+#endif //#ifndef acAlignmentLeft
+
+#ifndef acAlignmentMiddle
+#define acAlignmentMiddle		zcAlignmentMiddle
+#endif //#ifndef acAlignmentMiddle
+
+#ifndef acAlignmentMiddleCenter
+#define acAlignmentMiddleCenter		zcAlignmentMiddleCenter
+#endif //#ifndef acAlignmentMiddleCenter
+
+#ifndef acAlignmentMiddleLeft
+#define acAlignmentMiddleLeft		zcAlignmentMiddleLeft
+#endif //#ifndef acAlignmentMiddleLeft
+
+#ifndef acAlignmentMiddleRight
+#define acAlignmentMiddleRight		zcAlignmentMiddleRight
+#endif //#ifndef acAlignmentMiddleRight
+
+#ifndef acAlignmentRight
+#define acAlignmentRight		zcAlignmentRight
+#endif //#ifndef acAlignmentRight
+
+#ifndef acAlignmentTopCenter
+#define acAlignmentTopCenter		zcAlignmentTopCenter
+#endif //#ifndef acAlignmentTopCenter
+
+#ifndef acAlignmentTopLeft
+#define acAlignmentTopLeft		zcAlignmentTopLeft
+#endif //#ifndef acAlignmentTopLeft
+
+#ifndef acAlignmentTopRight
+#define acAlignmentTopRight		zcAlignmentTopRight
+#endif //#ifndef acAlignmentTopRight
+
+#ifndef acAllViewports
+#define acAllViewports		zcAllViewports
+#endif //#ifndef acAllViewports
+
+#ifndef acAmericanEnglish
+#define acAmericanEnglish		zcAmericanEnglish
+#endif //#ifndef acAmericanEnglish
+
+#ifndef acArc
+#define acArc		zcArc
+#endif //#ifndef acArc
+
+#ifndef acArchitectural
+#define acArchitectural		zcArchitectural
+#endif //#ifndef acArchitectural
+
+#ifndef acArrowArchTick
+#define acArrowArchTick		zcArrowArchTick
+#endif //#ifndef acArrowArchTick
+
+#ifndef acArrowBoxBlank
+#define acArrowBoxBlank		zcArrowBoxBlank
+#endif //#ifndef acArrowBoxBlank
+
+#ifndef acArrowBoxFilled
+#define acArrowBoxFilled		zcArrowBoxFilled
+#endif //#ifndef acArrowBoxFilled
+
+#ifndef acArrowClosed
+#define acArrowClosed		zcArrowClosed
+#endif //#ifndef acArrowClosed
+
+#ifndef acArrowClosedBlank
+#define acArrowClosedBlank		zcArrowClosedBlank
+#endif //#ifndef acArrowClosedBlank
+
+#ifndef acArrowDatumBlank
+#define acArrowDatumBlank		zcArrowDatumBlank
+#endif //#ifndef acArrowDatumBlank
+
+#ifndef acArrowDatumFilled
+#define acArrowDatumFilled		zcArrowDatumFilled
+#endif //#ifndef acArrowDatumFilled
+
+#ifndef acArrowDefault
+#define acArrowDefault		zcArrowDefault
+#endif //#ifndef acArrowDefault
+
+#ifndef acArrowDot
+#define acArrowDot		zcArrowDot
+#endif //#ifndef acArrowDot
+
+#ifndef acArrowDotBlank
+#define acArrowDotBlank		zcArrowDotBlank
+#endif //#ifndef acArrowDotBlank
+
+#ifndef acArrowDotSmall
+#define acArrowDotSmall		zcArrowDotSmall
+#endif //#ifndef acArrowDotSmall
+
+#ifndef acArrowIntegral
+#define acArrowIntegral		zcArrowIntegral
+#endif //#ifndef acArrowIntegral
+
+#ifndef acArrowNone
+#define acArrowNone		zcArrowNone
+#endif //#ifndef acArrowNone
+
+#ifndef acArrowOblique
+#define acArrowOblique		zcArrowOblique
+#endif //#ifndef acArrowOblique
+
+#ifndef acArrowOpen
+#define acArrowOpen		zcArrowOpen
+#endif //#ifndef acArrowOpen
+
+#ifndef acArrowOpen30
+#define acArrowOpen30		zcArrowOpen30
+#endif //#ifndef acArrowOpen30
+
+#ifndef acArrowOpen90
+#define acArrowOpen90		zcArrowOpen90
+#endif //#ifndef acArrowOpen90
+
+#ifndef acArrowOrigin
+#define acArrowOrigin		zcArrowOrigin
+#endif //#ifndef acArrowOrigin
+
+#ifndef acArrowOrigin2
+#define acArrowOrigin2		zcArrowOrigin2
+#endif //#ifndef acArrowOrigin2
+
+#ifndef acArrowSmall
+#define acArrowSmall		zcArrowSmall
+#endif //#ifndef acArrowSmall
+
+#ifndef acArrowUserDefined
+#define acArrowUserDefined		zcArrowUserDefined
+#endif //#ifndef acArrowUserDefined
+
+#ifndef acArrowsOnly
+#define acArrowsOnly		zcArrowsOnly
+#endif //#ifndef acArrowsOnly
+
+#ifndef acAttachmentPointBottomCenter
+#define acAttachmentPointBottomCenter		zcAttachmentPointBottomCenter
+#endif //#ifndef acAttachmentPointBottomCenter
+
+#ifndef acAttachmentPointBottomLeft
+#define acAttachmentPointBottomLeft		zcAttachmentPointBottomLeft
+#endif //#ifndef acAttachmentPointBottomLeft
+
+#ifndef acAttachmentPointBottomRight
+#define acAttachmentPointBottomRight		zcAttachmentPointBottomRight
+#endif //#ifndef acAttachmentPointBottomRight
+
+#ifndef acAttachmentPointMiddleCenter
+#define acAttachmentPointMiddleCenter		zcAttachmentPointMiddleCenter
+#endif //#ifndef acAttachmentPointMiddleCenter
+
+#ifndef acAttachmentPointMiddleLeft
+#define acAttachmentPointMiddleLeft		zcAttachmentPointMiddleLeft
+#endif //#ifndef acAttachmentPointMiddleLeft
+
+#ifndef acAttachmentPointMiddleRight
+#define acAttachmentPointMiddleRight		zcAttachmentPointMiddleRight
+#endif //#ifndef acAttachmentPointMiddleRight
+
+#ifndef acAttachmentPointTopCenter
+#define acAttachmentPointTopCenter		zcAttachmentPointTopCenter
+#endif //#ifndef acAttachmentPointTopCenter
+
+#ifndef acAttachmentPointTopLeft
+#define acAttachmentPointTopLeft		zcAttachmentPointTopLeft
+#endif //#ifndef acAttachmentPointTopLeft
+
+#ifndef acAttachmentPointTopRight
+#define acAttachmentPointTopRight		zcAttachmentPointTopRight
+#endif //#ifndef acAttachmentPointTopRight
+
+#ifndef acAttribute
+#define acAttribute		zcAttribute
+#endif //#ifndef acAttribute
+
+#ifndef acAttributeModeConstant
+#define acAttributeModeConstant		zcAttributeModeConstant
+#endif //#ifndef acAttributeModeConstant
+
+#ifndef acAttributeModeInvisible
+#define acAttributeModeInvisible		zcAttributeModeInvisible
+#endif //#ifndef acAttributeModeInvisible
+
+#ifndef acAttributeModeNormal
+#define acAttributeModeNormal		zcAttributeModeNormal
+#endif //#ifndef acAttributeModeNormal
+
+#ifndef acAttributeModePreset
+#define acAttributeModePreset		zcAttributeModePreset
+#endif //#ifndef acAttributeModePreset
+
+#ifndef acAttributeModeVerify
+#define acAttributeModeVerify		zcAttributeModeVerify
+#endif //#ifndef acAttributeModeVerify
+
+#ifndef acAttributeReference
+#define acAttributeReference		zcAttributeReference
+#endif //#ifndef acAttributeReference
+
+#ifndef acAustralianEnglish
+#define acAustralianEnglish		zcAustralianEnglish
+#endif //#ifndef acAustralianEnglish
+
+#ifndef acBaseMenuGroup
+#define acBaseMenuGroup		zcBaseMenuGroup
+#endif //#ifndef acBaseMenuGroup
+
+#ifndef acBestFit
+#define acBestFit		zcBestFit
+#endif //#ifndef acBestFit
+
+#ifndef acBezierSurfaceMesh
+#define acBezierSurfaceMesh		zcBezierSurfaceMesh
+#endif //#ifndef acBezierSurfaceMesh
+
+#ifndef acBlockCell
+#define acBlockCell		zcBlockCell
+#endif //#ifndef acBlockCell
+
+#ifndef acBlockReference
+#define acBlockReference		zcBlockReference
+#endif //#ifndef acBlockReference
+
+#ifndef acBlue
+#define acBlue		zcBlue
+#endif //#ifndef acBlue
+
+#ifndef acBottomCenter
+#define acBottomCenter		zcBottomCenter
+#endif //#ifndef acBottomCenter
+
+#ifndef acBottomLeft
+#define acBottomLeft		zcBottomLeft
+#endif //#ifndef acBottomLeft
+
+#ifndef acBottomMask
+#define acBottomMask		zcBottomMask
+#endif //#ifndef acBottomMask
+
+#ifndef acBottomRight
+#define acBottomRight		zcBottomRight
+#endif //#ifndef acBottomRight
+
+#ifndef acBottomToTop
+#define acBottomToTop		zcBottomToTop
+#endif //#ifndef acBottomToTop
+
+#ifndef acBritishEnglishIse
+#define acBritishEnglishIse		zcBritishEnglishIse
+#endif //#ifndef acBritishEnglishIse
+
+#ifndef acBritishEnglishIze
+#define acBritishEnglishIze		zcBritishEnglishIze
+#endif //#ifndef acBritishEnglishIze
+
+#ifndef acByBlock
+#define acByBlock		zcByBlock
+#endif //#ifndef acByBlock
+
+#ifndef acByLayer
+#define acByLayer		zcByLayer
+#endif //#ifndef acByLayer
+
+#ifndef acByStyle
+#define acByStyle		zcByStyle
+#endif //#ifndef acByStyle
+
+#ifndef acCatalan
+#define acCatalan		zcCatalan
+#endif //#ifndef acCatalan
+
+#ifndef acCellAlign
+#define acCellAlign		zcCellAlign
+#endif //#ifndef acCellAlign
+
+#ifndef acCellBackgroundColor
+#define acCellBackgroundColor		zcCellBackgroundColor
+#endif //#ifndef acCellBackgroundColor
+
+#ifndef acCellBackgroundFillNone
+#define acCellBackgroundFillNone		zcCellBackgroundFillNone
+#endif //#ifndef acCellBackgroundFillNone
+
+#ifndef acCellBottomGridColor
+#define acCellBottomGridColor		zcCellBottomGridColor
+#endif //#ifndef acCellBottomGridColor
+
+#ifndef acCellBottomGridLineWeight
+#define acCellBottomGridLineWeight		zcCellBottomGridLineWeight
+#endif //#ifndef acCellBottomGridLineWeight
+
+#ifndef acCellBottomVisibility
+#define acCellBottomVisibility		zcCellBottomVisibility
+#endif //#ifndef acCellBottomVisibility
+
+#ifndef acCellContentColor
+#define acCellContentColor		zcCellContentColor
+#endif //#ifndef acCellContentColor
+
+#ifndef acCellLeftGridColor
+#define acCellLeftGridColor		zcCellLeftGridColor
+#endif //#ifndef acCellLeftGridColor
+
+#ifndef acCellLeftGridLineWeight
+#define acCellLeftGridLineWeight		zcCellLeftGridLineWeight
+#endif //#ifndef acCellLeftGridLineWeight
+
+#ifndef acCellLeftVisibility
+#define acCellLeftVisibility		zcCellLeftVisibility
+#endif //#ifndef acCellLeftVisibility
+
+#ifndef acCellRightGridColor
+#define acCellRightGridColor		zcCellRightGridColor
+#endif //#ifndef acCellRightGridColor
+
+#ifndef acCellRightGridLineWeight
+#define acCellRightGridLineWeight		zcCellRightGridLineWeight
+#endif //#ifndef acCellRightGridLineWeight
+
+#ifndef acCellRightVisibility
+#define acCellRightVisibility		zcCellRightVisibility
+#endif //#ifndef acCellRightVisibility
+
+#ifndef acCellTextHeight
+#define acCellTextHeight		zcCellTextHeight
+#endif //#ifndef acCellTextHeight
+
+#ifndef acCellTextStyle
+#define acCellTextStyle		zcCellTextStyle
+#endif //#ifndef acCellTextStyle
+
+#ifndef acCellTopGridColor
+#define acCellTopGridColor		zcCellTopGridColor
+#endif //#ifndef acCellTopGridColor
+
+#ifndef acCellTopGridLineWeight
+#define acCellTopGridLineWeight		zcCellTopGridLineWeight
+#endif //#ifndef acCellTopGridLineWeight
+
+#ifndef acCellTopVisibility
+#define acCellTopVisibility		zcCellTopVisibility
+#endif //#ifndef acCellTopVisibility
+
+#ifndef acCenterLine
+#define acCenterLine		zcCenterLine
+#endif //#ifndef acCenterLine
+
+#ifndef acCenterMark
+#define acCenterMark		zcCenterMark
+#endif //#ifndef acCenterMark
+
+#ifndef acCenterNone
+#define acCenterNone		zcCenterNone
+#endif //#ifndef acCenterNone
+
+#ifndef acCircle
+#define acCircle		zcCircle
+#endif //#ifndef acCircle
+
+#ifndef acCubicSpline3DPoly
+#define acCubicSpline3DPoly		zcCubicSpline3DPoly
+#endif //#ifndef acCubicSpline3DPoly
+
+#ifndef acCubicSplinePoly
+#define acCubicSplinePoly		zcCubicSplinePoly
+#endif //#ifndef acCubicSplinePoly
+
+#ifndef acCubicSurfaceMesh
+#define acCubicSurfaceMesh		zcCubicSurfaceMesh
+#endif //#ifndef acCubicSurfaceMesh
+
+#ifndef acCyan
+#define acCyan		zcCyan
+#endif //#ifndef acCyan
+
+#ifndef acCzech
+#define acCzech		zcCzech
+#endif //#ifndef acCzech
+
+#ifndef acDanish
+#define acDanish		zcDanish
+#endif //#ifndef acDanish
+
+#ifndef acDataHorzBottomColor
+#define acDataHorzBottomColor		zcDataHorzBottomColor
+#endif //#ifndef acDataHorzBottomColor
+
+#ifndef acDataHorzBottomLineWeight
+#define acDataHorzBottomLineWeight		zcDataHorzBottomLineWeight
+#endif //#ifndef acDataHorzBottomLineWeight
+
+#ifndef acDataHorzBottomVisibility
+#define acDataHorzBottomVisibility		zcDataHorzBottomVisibility
+#endif //#ifndef acDataHorzBottomVisibility
+
+#ifndef acDataHorzInsideColor
+#define acDataHorzInsideColor		zcDataHorzInsideColor
+#endif //#ifndef acDataHorzInsideColor
+
+#ifndef acDataHorzInsideLineWeight
+#define acDataHorzInsideLineWeight		zcDataHorzInsideLineWeight
+#endif //#ifndef acDataHorzInsideLineWeight
+
+#ifndef acDataHorzInsideVisibility
+#define acDataHorzInsideVisibility		zcDataHorzInsideVisibility
+#endif //#ifndef acDataHorzInsideVisibility
+
+#ifndef acDataHorzTopColor
+#define acDataHorzTopColor		zcDataHorzTopColor
+#endif //#ifndef acDataHorzTopColor
+
+#ifndef acDataHorzTopLineWeight
+#define acDataHorzTopLineWeight		zcDataHorzTopLineWeight
+#endif //#ifndef acDataHorzTopLineWeight
+
+#ifndef acDataHorzTopVisibility
+#define acDataHorzTopVisibility		zcDataHorzTopVisibility
+#endif //#ifndef acDataHorzTopVisibility
+
+#ifndef acDataRow
+#define acDataRow		zcDataRow
+#endif //#ifndef acDataRow
+
+#ifndef acDataRowAlignment
+#define acDataRowAlignment		zcDataRowAlignment
+#endif //#ifndef acDataRowAlignment
+
+#ifndef acDataRowColor
+#define acDataRowColor		zcDataRowColor
+#endif //#ifndef acDataRowColor
+
+#ifndef acDataRowFillColor
+#define acDataRowFillColor		zcDataRowFillColor
+#endif //#ifndef acDataRowFillColor
+
+#ifndef acDataRowFillNone
+#define acDataRowFillNone		zcDataRowFillNone
+#endif //#ifndef acDataRowFillNone
+
+#ifndef acDataRowTextHeight
+#define acDataRowTextHeight		zcDataRowTextHeight
+#endif //#ifndef acDataRowTextHeight
+
+#ifndef acDataRowTextStyle
+#define acDataRowTextStyle		zcDataRowTextStyle
+#endif //#ifndef acDataRowTextStyle
+
+#ifndef acDataVertInsideColor
+#define acDataVertInsideColor		zcDataVertInsideColor
+#endif //#ifndef acDataVertInsideColor
+
+#ifndef acDataVertInsideLineWeight
+#define acDataVertInsideLineWeight		zcDataVertInsideLineWeight
+#endif //#ifndef acDataVertInsideLineWeight
+
+#ifndef acDataVertInsideVisibility
+#define acDataVertInsideVisibility		zcDataVertInsideVisibility
+#endif //#ifndef acDataVertInsideVisibility
+
+#ifndef acDataVertLeftColor
+#define acDataVertLeftColor		zcDataVertLeftColor
+#endif //#ifndef acDataVertLeftColor
+
+#ifndef acDataVertLeftLineWeight
+#define acDataVertLeftLineWeight		zcDataVertLeftLineWeight
+#endif //#ifndef acDataVertLeftLineWeight
+
+#ifndef acDataVertLeftVisibility
+#define acDataVertLeftVisibility		zcDataVertLeftVisibility
+#endif //#ifndef acDataVertLeftVisibility
+
+#ifndef acDataVertRightColor
+#define acDataVertRightColor		zcDataVertRightColor
+#endif //#ifndef acDataVertRightColor
+
+#ifndef acDataVertRightLineWeight
+#define acDataVertRightLineWeight		zcDataVertRightLineWeight
+#endif //#ifndef acDataVertRightLineWeight
+
+#ifndef acDataVertRightVisibility
+#define acDataVertRightVisibility		zcDataVertRightVisibility
+#endif //#ifndef acDataVertRightVisibility
+
+#ifndef acDecimal
+#define acDecimal		zcDecimal
+#endif //#ifndef acDecimal
+
+#ifndef acDefaultUnits
+#define acDefaultUnits		zcDefaultUnits
+#endif //#ifndef acDefaultUnits
+
+#ifndef acDegreeMinuteSeconds
+#define acDegreeMinuteSeconds		zcDegreeMinuteSeconds
+#endif //#ifndef acDegreeMinuteSeconds
+
+#ifndef acDegrees
+#define acDegrees		zcDegrees
+#endif //#ifndef acDegrees
+
+#ifndef acDegrees000
+#define acDegrees000		zcDegrees000
+#endif //#ifndef acDegrees000
+
+#ifndef acDegrees090
+#define acDegrees090		zcDegrees090
+#endif //#ifndef acDegrees090
+
+#ifndef acDegrees180
+#define acDegrees180		zcDegrees180
+#endif //#ifndef acDegrees180
+
+#ifndef acDegrees270
+#define acDegrees270		zcDegrees270
+#endif //#ifndef acDegrees270
+
+#ifndef acDegreesUnknown
+#define acDegreesUnknown		zcDegreesUnknown
+#endif //#ifndef acDegreesUnknown
+
+#ifndef acDemanLoadDisable
+#define acDemanLoadDisable		zcDemanLoadDisable
+#endif //#ifndef acDemanLoadDisable
+
+#ifndef acDemandLoadCmdInvoke
+#define acDemandLoadCmdInvoke		zcDemandLoadCmdInvoke
+#endif //#ifndef acDemandLoadCmdInvoke
+
+#ifndef acDemandLoadDisabled
+#define acDemandLoadDisabled		zcDemandLoadDisabled
+#endif //#ifndef acDemandLoadDisabled
+
+#ifndef acDemandLoadEnabled
+#define acDemandLoadEnabled		zcDemandLoadEnabled
+#endif //#ifndef acDemandLoadEnabled
+
+#ifndef acDemandLoadEnabledWithCopy
+#define acDemandLoadEnabledWithCopy		zcDemandLoadEnabledWithCopy
+#endif //#ifndef acDemandLoadEnabledWithCopy
+
+#ifndef acDemandLoadOnObjectDetect
+#define acDemandLoadOnObjectDetect		zcDemandLoadOnObjectDetect
+#endif //#ifndef acDemandLoadOnObjectDetect
+
+#ifndef acDiagonal
+#define acDiagonal		zcDiagonal
+#endif //#ifndef acDiagonal
+
+#ifndef acDim3PointAngular
+#define acDim3PointAngular		zcDim3PointAngular
+#endif //#ifndef acDim3PointAngular
+
+#ifndef acDimAligned
+#define acDimAligned		zcDimAligned
+#endif //#ifndef acDimAligned
+
+#ifndef acDimAngular
+#define acDimAngular		zcDimAngular
+#endif //#ifndef acDimAngular
+
+#ifndef acDimArcLength
+#define acDimArcLength		zcDimArcLength
+#endif //#ifndef acDimArcLength
+
+#ifndef acDimArchitectural
+#define acDimArchitectural		zcDimArchitectural
+#endif //#ifndef acDimArchitectural
+
+#ifndef acDimArchitecturalStacked
+#define acDimArchitecturalStacked		zcDimArchitecturalStacked
+#endif //#ifndef acDimArchitecturalStacked
+
+#ifndef acDimDecimal
+#define acDimDecimal		zcDimDecimal
+#endif //#ifndef acDimDecimal
+
+#ifndef acDimDiametric
+#define acDimDiametric		zcDimDiametric
+#endif //#ifndef acDimDiametric
+
+#ifndef acDimEngineering
+#define acDimEngineering		zcDimEngineering
+#endif //#ifndef acDimEngineering
+
+#ifndef acDimFractional
+#define acDimFractional		zcDimFractional
+#endif //#ifndef acDimFractional
+
+#ifndef acDimFractionalStacked
+#define acDimFractionalStacked		zcDimFractionalStacked
+#endif //#ifndef acDimFractionalStacked
+
+#ifndef acDimLArchitectural
+#define acDimLArchitectural		zcDimLArchitectural
+#endif //#ifndef acDimLArchitectural
+
+#ifndef acDimLDecimal
+#define acDimLDecimal		zcDimLDecimal
+#endif //#ifndef acDimLDecimal
+
+#ifndef acDimLEngineering
+#define acDimLEngineering		zcDimLEngineering
+#endif //#ifndef acDimLEngineering
+
+#ifndef acDimLFractional
+#define acDimLFractional		zcDimLFractional
+#endif //#ifndef acDimLFractional
+
+#ifndef acDimLScientific
+#define acDimLScientific		zcDimLScientific
+#endif //#ifndef acDimLScientific
+
+#ifndef acDimLWindowsDesktop
+#define acDimLWindowsDesktop		zcDimLWindowsDesktop
+#endif //#ifndef acDimLWindowsDesktop
+
+#ifndef acDimLineWithText
+#define acDimLineWithText		zcDimLineWithText
+#endif //#ifndef acDimLineWithText
+
+#ifndef acDimOrdinate
+#define acDimOrdinate		zcDimOrdinate
+#endif //#ifndef acDimOrdinate
+
+#ifndef acDimPrecisionEight
+#define acDimPrecisionEight		zcDimPrecisionEight
+#endif //#ifndef acDimPrecisionEight
+
+#ifndef acDimPrecisionFive
+#define acDimPrecisionFive		zcDimPrecisionFive
+#endif //#ifndef acDimPrecisionFive
+
+#ifndef acDimPrecisionFour
+#define acDimPrecisionFour		zcDimPrecisionFour
+#endif //#ifndef acDimPrecisionFour
+
+#ifndef acDimPrecisionOne
+#define acDimPrecisionOne		zcDimPrecisionOne
+#endif //#ifndef acDimPrecisionOne
+
+#ifndef acDimPrecisionSeven
+#define acDimPrecisionSeven		zcDimPrecisionSeven
+#endif //#ifndef acDimPrecisionSeven
+
+#ifndef acDimPrecisionSix
+#define acDimPrecisionSix		zcDimPrecisionSix
+#endif //#ifndef acDimPrecisionSix
+
+#ifndef acDimPrecisionThree
+#define acDimPrecisionThree		zcDimPrecisionThree
+#endif //#ifndef acDimPrecisionThree
+
+#ifndef acDimPrecisionTwo
+#define acDimPrecisionTwo		zcDimPrecisionTwo
+#endif //#ifndef acDimPrecisionTwo
+
+#ifndef acDimPrecisionZero
+#define acDimPrecisionZero		zcDimPrecisionZero
+#endif //#ifndef acDimPrecisionZero
+
+#ifndef acDimRadial
+#define acDimRadial		zcDimRadial
+#endif //#ifndef acDimRadial
+
+#ifndef acDimRadialLarge
+#define acDimRadialLarge		zcDimRadialLarge
+#endif //#ifndef acDimRadialLarge
+
+#ifndef acDimRotated
+#define acDimRotated		zcDimRotated
+#endif //#ifndef acDimRotated
+
+#ifndef acDimScientific
+#define acDimScientific		zcDimScientific
+#endif //#ifndef acDimScientific
+
+#ifndef acDimWindowsDesktop
+#define acDimWindowsDesktop		zcDimWindowsDesktop
+#endif //#ifndef acDimWindowsDesktop
+
+#ifndef acDisplay
+#define acDisplay		zcDisplay
+#endif //#ifndef acDisplay
+
+#ifndef acDisplayDCS
+#define acDisplayDCS		zcDisplayDCS
+#endif //#ifndef acDisplayDCS
+
+#ifndef acDragDisplayAutomatically
+#define acDragDisplayAutomatically		zcDragDisplayAutomatically
+#endif //#ifndef acDragDisplayAutomatically
+
+#ifndef acDragDisplayOnRequest
+#define acDragDisplayOnRequest		zcDragDisplayOnRequest
+#endif //#ifndef acDragDisplayOnRequest
+
+#ifndef acDragDoNotDisplay
+#define acDragDoNotDisplay		zcDragDoNotDisplay
+#endif //#ifndef acDragDoNotDisplay
+
+#ifndef acDutchPrim
+#define acDutchPrim		zcDutchPrim
+#endif //#ifndef acDutchPrim
+
+#ifndef acDutchSec
+#define acDutchSec		zcDutchSec
+#endif //#ifndef acDutchSec
+
+#ifndef acEdRepeatLastCommand
+#define acEdRepeatLastCommand		zcEdRepeatLastCommand
+#endif //#ifndef acEdRepeatLastCommand
+
+#ifndef acEdSCM
+#define acEdSCM		zcEdSCM
+#endif //#ifndef acEdSCM
+
+#ifndef acEllipse
+#define acEllipse		zcEllipse
+#endif //#ifndef acEllipse
+
+#ifndef acEnableSCM
+#define acEnableSCM		zcEnableSCM
+#endif //#ifndef acEnableSCM
+
+#ifndef acEnableSCMOptions
+#define acEnableSCMOptions		zcEnableSCMOptions
+#endif //#ifndef acEnableSCMOptions
+
+#ifndef acEngineering
+#define acEngineering		zcEngineering
+#endif //#ifndef acEngineering
+
+#ifndef acEnglish
+#define acEnglish		zcEnglish
+#endif //#ifndef acEnglish
+
+#ifndef acEnter
+#define acEnter		zcEnter
+#endif //#ifndef acEnter
+
+#ifndef acExtendBoth
+#define acExtendBoth		zcExtendBoth
+#endif //#ifndef acExtendBoth
+
+#ifndef acExtendNone
+#define acExtendNone		zcExtendNone
+#endif //#ifndef acExtendNone
+
+#ifndef acExtendOtherEntity
+#define acExtendOtherEntity		zcExtendOtherEntity
+#endif //#ifndef acExtendOtherEntity
+
+#ifndef acExtendThisEntity
+#define acExtendThisEntity		zcExtendThisEntity
+#endif //#ifndef acExtendThisEntity
+
+#ifndef acExtents
+#define acExtents		zcExtents
+#endif //#ifndef acExtents
+
+#ifndef acExternalReference
+#define acExternalReference		zcExternalReference
+#endif //#ifndef acExternalReference
+
+#ifndef acFalse
+#define acFalse		zcFalse
+#endif //#ifndef acFalse
+
+#ifndef acFinnish
+#define acFinnish		zcFinnish
+#endif //#ifndef acFinnish
+
+#ifndef acFirstExtensionLine
+#define acFirstExtensionLine		zcFirstExtensionLine
+#endif //#ifndef acFirstExtensionLine
+
+#ifndef acFitCurvePoly
+#define acFitCurvePoly		zcFitCurvePoly
+#endif //#ifndef acFitCurvePoly
+
+#ifndef acFlowDirection
+#define acFlowDirection		zcFlowDirection
+#endif //#ifndef acFlowDirection
+
+#ifndef acFontBold
+#define acFontBold		zcFontBold
+#endif //#ifndef acFontBold
+
+#ifndef acFontBoldItalic
+#define acFontBoldItalic		zcFontBoldItalic
+#endif //#ifndef acFontBoldItalic
+
+#ifndef acFontItalic
+#define acFontItalic		zcFontItalic
+#endif //#ifndef acFontItalic
+
+#ifndef acFontRegular
+#define acFontRegular		zcFontRegular
+#endif //#ifndef acFontRegular
+
+#ifndef acFractional
+#define acFractional		zcFractional
+#endif //#ifndef acFractional
+
+#ifndef acFrenchAccentCap
+#define acFrenchAccentCap		zcFrenchAccentCap
+#endif //#ifndef acFrenchAccentCap
+
+#ifndef acFrenchUnaccentCap
+#define acFrenchUnaccentCap		zcFrenchUnaccentCap
+#endif //#ifndef acFrenchUnaccentCap
+
+#ifndef acFullPreview
+#define acFullPreview		zcFullPreview
+#endif //#ifndef acFullPreview
+
+#ifndef acGermanDoppleS
+#define acGermanDoppleS		zcGermanDoppleS
+#endif //#ifndef acGermanDoppleS
+
+#ifndef acGermanScharfesS
+#define acGermanScharfesS		zcGermanScharfesS
+#endif //#ifndef acGermanScharfesS
+
+#ifndef acGradientObject
+#define acGradientObject		zcGradientObject
+#endif //#ifndef acGradientObject
+
+#ifndef acGrads
+#define acGrads		zcGrads
+#endif //#ifndef acGrads
+
+#ifndef acGreen
+#define acGreen		zcGreen
+#endif //#ifndef acGreen
+
+#ifndef acGroup
+#define acGroup		zcGroup
+#endif //#ifndef acGroup
+
+#ifndef acHatch
+#define acHatch		zcHatch
+#endif //#ifndef acHatch
+
+#ifndef acHatchLoopTypeDefault
+#define acHatchLoopTypeDefault		zcHatchLoopTypeDefault
+#endif //#ifndef acHatchLoopTypeDefault
+
+#ifndef acHatchLoopTypeDerived
+#define acHatchLoopTypeDerived		zcHatchLoopTypeDerived
+#endif //#ifndef acHatchLoopTypeDerived
+
+#ifndef acHatchLoopTypeExternal
+#define acHatchLoopTypeExternal		zcHatchLoopTypeExternal
+#endif //#ifndef acHatchLoopTypeExternal
+
+#ifndef acHatchLoopTypePolyline
+#define acHatchLoopTypePolyline		zcHatchLoopTypePolyline
+#endif //#ifndef acHatchLoopTypePolyline
+
+#ifndef acHatchLoopTypeTextbox
+#define acHatchLoopTypeTextbox		zcHatchLoopTypeTextbox
+#endif //#ifndef acHatchLoopTypeTextbox
+
+#ifndef acHatchObject
+#define acHatchObject		zcHatchObject
+#endif //#ifndef acHatchObject
+
+#ifndef acHatchPatternTypeCustomDefined
+#define acHatchPatternTypeCustomDefined		zcHatchPatternTypeCustomDefined
+#endif //#ifndef acHatchPatternTypeCustomDefined
+
+#ifndef acHatchPatternTypePreDefined
+#define acHatchPatternTypePreDefined		zcHatchPatternTypePreDefined
+#endif //#ifndef acHatchPatternTypePreDefined
+
+#ifndef acHatchPatternTypeUserDefined
+#define acHatchPatternTypeUserDefined		zcHatchPatternTypeUserDefined
+#endif //#ifndef acHatchPatternTypeUserDefined
+
+#ifndef acHatchStyleIgnore
+#define acHatchStyleIgnore		zcHatchStyleIgnore
+#endif //#ifndef acHatchStyleIgnore
+
+#ifndef acHatchStyleNormal
+#define acHatchStyleNormal		zcHatchStyleNormal
+#endif //#ifndef acHatchStyleNormal
+
+#ifndef acHatchStyleOuter
+#define acHatchStyleOuter		zcHatchStyleOuter
+#endif //#ifndef acHatchStyleOuter
+
+#ifndef acHeaderHorzBottomColor
+#define acHeaderHorzBottomColor		zcHeaderHorzBottomColor
+#endif //#ifndef acHeaderHorzBottomColor
+
+#ifndef acHeaderHorzBottomLineWeight
+#define acHeaderHorzBottomLineWeight		zcHeaderHorzBottomLineWeight
+#endif //#ifndef acHeaderHorzBottomLineWeight
+
+#ifndef acHeaderHorzBottomVisibility
+#define acHeaderHorzBottomVisibility		zcHeaderHorzBottomVisibility
+#endif //#ifndef acHeaderHorzBottomVisibility
+
+#ifndef acHeaderHorzInsideColor
+#define acHeaderHorzInsideColor		zcHeaderHorzInsideColor
+#endif //#ifndef acHeaderHorzInsideColor
+
+#ifndef acHeaderHorzInsideLineWeight
+#define acHeaderHorzInsideLineWeight		zcHeaderHorzInsideLineWeight
+#endif //#ifndef acHeaderHorzInsideLineWeight
+
+#ifndef acHeaderHorzInsideVisibility
+#define acHeaderHorzInsideVisibility		zcHeaderHorzInsideVisibility
+#endif //#ifndef acHeaderHorzInsideVisibility
+
+#ifndef acHeaderHorzTopColor
+#define acHeaderHorzTopColor		zcHeaderHorzTopColor
+#endif //#ifndef acHeaderHorzTopColor
+
+#ifndef acHeaderHorzTopLineWeight
+#define acHeaderHorzTopLineWeight		zcHeaderHorzTopLineWeight
+#endif //#ifndef acHeaderHorzTopLineWeight
+
+#ifndef acHeaderHorzTopVisibility
+#define acHeaderHorzTopVisibility		zcHeaderHorzTopVisibility
+#endif //#ifndef acHeaderHorzTopVisibility
+
+#ifndef acHeaderRow
+#define acHeaderRow		zcHeaderRow
+#endif //#ifndef acHeaderRow
+
+#ifndef acHeaderRowAlignment
+#define acHeaderRowAlignment		zcHeaderRowAlignment
+#endif //#ifndef acHeaderRowAlignment
+
+#ifndef acHeaderRowColor
+#define acHeaderRowColor		zcHeaderRowColor
+#endif //#ifndef acHeaderRowColor
+
+#ifndef acHeaderRowFillColor
+#define acHeaderRowFillColor		zcHeaderRowFillColor
+#endif //#ifndef acHeaderRowFillColor
+
+#ifndef acHeaderRowFillNone
+#define acHeaderRowFillNone		zcHeaderRowFillNone
+#endif //#ifndef acHeaderRowFillNone
+
+#ifndef acHeaderRowTextHeight
+#define acHeaderRowTextHeight		zcHeaderRowTextHeight
+#endif //#ifndef acHeaderRowTextHeight
+
+#ifndef acHeaderRowTextStyle
+#define acHeaderRowTextStyle		zcHeaderRowTextStyle
+#endif //#ifndef acHeaderRowTextStyle
+
+#ifndef acHeaderSuppressed
+#define acHeaderSuppressed		zcHeaderSuppressed
+#endif //#ifndef acHeaderSuppressed
+
+#ifndef acHeaderVertInsideColor
+#define acHeaderVertInsideColor		zcHeaderVertInsideColor
+#endif //#ifndef acHeaderVertInsideColor
+
+#ifndef acHeaderVertInsideLineWeight
+#define acHeaderVertInsideLineWeight		zcHeaderVertInsideLineWeight
+#endif //#ifndef acHeaderVertInsideLineWeight
+
+#ifndef acHeaderVertInsideVisibility
+#define acHeaderVertInsideVisibility		zcHeaderVertInsideVisibility
+#endif //#ifndef acHeaderVertInsideVisibility
+
+#ifndef acHeaderVertLeftColor
+#define acHeaderVertLeftColor		zcHeaderVertLeftColor
+#endif //#ifndef acHeaderVertLeftColor
+
+#ifndef acHeaderVertLeftLineWeight
+#define acHeaderVertLeftLineWeight		zcHeaderVertLeftLineWeight
+#endif //#ifndef acHeaderVertLeftLineWeight
+
+#ifndef acHeaderVertLeftVisibility
+#define acHeaderVertLeftVisibility		zcHeaderVertLeftVisibility
+#endif //#ifndef acHeaderVertLeftVisibility
+
+#ifndef acHeaderVertRightColor
+#define acHeaderVertRightColor		zcHeaderVertRightColor
+#endif //#ifndef acHeaderVertRightColor
+
+#ifndef acHeaderVertRightLineWeight
+#define acHeaderVertRightLineWeight		zcHeaderVertRightLineWeight
+#endif //#ifndef acHeaderVertRightLineWeight
+
+#ifndef acHeaderVertRightVisibility
+#define acHeaderVertRightVisibility		zcHeaderVertRightVisibility
+#endif //#ifndef acHeaderVertRightVisibility
+
+#ifndef acHorizontal
+#define acHorizontal		zcHorizontal
+#endif //#ifndef acHorizontal
+
+#ifndef acHorizontalAlignmentAligned
+#define acHorizontalAlignmentAligned		zcHorizontalAlignmentAligned
+#endif //#ifndef acHorizontalAlignmentAligned
+
+#ifndef acHorizontalAlignmentCenter
+#define acHorizontalAlignmentCenter		zcHorizontalAlignmentCenter
+#endif //#ifndef acHorizontalAlignmentCenter
+
+#ifndef acHorizontalAlignmentFit
+#define acHorizontalAlignmentFit		zcHorizontalAlignmentFit
+#endif //#ifndef acHorizontalAlignmentFit
+
+#ifndef acHorizontalAlignmentLeft
+#define acHorizontalAlignmentLeft		zcHorizontalAlignmentLeft
+#endif //#ifndef acHorizontalAlignmentLeft
+
+#ifndef acHorizontalAlignmentMiddle
+#define acHorizontalAlignmentMiddle		zcHorizontalAlignmentMiddle
+#endif //#ifndef acHorizontalAlignmentMiddle
+
+#ifndef acHorizontalAlignmentRight
+#define acHorizontalAlignmentRight		zcHorizontalAlignmentRight
+#endif //#ifndef acHorizontalAlignmentRight
+
+#ifndef acHorzBottom
+#define acHorzBottom		zcHorzBottom
+#endif //#ifndef acHorzBottom
+
+#ifndef acHorzCellMargin
+#define acHorzCellMargin		zcHorzCellMargin
+#endif //#ifndef acHorzCellMargin
+
+#ifndef acHorzCentered
+#define acHorzCentered		zcHorzCentered
+#endif //#ifndef acHorzCentered
+
+#ifndef acHorzInside
+#define acHorzInside		zcHorzInside
+#endif //#ifndef acHorzInside
+
+#ifndef acHorzTop
+#define acHorzTop		zcHorzTop
+#endif //#ifndef acHorzTop
+
+#ifndef acInches
+#define acInches		zcInches
+#endif //#ifndef acInches
+
+#ifndef acInsertUnitsAngstroms
+#define acInsertUnitsAngstroms		zcInsertUnitsAngstroms
+#endif //#ifndef acInsertUnitsAngstroms
+
+#ifndef acInsertUnitsAstronomicalUnits
+#define acInsertUnitsAstronomicalUnits		zcInsertUnitsAstronomicalUnits
+#endif //#ifndef acInsertUnitsAstronomicalUnits
+
+#ifndef acInsertUnitsAutoAssign
+#define acInsertUnitsAutoAssign		zcInsertUnitsAutoAssign
+#endif //#ifndef acInsertUnitsAutoAssign
+
+#ifndef acInsertUnitsCentimeters
+#define acInsertUnitsCentimeters		zcInsertUnitsCentimeters
+#endif //#ifndef acInsertUnitsCentimeters
+
+#ifndef acInsertUnitsDecameters
+#define acInsertUnitsDecameters		zcInsertUnitsDecameters
+#endif //#ifndef acInsertUnitsDecameters
+
+#ifndef acInsertUnitsDecimeters
+#define acInsertUnitsDecimeters		zcInsertUnitsDecimeters
+#endif //#ifndef acInsertUnitsDecimeters
+
+#ifndef acInsertUnitsFeet
+#define acInsertUnitsFeet		zcInsertUnitsFeet
+#endif //#ifndef acInsertUnitsFeet
+
+#ifndef acInsertUnitsGigameters
+#define acInsertUnitsGigameters		zcInsertUnitsGigameters
+#endif //#ifndef acInsertUnitsGigameters
+
+#ifndef acInsertUnitsHectometers
+#define acInsertUnitsHectometers		zcInsertUnitsHectometers
+#endif //#ifndef acInsertUnitsHectometers
+
+#ifndef acInsertUnitsInches
+#define acInsertUnitsInches		zcInsertUnitsInches
+#endif //#ifndef acInsertUnitsInches
+
+#ifndef acInsertUnitsKilometers
+#define acInsertUnitsKilometers		zcInsertUnitsKilometers
+#endif //#ifndef acInsertUnitsKilometers
+
+#ifndef acInsertUnitsLightYears
+#define acInsertUnitsLightYears		zcInsertUnitsLightYears
+#endif //#ifndef acInsertUnitsLightYears
+
+#ifndef acInsertUnitsMeters
+#define acInsertUnitsMeters		zcInsertUnitsMeters
+#endif //#ifndef acInsertUnitsMeters
+
+#ifndef acInsertUnitsMicroinches
+#define acInsertUnitsMicroinches		zcInsertUnitsMicroinches
+#endif //#ifndef acInsertUnitsMicroinches
+
+#ifndef acInsertUnitsMicrons
+#define acInsertUnitsMicrons		zcInsertUnitsMicrons
+#endif //#ifndef acInsertUnitsMicrons
+
+#ifndef acInsertUnitsMiles
+#define acInsertUnitsMiles		zcInsertUnitsMiles
+#endif //#ifndef acInsertUnitsMiles
+
+#ifndef acInsertUnitsMillimeters
+#define acInsertUnitsMillimeters		zcInsertUnitsMillimeters
+#endif //#ifndef acInsertUnitsMillimeters
+
+#ifndef acInsertUnitsMils
+#define acInsertUnitsMils		zcInsertUnitsMils
+#endif //#ifndef acInsertUnitsMils
+
+#ifndef acInsertUnitsNanometers
+#define acInsertUnitsNanometers		zcInsertUnitsNanometers
+#endif //#ifndef acInsertUnitsNanometers
+
+#ifndef acInsertUnitsParsecs
+#define acInsertUnitsParsecs		zcInsertUnitsParsecs
+#endif //#ifndef acInsertUnitsParsecs
+
+#ifndef acInsertUnitsPrompt
+#define acInsertUnitsPrompt		zcInsertUnitsPrompt
+#endif //#ifndef acInsertUnitsPrompt
+
+#ifndef acInsertUnitsUnitless
+#define acInsertUnitsUnitless		zcInsertUnitsUnitless
+#endif //#ifndef acInsertUnitsUnitless
+
+#ifndef acInsertUnitsYards
+#define acInsertUnitsYards		zcInsertUnitsYards
+#endif //#ifndef acInsertUnitsYards
+
+#ifndef acIntersection
+#define acIntersection		zcIntersection
+#endif //#ifndef acIntersection
+
+#ifndef acInvalidGridLine
+#define acInvalidGridLine		zcInvalidGridLine
+#endif //#ifndef acInvalidGridLine
+
+#ifndef acItalian
+#define acItalian		zcItalian
+#endif //#ifndef acItalian
+
+#ifndef acJIS
+#define acJIS		zcJIS
+#endif //#ifndef acJIS
+
+#ifndef acUnder
+#define acUnder		zcUnder
+#endif //#ifndef acUnder
+
+#ifndef acKeyboardEntry
+#define acKeyboardEntry		zcKeyboardEntry
+#endif //#ifndef acKeyboardEntry
+
+#ifndef acKeyboardEntryExceptScripts
+#define acKeyboardEntryExceptScripts		zcKeyboardEntryExceptScripts
+#endif //#ifndef acKeyboardEntryExceptScripts
+
+#ifndef acKeyboardRunningObjSnap
+#define acKeyboardRunningObjSnap		zcKeyboardRunningObjSnap
+#endif //#ifndef acKeyboardRunningObjSnap
+
+#ifndef acLayout
+#define acLayout		zcLayout
+#endif //#ifndef acLayout
+
+#ifndef acLeader
+#define acLeader		zcLeader
+#endif //#ifndef acLeader
+
+#ifndef acLeftMask
+#define acLeftMask		zcLeftMask
+#endif //#ifndef acLeftMask
+
+#ifndef acLeftToRight
+#define acLeftToRight		zcLeftToRight
+#endif //#ifndef acLeftToRight
+
+#ifndef acLimits
+#define acLimits		zcLimits
+#endif //#ifndef acLimits
+
+#ifndef acLine
+#define acLine		zcLine
+#endif //#ifndef acLine
+
+#ifndef acLineNoArrow
+#define acLineNoArrow		zcLineNoArrow
+#endif //#ifndef acLineNoArrow
+
+#ifndef acLineSpacingStyleAtLeast
+#define acLineSpacingStyleAtLeast		zcLineSpacingStyleAtLeast
+#endif //#ifndef acLineSpacingStyleAtLeast
+
+#ifndef acLineSpacingStyleExactly
+#define acLineSpacingStyleExactly		zcLineSpacingStyleExactly
+#endif //#ifndef acLineSpacingStyleExactly
+
+#ifndef acLineWithArrow
+#define acLineWithArrow		zcLineWithArrow
+#endif //#ifndef acLineWithArrow
+
+#ifndef acLnWt000
+#define acLnWt000		zcLnWt000
+#endif //#ifndef acLnWt000
+
+#ifndef acLnWt005
+#define acLnWt005		zcLnWt005
+#endif //#ifndef acLnWt005
+
+#ifndef acLnWt009
+#define acLnWt009		zcLnWt009
+#endif //#ifndef acLnWt009
+
+#ifndef acLnWt013
+#define acLnWt013		zcLnWt013
+#endif //#ifndef acLnWt013
+
+#ifndef acLnWt015
+#define acLnWt015		zcLnWt015
+#endif //#ifndef acLnWt015
+
+#ifndef acLnWt018
+#define acLnWt018		zcLnWt018
+#endif //#ifndef acLnWt018
+
+#ifndef acLnWt020
+#define acLnWt020		zcLnWt020
+#endif //#ifndef acLnWt020
+
+#ifndef acLnWt025
+#define acLnWt025		zcLnWt025
+#endif //#ifndef acLnWt025
+
+#ifndef acLnWt030
+#define acLnWt030		zcLnWt030
+#endif //#ifndef acLnWt030
+
+#ifndef acLnWt035
+#define acLnWt035		zcLnWt035
+#endif //#ifndef acLnWt035
+
+#ifndef acLnWt040
+#define acLnWt040		zcLnWt040
+#endif //#ifndef acLnWt040
+
+#ifndef acLnWt050
+#define acLnWt050		zcLnWt050
+#endif //#ifndef acLnWt050
+
+#ifndef acLnWt053
+#define acLnWt053		zcLnWt053
+#endif //#ifndef acLnWt053
+
+#ifndef acLnWt060
+#define acLnWt060		zcLnWt060
+#endif //#ifndef acLnWt060
+
+#ifndef acLnWt070
+#define acLnWt070		zcLnWt070
+#endif //#ifndef acLnWt070
+
+#ifndef acLnWt080
+#define acLnWt080		zcLnWt080
+#endif //#ifndef acLnWt080
+
+#ifndef acLnWt090
+#define acLnWt090		zcLnWt090
+#endif //#ifndef acLnWt090
+
+#ifndef acLnWt100
+#define acLnWt100		zcLnWt100
+#endif //#ifndef acLnWt100
+
+#ifndef acLnWt106
+#define acLnWt106		zcLnWt106
+#endif //#ifndef acLnWt106
+
+#ifndef acLnWt120
+#define acLnWt120		zcLnWt120
+#endif //#ifndef acLnWt120
+
+#ifndef acLnWt140
+#define acLnWt140		zcLnWt140
+#endif //#ifndef acLnWt140
+
+#ifndef acLnWt158
+#define acLnWt158		zcLnWt158
+#endif //#ifndef acLnWt158
+
+#ifndef acLnWt200
+#define acLnWt200		zcLnWt200
+#endif //#ifndef acLnWt200
+
+#ifndef acLnWt211
+#define acLnWt211		zcLnWt211
+#endif //#ifndef acLnWt211
+
+#ifndef acLnWtByBlock
+#define acLnWtByBlock		zcLnWtByBlock
+#endif //#ifndef acLnWtByBlock
+
+#ifndef acLnWtByLayer
+#define acLnWtByLayer		zcLnWtByLayer
+#endif //#ifndef acLnWtByLayer
+
+#ifndef acLnWtByLwDefault
+#define acLnWtByLwDefault		zcLnWtByLwDefault
+#endif //#ifndef acLnWtByLwDefault
+
+#ifndef acLsAll
+#define acLsAll		zcLsAll
+#endif //#ifndef acLsAll
+
+#ifndef acLsColor
+#define acLsColor		zcLsColor
+#endif //#ifndef acLsColor
+
+#ifndef acLsFrozen
+#define acLsFrozen		zcLsFrozen
+#endif //#ifndef acLsFrozen
+
+#ifndef acLsLineType
+#define acLsLineType		zcLsLineType
+#endif //#ifndef acLsLineType
+
+#ifndef acLsLineWeight
+#define acLsLineWeight		zcLsLineWeight
+#endif //#ifndef acLsLineWeight
+
+#ifndef acLsLocked
+#define acLsLocked		zcLsLocked
+#endif //#ifndef acLsLocked
+
+#ifndef acLsNewViewport
+#define acLsNewViewport		zcLsNewViewport
+#endif //#ifndef acLsNewViewport
+
+#ifndef acLsNone
+#define acLsNone		zcLsNone
+#endif //#ifndef acLsNone
+
+#ifndef acLsOn
+#define acLsOn		zcLsOn
+#endif //#ifndef acLsOn
+
+#ifndef acLsPlot
+#define acLsPlot		zcLsPlot
+#endif //#ifndef acLsPlot
+
+#ifndef acLsPlotStyle
+#define acLsPlotStyle		zcLsPlotStyle
+#endif //#ifndef acLsPlotStyle
+
+#ifndef acMInsertBlock
+#define acMInsertBlock		zcMInsertBlock
+#endif //#ifndef acMInsertBlock
+
+#ifndef acMLine
+#define acMLine		zcMLine
+#endif //#ifndef acMLine
+
+#ifndef acMagenta
+#define acMagenta		zcMagenta
+#endif //#ifndef acMagenta
+
+#ifndef acMax
+#define acMax		zcMax
+#endif //#ifndef acMax
+
+#ifndef acMenuFileCompiled
+#define acMenuFileCompiled		zcMenuFileCompiled
+#endif //#ifndef acMenuFileCompiled
+
+#ifndef acMenuFileSource
+#define acMenuFileSource		zcMenuFileSource
+#endif //#ifndef acMenuFileSource
+
+#ifndef acMenuItem
+#define acMenuItem		zcMenuItem
+#endif //#ifndef acMenuItem
+
+#ifndef acMenuSeparator
+#define acMenuSeparator		zcMenuSeparator
+#endif //#ifndef acMenuSeparator
+
+#ifndef acMenuSubMenu
+#define acMenuSubMenu		zcMenuSubMenu
+#endif //#ifndef acMenuSubMenu
+
+#ifndef acMetric
+#define acMetric		zcMetric
+#endif //#ifndef acMetric
+
+#ifndef acMiddleCenter
+#define acMiddleCenter		zcMiddleCenter
+#endif //#ifndef acMiddleCenter
+
+#ifndef acMiddleLeft
+#define acMiddleLeft		zcMiddleLeft
+#endif //#ifndef acMiddleLeft
+
+#ifndef acMiddleRight
+#define acMiddleRight		zcMiddleRight
+#endif //#ifndef acMiddleRight
+
+#ifndef acMillimeters
+#define acMillimeters		zcMillimeters
+#endif //#ifndef acMillimeters
+
+#ifndef acMin
+#define acMin		zcMin
+#endif //#ifndef acMin
+
+#ifndef acModelSpace
+#define acModelSpace		zcModelSpace
+#endif //#ifndef acModelSpace
+
+#ifndef acMoveTextAddLeader
+#define acMoveTextAddLeader		zcMoveTextAddLeader
+#endif //#ifndef acMoveTextAddLeader
+
+#ifndef acMoveTextNoLeader
+#define acMoveTextNoLeader		zcMoveTextNoLeader
+#endif //#ifndef acMoveTextNoLeader
+
+#ifndef acMtext
+#define acMtext		zcMtext
+#endif //#ifndef acMtext
+
+#ifndef acNative
+#define acNative		zcNative
+#endif //#ifndef acNative
+
+#ifndef acNoDrawingAreaShortCutMenu
+#define acNoDrawingAreaShortCutMenu		zcNoDrawingAreaShortCutMenu
+#endif //#ifndef acNoDrawingAreaShortCutMenu
+
+#ifndef acNorm
+#define acNorm		zcNorm
+#endif //#ifndef acNorm
+
+#ifndef acNorwegianBokmal
+#define acNorwegianBokmal		zcNorwegianBokmal
+#endif //#ifndef acNorwegianBokmal
+
+#ifndef acNorwegianNynorsk
+#define acNorwegianNynorsk		zcNorwegianNynorsk
+#endif //#ifndef acNorwegianNynorsk
+
+#ifndef acNotStacked
+#define acNotStacked		zcNotStacked
+#endif //#ifndef acNotStacked
+
+#ifndef acOCS
+#define acOCS		zcOCS
+#endif //#ifndef acOCS
+
+#ifndef acOPQHighGraphics
+#define acOPQHighGraphics		zcOPQHighGraphics
+#endif //#ifndef acOPQHighGraphics
+
+#ifndef acOPQLowGraphics
+#define acOPQLowGraphics		zcOPQLowGraphics
+#endif //#ifndef acOPQLowGraphics
+
+#ifndef acOPQMonochrome
+#define acOPQMonochrome		zcOPQMonochrome
+#endif //#ifndef acOPQMonochrome
+
+#ifndef acOQGraphics
+#define acOQGraphics		zcOQGraphics
+#endif //#ifndef acOQGraphics
+
+#ifndef acOQHighPhoto
+#define acOQHighPhoto		zcOQHighPhoto
+#endif //#ifndef acOQHighPhoto
+
+#ifndef acOQLineArt
+#define acOQLineArt		zcOQLineArt
+#endif //#ifndef acOQLineArt
+
+#ifndef acOQPhoto
+#define acOQPhoto		zcOQPhoto
+#endif //#ifndef acOQPhoto
+
+#ifndef acOQText
+#define acOQText		zcOQText
+#endif //#ifndef acOQText
+
+#ifndef acOTEmbedded
+#define acOTEmbedded		zcOTEmbedded
+#endif //#ifndef acOTEmbedded
+
+#ifndef acOTLink
+#define acOTLink		zcOTLink
+#endif //#ifndef acOTLink
+
+#ifndef acOTStatic
+#define acOTStatic		zcOTStatic
+#endif //#ifndef acOTStatic
+
+#ifndef acOff
+#define acOff		zcOff
+#endif //#ifndef acOff
+
+#ifndef acOn
+#define acOn		zcOn
+#endif //#ifndef acOn
+
+#ifndef acOutside
+#define acOutside		zcOutside
+#endif //#ifndef acOutside
+
+#ifndef acOverFirstExtension
+#define acOverFirstExtension		zcOverFirstExtension
+#endif //#ifndef acOverFirstExtension
+
+#ifndef acOverSecondExtension
+#define acOverSecondExtension		zcOverSecondExtension
+#endif //#ifndef acOverSecondExtension
+
+#ifndef acPViewport
+#define acPViewport		zcPViewport
+#endif //#ifndef acPViewport
+
+#ifndef acPaletteByDrawing
+#define acPaletteByDrawing		zcPaletteByDrawing
+#endif //#ifndef acPaletteByDrawing
+
+#ifndef acPaletteBySession
+#define acPaletteBySession		zcPaletteBySession
+#endif //#ifndef acPaletteBySession
+
+#ifndef acPaperSpace
+#define acPaperSpace		zcPaperSpace
+#endif //#ifndef acPaperSpace
+
+#ifndef acPaperSpaceDCS
+#define acPaperSpaceDCS		zcPaperSpaceDCS
+#endif //#ifndef acPaperSpaceDCS
+
+#ifndef acPartialMenuGroup
+#define acPartialMenuGroup		zcPartialMenuGroup
+#endif //#ifndef acPartialMenuGroup
+
+#ifndef acPartialPreview
+#define acPartialPreview		zcPartialPreview
+#endif //#ifndef acPartialPreview
+
+#ifndef acPenWidth013
+#define acPenWidth013		zcPenWidth013
+#endif //#ifndef acPenWidth013
+
+#ifndef acPenWidth018
+#define acPenWidth018		zcPenWidth018
+#endif //#ifndef acPenWidth018
+
+#ifndef acPenWidth025
+#define acPenWidth025		zcPenWidth025
+#endif //#ifndef acPenWidth025
+
+#ifndef acPenWidth035
+#define acPenWidth035		zcPenWidth035
+#endif //#ifndef acPenWidth035
+
+#ifndef acPenWidth050
+#define acPenWidth050		zcPenWidth050
+#endif //#ifndef acPenWidth050
+
+#ifndef acPenWidth070
+#define acPenWidth070		zcPenWidth070
+#endif //#ifndef acPenWidth070
+
+#ifndef acPenWidth100
+#define acPenWidth100		zcPenWidth100
+#endif //#ifndef acPenWidth100
+
+#ifndef acPenWidth140
+#define acPenWidth140		zcPenWidth140
+#endif //#ifndef acPenWidth140
+
+#ifndef acPenWidth200
+#define acPenWidth200		zcPenWidth200
+#endif //#ifndef acPenWidth200
+
+#ifndef acPenWidthUnk
+#define acPenWidthUnk		zcPenWidthUnk
+#endif //#ifndef acPenWidthUnk
+
+#ifndef acPixels
+#define acPixels		zcPixels
+#endif //#ifndef acPixels
+
+#ifndef acPlotOrientationLandscape
+#define acPlotOrientationLandscape		zcPlotOrientationLandscape
+#endif //#ifndef acPlotOrientationLandscape
+
+#ifndef acPlotOrientationPortrait
+#define acPlotOrientationPortrait		zcPlotOrientationPortrait
+#endif //#ifndef acPlotOrientationPortrait
+
+#ifndef acPoint
+#define acPoint		zcPoint
+#endif //#ifndef acPoint
+
+#ifndef acPolicyLegacy
+#define acPolicyLegacy		zcPolicyLegacy
+#endif //#ifndef acPolicyLegacy
+
+#ifndef acPolicyLegacyDefault
+#define acPolicyLegacyDefault		zcPolicyLegacyDefault
+#endif //#ifndef acPolicyLegacyDefault
+
+#ifndef acPolicyLegacyLegacy
+#define acPolicyLegacyLegacy		zcPolicyLegacyLegacy
+#endif //#ifndef acPolicyLegacyLegacy
+
+#ifndef acPolicyLegacyQuery
+#define acPolicyLegacyQuery		zcPolicyLegacyQuery
+#endif //#ifndef acPolicyLegacyQuery
+
+#ifndef acPolicyNamed
+#define acPolicyNamed		zcPolicyNamed
+#endif //#ifndef acPolicyNamed
+
+#ifndef acPolicyNewDefault
+#define acPolicyNewDefault		zcPolicyNewDefault
+#endif //#ifndef acPolicyNewDefault
+
+#ifndef acPolicyNewLegacy
+#define acPolicyNewLegacy		zcPolicyNewLegacy
+#endif //#ifndef acPolicyNewLegacy
+
+#ifndef acPolyfaceMesh
+#define acPolyfaceMesh		zcPolyfaceMesh
+#endif //#ifndef acPolyfaceMesh
+
+#ifndef acPolyline
+#define acPolyline		zcPolyline
+#endif //#ifndef acPolyline
+
+#ifndef acPolylineLight
+#define acPolylineLight		zcPolylineLight
+#endif //#ifndef acPolylineLight
+
+#ifndef acPolymesh
+#define acPolymesh		zcPolymesh
+#endif //#ifndef acPolymesh
+
+#ifndef acPortugueseBrazilian
+#define acPortugueseBrazilian		zcPortugueseBrazilian
+#endif //#ifndef acPortugueseBrazilian
+
+#ifndef acPortugueseIberian
+#define acPortugueseIberian		zcPortugueseIberian
+#endif //#ifndef acPortugueseIberian
+
+#ifndef acPreDefinedGradient
+#define acPreDefinedGradient		zcPreDefinedGradient
+#endif //#ifndef acPreDefinedGradient
+
+#ifndef acPreferenceClassic
+#define acPreferenceClassic		zcPreferenceClassic
+#endif //#ifndef acPreferenceClassic
+
+#ifndef acPreferenceCustom
+#define acPreferenceCustom		zcPreferenceCustom
+#endif //#ifndef acPreferenceCustom
+
+#ifndef acPrinterAlertOnce
+#define acPrinterAlertOnce		zcPrinterAlertOnce
+#endif //#ifndef acPrinterAlertOnce
+
+#ifndef acPrinterAlwaysAlert
+#define acPrinterAlwaysAlert		zcPrinterAlwaysAlert
+#endif //#ifndef acPrinterAlwaysAlert
+
+#ifndef acPrinterNeverAlert
+#define acPrinterNeverAlert		zcPrinterNeverAlert
+#endif //#ifndef acPrinterNeverAlert
+
+#ifndef acPrinterNeverAlertLogOnce
+#define acPrinterNeverAlertLogOnce		zcPrinterNeverAlertLogOnce
+#endif //#ifndef acPrinterNeverAlertLogOnce
+
+#ifndef acProxyBoundingBox
+#define acProxyBoundingBox		zcProxyBoundingBox
+#endif //#ifndef acProxyBoundingBox
+
+#ifndef acProxyNotShow
+#define acProxyNotShow		zcProxyNotShow
+#endif //#ifndef acProxyNotShow
+
+#ifndef acProxyShow
+#define acProxyShow		zcProxyShow
+#endif //#ifndef acProxyShow
+
+#ifndef acQuadSpline3DPoly
+#define acQuadSpline3DPoly		zcQuadSpline3DPoly
+#endif //#ifndef acQuadSpline3DPoly
+
+#ifndef acQuadSplinePoly
+#define acQuadSplinePoly		zcQuadSplinePoly
+#endif //#ifndef acQuadSplinePoly
+
+#ifndef acQuadSurfaceMesh
+#define acQuadSurfaceMesh		zcQuadSurfaceMesh
+#endif //#ifndef acQuadSurfaceMesh
+
+#ifndef acR12_dxf
+#define acR12_dxf		zcR12_dxf
+#endif //#ifndef acR12_dxf
+
+#ifndef acR13_dwg
+#define acR13_dwg		zcR13_dwg
+#endif //#ifndef acR13_dwg
+
+#ifndef acR13_dxf
+#define acR13_dxf		zcR13_dxf
+#endif //#ifndef acR13_dxf
+
+#ifndef acR14_dwg
+#define acR14_dwg		zcR14_dwg
+#endif //#ifndef acR14_dwg
+
+#ifndef acR14_dxf
+#define acR14_dxf		zcR14_dxf
+#endif //#ifndef acR14_dxf
+
+#ifndef acR15_Template
+#define acR15_Template		zcR15_Template
+#endif //#ifndef acR15_Template
+
+#ifndef acR15_dwg
+#define acR15_dwg		zcR15_dwg
+#endif //#ifndef acR15_dwg
+
+#ifndef acR15_dxf
+#define acR15_dxf		zcR15_dxf
+#endif //#ifndef acR15_dxf
+
+#ifndef acR18_Template
+#define acR18_Template		zcR18_Template
+#endif //#ifndef acR18_Template
+
+#ifndef acR18_dwg
+#define acR18_dwg		zcR18_dwg
+#endif //#ifndef acR18_dwg
+
+#ifndef acR18_dxf
+#define acR18_dxf		zcR18_dxf
+#endif //#ifndef acR18_dxf
+
+#ifndef acRadians
+#define acRadians		zcRadians
+#endif //#ifndef acRadians
+
+#ifndef acRaster
+#define acRaster		zcRaster
+#endif //#ifndef acRaster
+
+#ifndef acRay
+#define acRay		zcRay
+#endif //#ifndef acRay
+
+#ifndef acRed
+#define acRed		zcRed
+#endif //#ifndef acRed
+
+#ifndef acRegion
+#define acRegion		zcRegion
+#endif //#ifndef acRegion
+
+#ifndef acRepeatLastCommand
+#define acRepeatLastCommand		zcRepeatLastCommand
+#endif //#ifndef acRepeatLastCommand
+
+#ifndef acRightMask
+#define acRightMask		zcRightMask
+#endif //#ifndef acRightMask
+
+#ifndef acRightToLeft
+#define acRightToLeft		zcRightToLeft
+#endif //#ifndef acRightToLeft
+
+#ifndef acRussianFrequentIo
+#define acRussianFrequentIo		zcRussianFrequentIo
+#endif //#ifndef acRussianFrequentIo
+
+#ifndef acRussianInfrequentIo
+#define acRussianInfrequentIo		zcRussianInfrequentIo
+#endif //#ifndef acRussianInfrequentIo
+
+#ifndef acSCM
+#define acSCM		zcSCM
+#endif //#ifndef acSCM
+
+#ifndef acScaleToFit
+#define acScaleToFit		zcScaleToFit
+#endif //#ifndef acScaleToFit
+
+#ifndef acScientific
+#define acScientific		zcScientific
+#endif //#ifndef acScientific
+
+#ifndef acSecondExtensionLine
+#define acSecondExtensionLine		zcSecondExtensionLine
+#endif //#ifndef acSecondExtensionLine
+
+#ifndef acSelectionSetAll
+#define acSelectionSetAll		zcSelectionSetAll
+#endif //#ifndef acSelectionSetAll
+
+#ifndef acSelectionSetCrossing
+#define acSelectionSetCrossing		zcSelectionSetCrossing
+#endif //#ifndef acSelectionSetCrossing
+
+#ifndef acSelectionSetCrossingPolygon
+#define acSelectionSetCrossingPolygon		zcSelectionSetCrossingPolygon
+#endif //#ifndef acSelectionSetCrossingPolygon
+
+#ifndef acSelectionSetFence
+#define acSelectionSetFence		zcSelectionSetFence
+#endif //#ifndef acSelectionSetFence
+
+#ifndef acSelectionSetLast
+#define acSelectionSetLast		zcSelectionSetLast
+#endif //#ifndef acSelectionSetLast
+
+#ifndef acSelectionSetPrevious
+#define acSelectionSetPrevious		zcSelectionSetPrevious
+#endif //#ifndef acSelectionSetPrevious
+
+#ifndef acSelectionSetWindow
+#define acSelectionSetWindow		zcSelectionSetWindow
+#endif //#ifndef acSelectionSetWindow
+
+#ifndef acSelectionSetWindowPolygon
+#define acSelectionSetWindowPolygon		zcSelectionSetWindowPolygon
+#endif //#ifndef acSelectionSetWindowPolygon
+
+#ifndef acShadePlotAsDisplayed
+#define acShadePlotAsDisplayed		zcShadePlotAsDisplayed
+#endif //#ifndef acShadePlotAsDisplayed
+
+#ifndef acShadePlotHidden
+#define acShadePlotHidden		zcShadePlotHidden
+#endif //#ifndef acShadePlotHidden
+
+#ifndef acShadePlotRendered
+#define acShadePlotRendered		zcShadePlotRendered
+#endif //#ifndef acShadePlotRendered
+
+#ifndef acShadePlotWireframe
+#define acShadePlotWireframe		zcShadePlotWireframe
+#endif //#ifndef acShadePlotWireframe
+
+#ifndef acShape
+#define acShape		zcShape
+#endif //#ifndef acShape
+
+#ifndef acSimple3DPoly
+#define acSimple3DPoly		zcSimple3DPoly
+#endif //#ifndef acSimple3DPoly
+
+#ifndef acSimpleMesh
+#define acSimpleMesh		zcSimpleMesh
+#endif //#ifndef acSimpleMesh
+
+#ifndef acSimplePoly
+#define acSimplePoly		zcSimplePoly
+#endif //#ifndef acSimplePoly
+
+#ifndef acSolid
+#define acSolid		zcSolid
+#endif //#ifndef acSolid
+
+#ifndef acSpanishAccentCap
+#define acSpanishAccentCap		zcSpanishAccentCap
+#endif //#ifndef acSpanishAccentCap
+
+#ifndef acSpanishUnaccentCap
+#define acSpanishUnaccentCap		zcSpanishUnaccentCap
+#endif //#ifndef acSpanishUnaccentCap
+
+#ifndef acSpline
+#define acSpline		zcSpline
+#endif //#ifndef acSpline
+
+#ifndef acSplineNoArrow
+#define acSplineNoArrow		zcSplineNoArrow
+#endif //#ifndef acSplineNoArrow
+
+#ifndef acSplineWithArrow
+#define acSplineWithArrow		zcSplineWithArrow
+#endif //#ifndef acSplineWithArrow
+
+#ifndef acSubtraction
+#define acSubtraction		zcSubtraction
+#endif //#ifndef acSubtraction
+
+#ifndef acSwedish
+#define acSwedish		zcSwedish
+#endif //#ifndef acSwedish
+
+#ifndef acSymAbove
+#define acSymAbove		zcSymAbove
+#endif //#ifndef acSymAbove
+
+#ifndef acSymInFront
+#define acSymInFront		zcSymInFront
+#endif //#ifndef acSymInFront
+
+#ifndef acSymNone
+#define acSymNone		zcSymNone
+#endif //#ifndef acSymNone
+
+#ifndef acTable
+#define acTable		zcTable
+#endif //#ifndef acTable
+
+#ifndef acTableBottomToTop
+#define acTableBottomToTop		zcTableBottomToTop
+#endif //#ifndef acTableBottomToTop
+
+#ifndef acTableSelectCrossing
+#define acTableSelectCrossing		zcTableSelectCrossing
+#endif //#ifndef acTableSelectCrossing
+
+#ifndef acTableSelectWindow
+#define acTableSelectWindow		zcTableSelectWindow
+#endif //#ifndef acTableSelectWindow
+
+#ifndef acTableTopToBottom
+#define acTableTopToBottom		zcTableTopToBottom
+#endif //#ifndef acTableTopToBottom
+
+#ifndef acText
+#define acText		zcText
+#endif //#ifndef acText
+
+#ifndef acTextAndArrows
+#define acTextAndArrows		zcTextAndArrows
+#endif //#ifndef acTextAndArrows
+
+#ifndef acTextCell
+#define acTextCell		zcTextCell
+#endif //#ifndef acTextCell
+
+#ifndef acTextFlagBackward
+#define acTextFlagBackward		zcTextFlagBackward
+#endif //#ifndef acTextFlagBackward
+
+#ifndef acTextFlagUpsideDown
+#define acTextFlagUpsideDown		zcTextFlagUpsideDown
+#endif //#ifndef acTextFlagUpsideDown
+
+#ifndef acTextOnly
+#define acTextOnly		zcTextOnly
+#endif //#ifndef acTextOnly
+
+#ifndef acTitleHorzBottomColor
+#define acTitleHorzBottomColor		zcTitleHorzBottomColor
+#endif //#ifndef acTitleHorzBottomColor
+
+#ifndef acTitleHorzBottomLineWeight
+#define acTitleHorzBottomLineWeight		zcTitleHorzBottomLineWeight
+#endif //#ifndef acTitleHorzBottomLineWeight
+
+#ifndef acTitleHorzBottomVisibility
+#define acTitleHorzBottomVisibility		zcTitleHorzBottomVisibility
+#endif //#ifndef acTitleHorzBottomVisibility
+
+#ifndef acTitleHorzInsideColor
+#define acTitleHorzInsideColor		zcTitleHorzInsideColor
+#endif //#ifndef acTitleHorzInsideColor
+
+#ifndef acTitleHorzInsideLineWeight
+#define acTitleHorzInsideLineWeight		zcTitleHorzInsideLineWeight
+#endif //#ifndef acTitleHorzInsideLineWeight
+
+#ifndef acTitleHorzInsideVisibility
+#define acTitleHorzInsideVisibility		zcTitleHorzInsideVisibility
+#endif //#ifndef acTitleHorzInsideVisibility
+
+#ifndef acTitleHorzTopColor
+#define acTitleHorzTopColor		zcTitleHorzTopColor
+#endif //#ifndef acTitleHorzTopColor
+
+#ifndef acTitleHorzTopLineWeight
+#define acTitleHorzTopLineWeight		zcTitleHorzTopLineWeight
+#endif //#ifndef acTitleHorzTopLineWeight
+
+#ifndef acTitleHorzTopVisibility
+#define acTitleHorzTopVisibility		zcTitleHorzTopVisibility
+#endif //#ifndef acTitleHorzTopVisibility
+
+#ifndef acTitleRow
+#define acTitleRow		zcTitleRow
+#endif //#ifndef acTitleRow
+
+#ifndef acTitleRowAlignment
+#define acTitleRowAlignment		zcTitleRowAlignment
+#endif //#ifndef acTitleRowAlignment
+
+#ifndef acTitleRowColor
+#define acTitleRowColor		zcTitleRowColor
+#endif //#ifndef acTitleRowColor
+
+#ifndef acTitleRowFillColor
+#define acTitleRowFillColor		zcTitleRowFillColor
+#endif //#ifndef acTitleRowFillColor
+
+#ifndef acTitleRowFillNone
+#define acTitleRowFillNone		zcTitleRowFillNone
+#endif //#ifndef acTitleRowFillNone
+
+#ifndef acTitleRowTextHeight
+#define acTitleRowTextHeight		zcTitleRowTextHeight
+#endif //#ifndef acTitleRowTextHeight
+
+#ifndef acTitleRowTextStyle
+#define acTitleRowTextStyle		zcTitleRowTextStyle
+#endif //#ifndef acTitleRowTextStyle
+
+#ifndef acTitleSuppressed
+#define acTitleSuppressed		zcTitleSuppressed
+#endif //#ifndef acTitleSuppressed
+
+#ifndef acTitleVertInsideColor
+#define acTitleVertInsideColor		zcTitleVertInsideColor
+#endif //#ifndef acTitleVertInsideColor
+
+#ifndef acTitleVertInsideLineWeight
+#define acTitleVertInsideLineWeight		zcTitleVertInsideLineWeight
+#endif //#ifndef acTitleVertInsideLineWeight
+
+#ifndef acTitleVertInsideVisibility
+#define acTitleVertInsideVisibility		zcTitleVertInsideVisibility
+#endif //#ifndef acTitleVertInsideVisibility
+
+#ifndef acTitleVertLeftColor
+#define acTitleVertLeftColor		zcTitleVertLeftColor
+#endif //#ifndef acTitleVertLeftColor
+
+#ifndef acTitleVertLeftLineWeight
+#define acTitleVertLeftLineWeight		zcTitleVertLeftLineWeight
+#endif //#ifndef acTitleVertLeftLineWeight
+
+#ifndef acTitleVertLeftVisibility
+#define acTitleVertLeftVisibility		zcTitleVertLeftVisibility
+#endif //#ifndef acTitleVertLeftVisibility
+
+#ifndef acTitleVertRightColor
+#define acTitleVertRightColor		zcTitleVertRightColor
+#endif //#ifndef acTitleVertRightColor
+
+#ifndef acTitleVertRightLineWeight
+#define acTitleVertRightLineWeight		zcTitleVertRightLineWeight
+#endif //#ifndef acTitleVertRightLineWeight
+
+#ifndef acTitleVertRightVisibility
+#define acTitleVertRightVisibility		zcTitleVertRightVisibility
+#endif //#ifndef acTitleVertRightVisibility
+
+#ifndef acTolBasic
+#define acTolBasic		zcTolBasic
+#endif //#ifndef acTolBasic
+
+#ifndef acTolBottom
+#define acTolBottom		zcTolBottom
+#endif //#ifndef acTolBottom
+
+#ifndef acTolDeviation
+#define acTolDeviation		zcTolDeviation
+#endif //#ifndef acTolDeviation
+
+#ifndef acTolLimits
+#define acTolLimits		zcTolLimits
+#endif //#ifndef acTolLimits
+
+#ifndef acTolMiddle
+#define acTolMiddle		zcTolMiddle
+#endif //#ifndef acTolMiddle
+
+#ifndef acTolNone
+#define acTolNone		zcTolNone
+#endif //#ifndef acTolNone
+
+#ifndef acTolSymmetrical
+#define acTolSymmetrical		zcTolSymmetrical
+#endif //#ifndef acTolSymmetrical
+
+#ifndef acTolTop
+#define acTolTop		zcTolTop
+#endif //#ifndef acTolTop
+
+#ifndef acTolerance
+#define acTolerance		zcTolerance
+#endif //#ifndef acTolerance
+
+#ifndef acToolbarButton
+#define acToolbarButton		zcToolbarButton
+#endif //#ifndef acToolbarButton
+
+#ifndef acToolbarControl
+#define acToolbarControl		zcToolbarControl
+#endif //#ifndef acToolbarControl
+
+#ifndef acToolbarDockBottom
+#define acToolbarDockBottom		zcToolbarDockBottom
+#endif //#ifndef acToolbarDockBottom
+
+#ifndef acToolbarDockLeft
+#define acToolbarDockLeft		zcToolbarDockLeft
+#endif //#ifndef acToolbarDockLeft
+
+#ifndef acToolbarDockRight
+#define acToolbarDockRight		zcToolbarDockRight
+#endif //#ifndef acToolbarDockRight
+
+#ifndef acToolbarDockTop
+#define acToolbarDockTop		zcToolbarDockTop
+#endif //#ifndef acToolbarDockTop
+
+#ifndef acToolbarFloating
+#define acToolbarFloating		zcToolbarFloating
+#endif //#ifndef acToolbarFloating
+
+#ifndef acToolbarFlyout
+#define acToolbarFlyout		zcToolbarFlyout
+#endif //#ifndef acToolbarFlyout
+
+#ifndef acToolbarSeparator
+#define acToolbarSeparator		zcToolbarSeparator
+#endif //#ifndef acToolbarSeparator
+
+#ifndef acTopCenter
+#define acTopCenter		zcTopCenter
+#endif //#ifndef acTopCenter
+
+#ifndef acTopLeft
+#define acTopLeft		zcTopLeft
+#endif //#ifndef acTopLeft
+
+#ifndef acTopMask
+#define acTopMask		zcTopMask
+#endif //#ifndef acTopMask
+
+#ifndef acTopRight
+#define acTopRight		zcTopRight
+#endif //#ifndef acTopRight
+
+#ifndef acTopToBottom
+#define acTopToBottom		zcTopToBottom
+#endif //#ifndef acTopToBottom
+
+#ifndef acTrace
+#define acTrace		zcTrace
+#endif //#ifndef acTrace
+
+#ifndef acTrue
+#define acTrue		zcTrue
+#endif //#ifndef acTrue
+
+#ifndef acUCS
+#define acUCS		zcUCS
+#endif //#ifndef acUCS
+
+#ifndef acUnion
+#define acUnion		zcUnion
+#endif //#ifndef acUnion
+
+#ifndef acUnknown
+#define acUnknown		zcUnknown
+#endif //#ifndef acUnknown
+
+#ifndef acUnknownCell
+#define acUnknownCell		zcUnknownCell
+#endif //#ifndef acUnknownCell
+
+#ifndef acUnknownRow
+#define acUnknownRow		zcUnknownRow
+#endif //#ifndef acUnknownRow
+
+#ifndef acUseDefaultDrawingAreaShortCutMenu
+#define acUseDefaultDrawingAreaShortCutMenu		zcUseDefaultDrawingAreaShortCutMenu
+#endif //#ifndef acUseDefaultDrawingAreaShortCutMenu
+
+#ifndef acUserDefinedGradient
+#define acUserDefinedGradient		zcUserDefinedGradient
+#endif //#ifndef acUserDefinedGradient
+
+#ifndef acVertCellMargin
+#define acVertCellMargin		zcVertCellMargin
+#endif //#ifndef acVertCellMargin
+
+#ifndef acVertCentered
+#define acVertCentered		zcVertCentered
+#endif //#ifndef acVertCentered
+
+#ifndef acVertInside
+#define acVertInside		zcVertInside
+#endif //#ifndef acVertInside
+
+#ifndef acVertLeft
+#define acVertLeft		zcVertLeft
+#endif //#ifndef acVertLeft
+
+#ifndef acVertRight
+#define acVertRight		zcVertRight
+#endif //#ifndef acVertRight
+
+#ifndef acVerticalAlignmentBaseline
+#define acVerticalAlignmentBaseline		zcVerticalAlignmentBaseline
+#endif //#ifndef acVerticalAlignmentBaseline
+
+#ifndef acVerticalAlignmentBottom
+#define acVerticalAlignmentBottom		zcVerticalAlignmentBottom
+#endif //#ifndef acVerticalAlignmentBottom
+
+#ifndef acVerticalAlignmentMiddle
+#define acVerticalAlignmentMiddle		zcVerticalAlignmentMiddle
+#endif //#ifndef acVerticalAlignmentMiddle
+
+#ifndef acVerticalAlignmentTop
+#define acVerticalAlignmentTop		zcVerticalAlignmentTop
+#endif //#ifndef acVerticalAlignmentTop
+
+#ifndef acView
+#define acView		zcView
+#endif //#ifndef acView
+
+#ifndef acViewport2Horizontal
+#define acViewport2Horizontal		zcViewport2Horizontal
+#endif //#ifndef acViewport2Horizontal
+
+#ifndef acViewport2Vertical
+#define acViewport2Vertical		zcViewport2Vertical
+#endif //#ifndef acViewport2Vertical
+
+#ifndef acViewport3Above
+#define acViewport3Above		zcViewport3Above
+#endif //#ifndef acViewport3Above
+
+#ifndef acViewport3Below
+#define acViewport3Below		zcViewport3Below
+#endif //#ifndef acViewport3Below
+
+#ifndef acViewport3Horizontal
+#define acViewport3Horizontal		zcViewport3Horizontal
+#endif //#ifndef acViewport3Horizontal
+
+#ifndef acViewport3Left
+#define acViewport3Left		zcViewport3Left
+#endif //#ifndef acViewport3Left
+
+#ifndef acViewport3Right
+#define acViewport3Right		zcViewport3Right
+#endif //#ifndef acViewport3Right
+
+#ifndef acViewport3Vertical
+#define acViewport3Vertical		zcViewport3Vertical
+#endif //#ifndef acViewport3Vertical
+
+#ifndef acViewport4
+#define acViewport4		zcViewport4
+#endif //#ifndef acViewport4
+
+#ifndef acVp100_1
+#define acVp100_1		zcVp100_1
+#endif //#ifndef acVp100_1
+
+#ifndef acVp10_1
+#define acVp10_1		zcVp10_1
+#endif //#ifndef acVp10_1
+
+#ifndef acVp1_1
+#define acVp1_1		zcVp1_1
+#endif //#ifndef acVp1_1
+
+#ifndef acVp1_10
+#define acVp1_10		zcVp1_10
+#endif //#ifndef acVp1_10
+
+#ifndef acVp1_100
+#define acVp1_100		zcVp1_100
+#endif //#ifndef acVp1_100
+
+#ifndef acVp1_128in_1ft
+#define acVp1_128in_1ft		zcVp1_128in_1ft
+#endif //#ifndef acVp1_128in_1ft
+
+#ifndef acVp1_16
+#define acVp1_16		zcVp1_16
+#endif //#ifndef acVp1_16
+
+#ifndef acVp1_16in_1ft
+#define acVp1_16in_1ft		zcVp1_16in_1ft
+#endif //#ifndef acVp1_16in_1ft
+
+#ifndef acVp1_2
+#define acVp1_2		zcVp1_2
+#endif //#ifndef acVp1_2
+
+#ifndef acVp1_20
+#define acVp1_20		zcVp1_20
+#endif //#ifndef acVp1_20
+
+#ifndef acVp1_2in_1ft
+#define acVp1_2in_1ft		zcVp1_2in_1ft
+#endif //#ifndef acVp1_2in_1ft
+
+#ifndef acVp1_30
+#define acVp1_30		zcVp1_30
+#endif //#ifndef acVp1_30
+
+#ifndef acVp1_32in_1ft
+#define acVp1_32in_1ft		zcVp1_32in_1ft
+#endif //#ifndef acVp1_32in_1ft
+
+#ifndef acVp1_4
+#define acVp1_4		zcVp1_4
+#endif //#ifndef acVp1_4
+
+#ifndef acVp1_40
+#define acVp1_40		zcVp1_40
+#endif //#ifndef acVp1_40
+
+#ifndef acVp1_4in_1ft
+#define acVp1_4in_1ft		zcVp1_4in_1ft
+#endif //#ifndef acVp1_4in_1ft
+
+#ifndef acVp1_50
+#define acVp1_50		zcVp1_50
+#endif //#ifndef acVp1_50
+
+#ifndef acVp1_64in_1ft
+#define acVp1_64in_1ft		zcVp1_64in_1ft
+#endif //#ifndef acVp1_64in_1ft
+
+#ifndef acVp1_8
+#define acVp1_8		zcVp1_8
+#endif //#ifndef acVp1_8
+
+#ifndef acVp1_8in_1ft
+#define acVp1_8in_1ft		zcVp1_8in_1ft
+#endif //#ifndef acVp1_8in_1ft
+
+#ifndef acVp1and1_2in_1ft
+#define acVp1and1_2in_1ft		zcVp1and1_2in_1ft
+#endif //#ifndef acVp1and1_2in_1ft
+
+#ifndef acVp1ft_1ft
+#define acVp1ft_1ft		zcVp1ft_1ft
+#endif //#ifndef acVp1ft_1ft
+
+#ifndef acVp1in_1ft
+#define acVp1in_1ft		zcVp1in_1ft
+#endif //#ifndef acVp1in_1ft
+
+#ifndef acVp2_1
+#define acVp2_1		zcVp2_1
+#endif //#ifndef acVp2_1
+
+#ifndef acVp3_16in_1ft
+#define acVp3_16in_1ft		zcVp3_16in_1ft
+#endif //#ifndef acVp3_16in_1ft
+
+#ifndef acVp3_32in_1ft
+#define acVp3_32in_1ft		zcVp3_32in_1ft
+#endif //#ifndef acVp3_32in_1ft
+
+#ifndef acVp3_4in_1ft
+#define acVp3_4in_1ft		zcVp3_4in_1ft
+#endif //#ifndef acVp3_4in_1ft
+
+#ifndef acVp3_8in_1ft
+#define acVp3_8in_1ft		zcVp3_8in_1ft
+#endif //#ifndef acVp3_8in_1ft
+
+#ifndef acVp3in_1ft
+#define acVp3in_1ft		zcVp3in_1ft
+#endif //#ifndef acVp3in_1ft
+
+#ifndef acVp4_1
+#define acVp4_1		zcVp4_1
+#endif //#ifndef acVp4_1
+
+#ifndef acVp6in_1ft
+#define acVp6in_1ft		zcVp6in_1ft
+#endif //#ifndef acVp6in_1ft
+
+#ifndef acVp8_1
+#define acVp8_1		zcVp8_1
+#endif //#ifndef acVp8_1
+
+#ifndef acVpCustomScale
+#define acVpCustomScale		zcVpCustomScale
+#endif //#ifndef acVpCustomScale
+
+#ifndef acVpScaleToFit
+#define acVpScaleToFit		zcVpScaleToFit
+#endif //#ifndef acVpScaleToFit
+
+#ifndef acWhite
+#define acWhite		zcWhite
+#endif //#ifndef acWhite
+
+#ifndef acWindow
+#define acWindow		zcWindow
+#endif //#ifndef acWindow
+
+#ifndef acWorld
+#define acWorld		zcWorld
+#endif //#ifndef acWorld
+
+#ifndef acXline
+#define acXline		zcXline
+#endif //#ifndef acXline
+
+#ifndef acYellow
+#define acYellow		zcYellow
+#endif //#ifndef acYellow
+
+#ifndef acZoomScaledAbsolute
+#define acZoomScaledAbsolute		zcZoomScaledAbsolute
+#endif //#ifndef acZoomScaledAbsolute
+
+#ifndef acZoomScaledRelative
+#define acZoomScaledRelative		zcZoomScaledRelative
+#endif //#ifndef acZoomScaledRelative
+
+#ifndef acZoomScaledRelativePSpace
+#define acZoomScaledRelativePSpace		zcZoomScaledRelativePSpace
+#endif //#ifndef acZoomScaledRelativePSpace
+
+#endif //#ifndef __AXTYPES_IDL__

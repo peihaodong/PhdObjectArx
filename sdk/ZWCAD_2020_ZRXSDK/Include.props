@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_ProjectFileVersion>2019.0.0</_ProjectFileVersion>
+    <_PropertySheetDisplayName>Zrx2020</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <PropertyGroup Label="ZrxMacros">
+    <ZRX>20</ZRX>
+    <ZRXDIR>$(MSBuildThisFileDirectory)</ZRXDIR>
+    <ZrxSdkIncs>$(ZRXDIR)\inc;$(ZRXDIR)\inc-$(Platform);$(ZRXDIR)\arxport;$(ZRXDIR)\lib-$(Platform)</ZrxSdkIncs>
+    <ZrxSdkLibs>$(ZRXDIR)\lib-$(Platform)</ZrxSdkLibs>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- ExecutablePath>$(ExecutablePath)</ExecutablePath -->
+    <IncludePath>$(ZrxSdkIncs);$(IncludePath)</IncludePath>
+    <LibraryPath>$(ZrxSdkLibs);$(LibraryPath)</LibraryPath>
+    <TargetExt>.zrx</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>ZRX=20;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>ZRX=19;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Midl>
+      <PreprocessorDefinitions>ZRX=19;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>ZwZrx.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+    <CustomBuildStep>
+      <Command />
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="ZRXDIR">
+      <Value>$(ZRXDIR)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ZrxSdkIncs">
+      <Value>$(ZrxSdkIncs)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ZrxSdkLibs">
+      <Value>$(ZrxSdkLibs)</Value>
+    </BuildMacro>
+    <BuildMacro Include="ZRX">
+      <Value>$(ZRX)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,59 @@
+
+#ifndef __ACTC_IDL__
+#define __ACTC_IDL__
+
+#include "../inc/zAcTc.idl"
+
+#ifndef AcTcLib
+#define AcTcLib		ZcTcLib
+#endif //#ifndef AcTcLib
+
+#ifndef AcadToolImage
+#define AcadToolImage		ZcadToolImage
+#endif //#ifndef AcadToolImage
+
+#ifndef AcadToolProperties
+#define AcadToolProperties		ZcadToolProperties
+#endif //#ifndef AcadToolProperties
+
+#ifndef IAcadStockTool
+#define IAcadStockTool		IZcadStockTool
+#endif //#ifndef IAcadStockTool
+
+#ifndef IAcadTool
+#define IAcadTool		IZcadTool
+#endif //#ifndef IAcadTool
+
+#ifndef IAcadToolContextMenu
+#define IAcadToolContextMenu		IZcadToolContextMenu
+#endif //#ifndef IAcadToolContextMenu
+
+#ifndef IAcadToolCopyPaste
+#define IAcadToolCopyPaste		IZcadToolCopyPaste
+#endif //#ifndef IAcadToolCopyPaste
+
+#ifndef IAcadToolDragSource
+#define IAcadToolDragSource		IZcadToolDragSource
+#endif //#ifndef IAcadToolDragSource
+
+#ifndef IAcadToolDropTarget
+#define IAcadToolDropTarget		IZcadToolDropTarget
+#endif //#ifndef IAcadToolDropTarget
+
+#ifndef IAcadToolFlyoutShape
+#define IAcadToolFlyoutShape		IZcadToolFlyoutShape
+#endif //#ifndef IAcadToolFlyoutShape
+
+#ifndef IAcadToolImage
+#define IAcadToolImage		IZcadToolImage
+#endif //#ifndef IAcadToolImage
+
+#ifndef IAcadToolProperties
+#define IAcadToolProperties		IZcadToolProperties
+#endif //#ifndef IAcadToolProperties
+
+#ifndef IAcadToolProperties2
+#define IAcadToolProperties2		IZcadToolProperties2
+#endif //#ifndef IAcadToolProperties2
+
+#endif //#ifndef __ACTC_IDL__

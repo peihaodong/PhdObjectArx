@@ -1,0 +1,26 @@
+HKCR
+{
+	SignDb.Entity.1 = s 'SignEntity Class'
+	{
+		CLSID = s '{7922E867-1D99-4703-9519-68FA61C8AA3F}'
+	}
+	SignDb.Entity = s 'SignEntity Class'
+	{		
+		CurVer = s 'SignDb.Entity.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7922E867-1D99-4703-9519-68FA61C8AA3F} = s 'SignEntity Class'
+		{
+			ProgID = s 'SignDb.Entity.1'
+			VersionIndependentProgID = s 'SignDb.Entity'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{16E18D63-4513-4371-9A76-BF8B7FEE0793}'
+			Version = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,397 @@
+
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "zdcconst.idl"
+#include "zdcdispid.h"
+
+[
+    object,
+    uuid(EC9230E5-5A17-11E7-B72E-BC5FF42AC839),
+    helpstring("IZwDcContentBrowser Interface"),
+    pointer_default(unique)
+]
+
+interface IZcDcContentBrowser : IUnknown
+{
+
+    [id(DISPID_IZcDcContentBrowser_AddPaletteItem), helpstring("method AddPaletteItem")]
+    HRESULT AddPaletteItem(
+        [in, string] BSTR bstrText                  
+        , [in] VARIANT varImageIndex                
+        , [in] VARIANT *pvarItemData                
+        , [out, retval] VARIANT *pvarAddedItemIndex 
+    );
+
+    [id(DISPID_IZcDcContentBrowser_AddNavigatorNode), helpstring("method AddNavigatorNode")]
+    HRESULT AddNavigatorNode(
+        [in] VARIANT varhRelativeNode               
+        , [in] dcNavNodeRelation sRelationship      
+        , [in, string] BSTR bstrText                
+        , [in] VARIANT varIconIndex                 
+        , [in] VARIANT varSelectedIconIndex         
+		, [in] VARIANT varbMayhaveChildren	        
+        , [out, retval] VARIANT *pvarAddedNodeID    
+    );
+
+    [id(DISPID_IZcDcContentBrowser_GetDCFrameWindow), helpstring("method GetDCFrameWindow")]
+    HRESULT GetDCFrameWindow(
+        
+        [out, retval] VARIANT *pvarhFrameWindow     
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SetItemDescription), helpstring("method SetItemDescription")]
+    HRESULT SetItemDescription(
+        [in, string] BSTR bstrDescription           
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SetPaletteImageList), helpstring("method SetPaletteImageList")]
+    HRESULT SetPaletteImageList(
+        [in] VARIANT varhImageList          
+        , [in] VARIANT varbLarge            
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SetNavigatorImageList), helpstring("method SetNavigatorImageList")]
+    HRESULT SetNavigatorImageList(
+        [in] VARIANT varhImageList,                 
+		[out, retval] VARIANT *pvarImageListOffset  
+                                                    
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SetPaletteMultiSelect), helpstring("method SetPaletteMultiSelect")]
+    HRESULT SetPaletteMultiSelect(
+        [in] VARIANT varbMultiSelect     
+    );
+
+    [id(DISPID_IZcDcContentBrowser_InsertPaletteColumn), helpstring("method InsertPaletteColumn")]
+    HRESULT InsertPaletteColumn(
+        [in] VARIANT varIndex            
+        , [in] BSTR bstrText             
+        , [in] dcPalColAlignment eFormat 
+    );
+
+    [id(DISPID_IZcDcContentBrowser_DeleteAllPaletteItems), helpstring("method DeleteAllPaletteItems")]
+    HRESULT DeleteAllPaletteItems();
+
+    [id(DISPID_IZcDcContentBrowser_GetSelectedNavNodeText), helpstring("method GetSelectedNavNodeText")]
+    HRESULT GetSelectedNavNodeText([out, string] BSTR* bstrText);
+
+    [id(DISPID_IZcDcContentBrowser_GetCurrentViewMode), helpstring("method GetCurrentViewMode")]
+    HRESULT GetCurrentViewMode(
+        [out, retval] dcContentMode *psMode            
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SetPaletteSubItem), helpstring("method SetPaletteSubItem")]
+    HRESULT SetPaletteSubItem(
+        [in] VARIANT varItemIndex       
+        , [in] VARIANT varColumnIndex   
+        , [in] BSTR bstrSubItemText     
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SortPaletteItems), helpstring("method SortPaletteItems")]
+    HRESULT SortPaletteItems(
+        [in] VARIANT varpfnFunction     
+        , [in] VARIANT varSortData      
+    );
+
+    [id(DISPID_IZcDcContentBrowser_RestorePaletteSelection), helpstring("method RestorePaletteSelection")]
+    HRESULT RestorePaletteSelection();
+
+    [id(DISPID_IZcDcContentBrowser_GetDCStatusBar), helpstring("method GetDCStatusBar")]
+    HRESULT GetDCStatusBar(
+        
+        [out, retval] VARIANT *pvarhStatusBar     
+    );
+
+    [id(DISPID_IZcDcContentBrowser_GetPaneInfo), helpstring("method GetPaneInfo")]
+    HRESULT GetPaneInfo(
+        [in] dcPane ePane               
+        , [out] VARIANT *pvarWidth      
+        , [out] VARIANT *pvarHeight     
+    );
+
+    [id(DISPID_IZcDcContentBrowser_SetPaletteViewType), helpstring("method SetPaletteViewType")]
+    HRESULT SetPaletteViewType(
+        [in] dcPalViewType eViewType    
+    );
+
+    [id(DISPID_IZcDcContentBrowser_NavigateTo), helpstring("method NavigateTo")]
+    HRESULT NavigateTo(
+        [in] dcContentMode eViewMode
+        , [in] BSTR bstrPath
+    );
+
+}; 
+
+[
+    object,
+    uuid(EC923181-5A17-11E7-B72E-BC5FF42AC839),
+    helpstring("IZwDcContentView interface"),
+    pointer_default(unique)
+]
+
+interface IZcDcContentView : IUnknown
+{
+
+    [id(DISPID_IZcDcContentView_Initialize), helpstring("Initializes the content")]
+    HRESULT Initialize(
+        [in] VARIANT varBrowser     
+        , [in] VARIANT varReserved  
+    );
+
+    [id(DISPID_IZcDcContentView_SetImageLists), helpstring("Sets the image lists")]
+    HRESULT SetImageLists();
+
+    [id(DISPID_IZcDcContentView_Refresh), helpstring("Refreshes the content")]
+    HRESULT Refresh();
+
+    [id(DISPID_IZcDcContentView_NavigatorNodeExpanding), helpstring("Event fired when a navigator node is clicked")]
+    HRESULT NavigatorNodeExpanding(
+        [in] VARIANT varhNode                 
+        , [in, string] BSTR bstrNodeText      
+    );
+
+    [id(DISPID_IZcDcContentView_NavigatorNodeCollapsing), helpstring("Event fired when a navigator node is collapsed")]
+    HRESULT NavigatorNodeCollapsing(
+        [in] VARIANT varhNode                 
+        , [in, string] BSTR bstrNodeText      
+    );
+
+    [id(DISPID_IZcDcContentView_NavigatorNodeClick), helpstring("Event fired when a navigator node is clicked")]
+    HRESULT NavigatorNodeClick(
+        [in] VARIANT varhNode               
+        , [in, string] BSTR bstrNodeText    
+    );
+
+    [id(DISPID_IZcDcContentView_NavigatorMouseUp), helpstring("Event fired when the mouse is released in navigator")]
+    HRESULT NavigatorMouseUp(
+        [in] VARIANT varhNode                 
+        , [in, string] BSTR bstrNodeText      
+        , [in] VARIANT varX                   
+        , [in] VARIANT varY                   
+    );
+
+    [id(DISPID_IZcDcContentView_PaletteItemClick), helpstring("Event fired when palette items are selected")]
+    HRESULT PaletteItemClick(
+        [in, string] BSTR bstrItemText      
+    );
+
+    [id(DISPID_IZcDcContentView_PaletteItemDblClick), helpstring("Event fired when a palette item is double clicked")]
+    HRESULT PaletteItemDblClick(
+        [in, string] BSTR bstrItemText      
+    );
+
+    [id(DISPID_IZcDcContentView_PaletteColumnClick), helpstring("Event fired when a column is clicked in the palette")]
+    HRESULT PaletteColumnClick(
+        [in] VARIANT varIndex              
+    );
+
+    [id(DISPID_IZcDcContentView_PaletteMouseUp), helpstring("Event fired when the mouse is released in palette")]
+    HRESULT PaletteMouseUp(
+        [in] VARIANT varButton              
+        , [in] VARIANT varItemTexts         
+        , [in] VARIANT varX                 
+        , [in] VARIANT varY                 
+    );
+
+    [id(DISPID_IZcDcContentView_PaletteMouseDown), helpstring("Event fired when the mouse is pressed in palette")]
+    HRESULT PaletteMouseDown(
+        [in] VARIANT varButton            
+        , [in, string] BSTR bstrItemText  
+        , [in] VARIANT varX               
+        , [in] VARIANT varY               
+    );
+
+    [id(DISPID_IZcDcContentView_RenderPreviewWindow), helpstring("Event fired when the preview window is redrawn")]
+    HRESULT RenderPreviewWindow(
+        [in, string] BSTR bstrItemText      
+        , [in] VARIANT varhPreviewWindow    
+    );
+
+    [id(DISPID_IZcDcContentView_PreviewMouseUp), helpstring("Event fired when the mouse is relased in preview")]
+    HRESULT PreviewMouseUp(
+        [in] VARIANT varButton            
+        , [in] VARIANT varX               
+        , [in] VARIANT varY               
+    );
+
+    [id(DISPID_IZcDcContentView_PaletteBeginDrag), helpstring("Event fired when items are dragged in palette")]
+    HRESULT PaletteBeginDrag(
+        [in] VARIANT varbstrItemTexts     
+        , [in] VARIANT varX               
+        , [in] VARIANT varY               
+    );
+
+    [id(DISPID_IZcDcContentView_ReleaseBrowser), helpstring("Request to release IZcDcContentBrowser")]
+    HRESULT ReleaseBrowser();
+
+    [id(DISPID_IZcDcContentView_QueryContextMenu), helpstring("Queries for a context menu")]
+    HRESULT QueryContextMenu(
+        [in] VARIANT varhMenu                
+        , [in] VARIANT varIndex              
+        , [in] VARIANT varCmdFirst           
+        , [in] VARIANT varCmdLast            
+        , [in] VARIANT varItemTexts          
+    );
+
+    [id(DISPID_IZcDcContentView_InvokeCommand), helpstring("Handler for context menu item")]
+    HRESULT InvokeCommand(
+        [in] VARIANT varMenuItemID          
+    );
+
+    [id(DISPID_IZcDcContentView_IsExpandable), helpstring("Ask if an item can be expanded")]
+    HRESULT IsExpandable(
+        [in, string] BSTR bstrItemText,			  
+        [out, retval] VARIANT *pvarIsExpandable   
+    );
+
+    [id(DISPID_IZcDcContentView_GetLargeIcon), helpstring("Request to give large icon")]
+    HRESULT GetLargeImage(
+        [in] BSTR bstrFileName                  
+        , [in, out] VARIANT *pvarhLargeImage    
+    );
+
+    [id(DISPID_IZcDcContentView_GetSmallImageListForContent), helpstring("Request to get the small image list for a given container")]
+    HRESULT GetSmallImageListForContent(
+        [in] BSTR bstrFileName                  
+        , [out, retval] VARIANT *pvarhImageList 
+    );
+
+    [id(DISPID_IZcDcContentView_GetLargeImageListForContent), helpstring("Request to get the large image list for a given container")]
+    HRESULT GetLargeImageListForContent(
+        [in] BSTR bstrFileName                  
+        , [out, retval] VARIANT *pvarhImageList 
+    );
+
+    [id(DISPID_IZcDcContentView_GetCommandString), helpstring("Request to get the command string or the help text for a context menu item")]
+    HRESULT GetCommandString(
+        [in] VARIANT varMenuID          
+        , [in] dcMenuInfoFlag           
+        , [out] VARIANT *pvarReserved   
+        , [out] BSTR *pbstrName         
+    );
+
+    [id(DISPID_IZcDcContentView_DeleteItemData), helpstring("Request to delete data associated with each item in navigator or palette")]
+    HRESULT DeleteItemData(
+        [in] dcItemDataSource dcSrc     
+        , [in] VARIANT varItemDataArray 
+    );
+
+}; 
+
+typedef struct {
+	LPCOLESTR        lpObjectName;          
+	LPCOLESTR        lpObjectType;			
+	LPCOLESTR        lpCustomValue;         
+	LPCOLESTR        lpLocation;            
+	FILETIME         ftLastWriteTime;       
+    DWORD            nFileSizeHigh;         
+	DWORD            nFileSizeLow;          
+	short            nBitmapIndex;          
+	short            nObjectType;           
+	short            nObjectTypeEx;         
+} FINDOBJECTINFO;
+
+[
+	object,
+	uuid(EC922FDD-5A17-11E7-B72E-BC5FF42AC839),
+	helpstring("IZwDcContentFinderSite Interface"),
+	pointer_default(ref)
+]
+
+interface IZcDcContentFinderSite : IUnknown
+	{
+
+    [helpstring("Callback for object information")]
+	HRESULT SetObjectInfo (
+					[in] FINDOBJECTINFO* lpObjectInfo,              
+					[out, retval] boolean* pbContinue
+	);
+
+    [helpstring("Callback for messages")]
+	HRESULT SetMessage (
+					[in, string] LPCOLESTR lpMessage,                  
+					[out, retval] boolean* pbContinue
+	);
+
+    [helpstring("Callback for property values")]
+	HRESULT SetPropertyValue (
+					[in, string] LPCOLESTR lpPropertyValue,
+					[out, retval] boolean* pbContinue
+	);
+
+    [helpstring("Set the searched type bitmap")]
+	HRESULT SetTypeBitmap (
+					[in, string] LPCOLESTR lpTypeName,
+					[in] IPictureDisp* lpPictureDisp,
+					[out] short *pnBitmapIndex
+	);
+
+    [helpstring("Ask for continuing. Also allow yield")]
+	HRESULT QueryContinueFind (
+					[out, retval] boolean* pbContinue
+	); 
+
+}; 
+
+[
+	object,
+	uuid(EC923090-5A17-11E7-B72E-BC5FF42AC839),
+	helpstring("IZcDcContentFinder Interface"),
+	pointer_default(unique)
+]
+
+interface IZcDcContentFinder : IUnknown
+	{
+
+    [helpstring("One time initialization for the finder")]
+	HRESULT Initialize (
+			[in] IZcDcContentFinderSite* pClient
+	);
+
+    [helpstring("Start the enumeration of the objects of a given type")]
+	HRESULT EnumerateObjects (
+					[in] IZcDcContentFinderSite* pClient,
+					[in, string] LPCOLESTR lpTypeName,
+					[in, string] LPCOLESTR lpDirName,
+					[in, string] LPCOLESTR lpFilter,
+					[in] boolean bRecurse,
+					[in, string] LPCOLESTR lpPropertyRequested,
+					[in] boolean bAdvPropertySearch
+	);
+
+    [helpstring("Advanced property value enumeration")]
+	HRESULT EnumeratePropertyValues (
+			[in, string] LPCOLESTR lpPropertyName     
+	);
+
+    [helpstring("Ask the component for multiselection")]
+	HRESULT IsMultiselectionEnabled (
+					[in, string] LPCOLESTR lpTypeName,
+					[out, retval] boolean* pbEnable
+	);
+
+    [helpstring("Pass a command to be executed by the component")]
+	HRESULT InvokeCommand (
+					[in] int nCmdId,
+                    [in] SAFEARRAY(BSTR) *pNames,
+					[in] int nObjectType
+	);
+
+    [helpstring("Interrupt a search. Searching should stop immediatly")]
+	HRESULT Interrupt ();
+
+    [helpstring("Give to the component an opportunity to modify the popup menu before it is displayed")]
+    HRESULT InitPopupMenu (
+					[in] int hMenu
+	);
+
+	HRESULT QueryObjectLocation (
+				[in] LPCOLESTR lpObjectName,
+				[in] LPCOLESTR lpFolderName,
+				[in] LPCOLESTR lpType,
+				[in, out] LPOLESTR *lpTreeLocation,
+				[in, out] LPOLESTR *lpPaletteItemName
+	);
+
+}; 

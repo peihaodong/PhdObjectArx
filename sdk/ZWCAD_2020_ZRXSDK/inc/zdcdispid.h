@@ -1,0 +1,52 @@
+
+
+#ifndef ZDCDISPID_H
+#define ZDCDISPID_H
+
+#define ZCDC_MAKE_DISPID(ID)    (ID + 100)
+
+#define DISPID_IZcDcContentBrowser_AddPaletteItem           ZCDC_MAKE_DISPID(1)
+#define DISPID_IZcDcContentBrowser_AddNavigatorNode         ZCDC_MAKE_DISPID(2)
+#define DISPID_IZcDcContentBrowser_GetDCFrameWindow         ZCDC_MAKE_DISPID(3)
+#define DISPID_IZcDcContentBrowser_SetItemDescription       ZCDC_MAKE_DISPID(4)
+#define DISPID_IZcDcContentBrowser_SetPaletteImageList      ZCDC_MAKE_DISPID(5)
+#define DISPID_IZcDcContentBrowser_SetNavigatorImageList    ZCDC_MAKE_DISPID(6)
+#define DISPID_IZcDcContentBrowser_SetPaletteMultiSelect    ZCDC_MAKE_DISPID(7)
+#define DISPID_IZcDcContentBrowser_InsertPaletteColumn      ZCDC_MAKE_DISPID(8)
+#define DISPID_IZcDcContentBrowser_DeleteAllPaletteItems    ZCDC_MAKE_DISPID(9)
+#define DISPID_IZcDcContentBrowser_GetSelectedNavNodeText   ZCDC_MAKE_DISPID(10)
+#define DISPID_IZcDcContentBrowser_GetCurrentViewMode       ZCDC_MAKE_DISPID(11)
+#define DISPID_IZcDcContentBrowser_SetPaletteSubItem        ZCDC_MAKE_DISPID(12)
+#define DISPID_IZcDcContentBrowser_SortPaletteItems         ZCDC_MAKE_DISPID(13)
+#define DISPID_IZcDcContentBrowser_RestorePaletteSelection  ZCDC_MAKE_DISPID(14)
+#define DISPID_IZcDcContentBrowser_GetDCStatusBar           ZCDC_MAKE_DISPID(15)
+#define DISPID_IZcDcContentBrowser_GetPaneInfo              ZCDC_MAKE_DISPID(16)
+#define DISPID_IZcDcContentBrowser_SetPaletteViewType       ZCDC_MAKE_DISPID(17)
+#define DISPID_IZcDcContentBrowser_NavigateTo               ZCDC_MAKE_DISPID(18)
+
+#define DISPID_IZcDcContentView_Initialize                  ZCDC_MAKE_DISPID(101)
+#define DISPID_IZcDcContentView_SetImageLists               ZCDC_MAKE_DISPID(102)
+#define DISPID_IZcDcContentView_Refresh                     ZCDC_MAKE_DISPID(103)
+#define DISPID_IZcDcContentView_NavigatorNodeExpanding      ZCDC_MAKE_DISPID(104)
+#define DISPID_IZcDcContentView_NavigatorNodeCollapsing     ZCDC_MAKE_DISPID(105)
+#define DISPID_IZcDcContentView_NavigatorNodeClick          ZCDC_MAKE_DISPID(106)
+#define DISPID_IZcDcContentView_NavigatorMouseUp            ZCDC_MAKE_DISPID(107)
+#define DISPID_IZcDcContentView_PaletteItemClick            ZCDC_MAKE_DISPID(108)
+#define DISPID_IZcDcContentView_PaletteItemDblClick         ZCDC_MAKE_DISPID(109)
+#define DISPID_IZcDcContentView_PaletteColumnClick          ZCDC_MAKE_DISPID(110)
+#define DISPID_IZcDcContentView_PaletteMouseUp              ZCDC_MAKE_DISPID(111)
+#define DISPID_IZcDcContentView_PaletteMouseDown            ZCDC_MAKE_DISPID(112)
+#define DISPID_IZcDcContentView_RenderPreviewWindow         ZCDC_MAKE_DISPID(113)
+#define DISPID_IZcDcContentView_PreviewMouseUp              ZCDC_MAKE_DISPID(114)
+#define DISPID_IZcDcContentView_PaletteBeginDrag            ZCDC_MAKE_DISPID(115)
+#define DISPID_IZcDcContentView_ReleaseBrowser              ZCDC_MAKE_DISPID(116)
+#define DISPID_IZcDcContentView_QueryContextMenu            ZCDC_MAKE_DISPID(117)
+#define DISPID_IZcDcContentView_InvokeCommand               ZCDC_MAKE_DISPID(118)
+#define DISPID_IZcDcContentView_IsExpandable                ZCDC_MAKE_DISPID(119)
+#define DISPID_IZcDcContentView_GetLargeIcon                ZCDC_MAKE_DISPID(120)
+#define DISPID_IZcDcContentView_GetSmallImageListForContent ZCDC_MAKE_DISPID(121)
+#define DISPID_IZcDcContentView_GetLargeImageListForContent ZCDC_MAKE_DISPID(122)
+#define DISPID_IZcDcContentView_GetCommandString            ZCDC_MAKE_DISPID(123)
+#define DISPID_IZcDcContentView_DeleteItemData              ZCDC_MAKE_DISPID(124)
+
+#endif 

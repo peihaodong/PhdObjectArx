@@ -1,0 +1,12 @@
+
+#ifndef __IPSTDROP_IDL__
+#define __IPSTDROP_IDL__
+
+
+#include "../inc/zipstdrop.idl"
+
+#ifndef IAcPostDrop
+#define IAcPostDrop		IZcPostDrop
+#endif //#ifndef IAcPostDrop
+
+#endif //#ifndef __IPSTDROP_IDL__

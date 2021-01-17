@@ -1,0 +1,40 @@
+// SignDbCom.idl : type library source for SignDbCom.dll
+// This file will be processed by the MIDL compiler to produce the
+// type library (SignDbCom.tlb).
+
+import "ocidl.idl";
+import "oaidl.idl";
+[ uuid(16E18D63-4513-4371-9A76-BF8B7FEE0793), version(1.0) ]
+library SignDbCom
+{
+	importlib("stdole64.tlb");
+	importlib("stdole2.tlb");
+	importlib("ZwAuto.dll");
+	[
+		object,
+		uuid(35BEA812-E349-4327-99B4-00BAAA203433),
+		dual,
+		nonextensible,
+		pointer_default(unique)
+	]
+	interface ISignEntity : IZcadEntity{
+		[propget, id(1), helpstring("Get normal of the Sign entity.")] HRESULT Normal([out, retval] VARIANT* pVal);
+		[propput, id(1), helpstring("Get normal of the Sign entity.")] HRESULT Normal([in] VARIANT newVal);
+		[propget, id(2), helpstring("Get center of the Sign entity.")] HRESULT Center([out, retval] VARIANT* pVal);
+		[propput, id(2), helpstring("Get center of the Sign entity.")] HRESULT Center([in] VARIANT newVal);
+		[propget, id(3), helpstring("Get radius of the Sign entity.")] HRESULT Radius([out, retval] DOUBLE* pVal);
+		[propput, id(3), helpstring("Get radius of the Sign entity.")] HRESULT Radius([in] DOUBLE newVal);
+		[propget, id(4), helpstring("Get text truecolor of the Sign entity.")] HRESULT TextTrueColor([out, retval] IZcadZcCmColor** pVal);
+		[propput, id(4), helpstring("Get text truecolor of the Sign entity.")] HRESULT TextTrueColor([in] IZcadZcCmColor* newVal);
+		[propget, id(5), helpstring("Get text of the Sign entity.")] HRESULT Text([out, retval] BSTR* pVal);
+		[propput, id(5), helpstring("Get text of the Sign entity.")] HRESULT Text([in] BSTR newVal);
+	};
+	[
+		uuid(7922E867-1D99-4703-9519-68FA61C8AA3F)		
+	]
+	coclass SignEntity
+	{
+		[default] interface ISignEntity;
+		[source] interface IZcadObjectEvents;
+	};
+};

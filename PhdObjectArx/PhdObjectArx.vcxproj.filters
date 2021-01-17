@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Class">
+      <UniqueIdentifier>{bb1bacb7-2dec-4099-b4a2-ee134ae7f3bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{1179db73-bcfb-45af-ae7a-14f7dda53aa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control\BlockViewListCtrl">
+      <UniqueIdentifier>{bfe6dbce-e3f3-4741-8726-39f3a62feb17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drag">
+      <UniqueIdentifier>{2da09ff5-ad64-43d3-b9de-b1aede7d3798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ObjectArx">
+      <UniqueIdentifier>{8d90e25d-1459-4bfb-ba4e-d48797784afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Reactor">
+      <UniqueIdentifier>{d1660874-65d8-4566-8e19-7865006c67fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="动态链接">
+      <UniqueIdentifier>{d4a9fdb2-847e-4799-8d31-6af14d31f09d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\PhdObjectArx.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PhdObjectArx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DocData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="acrxEntryPoint.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CCurveToPline.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="CFiltrateYxk.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhdPlot.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="ZrxProductUtils.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockViewListCtrl\GraphBlockViewWnd.cpp">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockViewListCtrl\GraphButton.cpp">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockViewListCtrl\GraphListCtrl.cpp">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockViewListCtrl\GraphTitleTip.cpp">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockViewListCtrl\GsMPCtrl.cpp">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="CCellSelectableListCtrl.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="CDimSeekCombCtrl.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditableListCtrl.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhdListCtrl.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhdTreeCtrl.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="CAjmdlxJig.cpp">
+      <Filter>Drag</Filter>
+    </ClCompile>
+    <ClCompile Include="CAttBlkJig.cpp">
+      <Filter>Drag</Filter>
+    </ClCompile>
+    <ClCompile Include="CBlockJig.cpp">
+      <Filter>Drag</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdBlock.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdCommand.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdConver.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdDatabase.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdDimStyle.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdEntity.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdGroup.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdInline.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdLayer.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdLinetype.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdMethod.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdSelSet.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdSysDlg.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdSysVar.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdTextStyle.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdUiPr.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdUtility.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdView.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdViewport.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="PhdXData.cpp">
+      <Filter>ObjectArx</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhdPersistReactor.cpp">
+      <Filter>Reactor</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhdReactor.cpp">
+      <Filter>Reactor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DocData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CCurveToPline.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CFiltrateYxk.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhdPlot.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="ZrxProductUtils.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\AcadVistualDeclare.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\GraphBlockViewWnd.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\GraphButton.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\GraphListCtrl.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\GraphTitleTip.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\GsMPCtrl.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\Icon2.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\Resize2.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\resource.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockViewListCtrl\rxdebug.h">
+      <Filter>Control\BlockViewListCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="CCellSelectableListCtrl.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="CDimSeekCombCtrl.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="CEditableListCtrl.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhdListCtrl.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhdTreeCtrl.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="CAjmdlxJig.h">
+      <Filter>Drag</Filter>
+    </ClInclude>
+    <ClInclude Include="CAttBlkJig.h">
+      <Filter>Drag</Filter>
+    </ClInclude>
+    <ClInclude Include="CBlockJig.h">
+      <Filter>Drag</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdBlock.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdCommand.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdConver.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdDatabase.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdDimStyle.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdEntity.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdGroup.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdInline.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdLayer.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdLinetype.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdMethod.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdSelSet.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdSysDlg.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdSysVar.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdTextStyle.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdUiPr.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdUtility.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdView.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdViewport.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdXData.h">
+      <Filter>ObjectArx</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhdPersistReactor.h">
+      <Filter>Reactor</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhdReactor.h">
+      <Filter>Reactor</Filter>
+    </ClInclude>
+    <ClInclude Include="PhdObjectArxDynamicLink.h">
+      <Filter>动态链接</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PhdObjectArx.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

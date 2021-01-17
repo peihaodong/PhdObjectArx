@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6D075AFE-0189-4AF8-8ED5-71074C4B8694}</ProjectGuid>
+    <RootNamespace>PhdObjectArx</RootNamespace>
+    <Keyword>MFCDLLProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="..\sdk\ZWCAD_2020_ZRXSDK\Include.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="..\sdk\ZWCAD_2020_ZRXSDK\Include.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="..\sdk\ZWCAD_2020_ZRXSDK\Include.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="..\sdk\ZWCAD_2020_ZRXSDK\Include.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetExt>.zrx</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetExt>.zrx</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetExt>.zrx</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetExt>.zrx</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/Zm256 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link />
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
+xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PreprocessorDefinitions>_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/Zm256 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link />
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
+xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/Zm256 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
+xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>_AFXEXT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/Zm256 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
+xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\PhdObjectArx.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="acrxEntryPoint.cpp" />
+    <ClCompile Include="BlockViewListCtrl\GraphBlockViewWnd.cpp" />
+    <ClCompile Include="BlockViewListCtrl\GraphButton.cpp" />
+    <ClCompile Include="BlockViewListCtrl\GraphListCtrl.cpp" />
+    <ClCompile Include="BlockViewListCtrl\GraphTitleTip.cpp" />
+    <ClCompile Include="BlockViewListCtrl\GsMPCtrl.cpp" />
+    <ClCompile Include="CAjmdlxJig.cpp" />
+    <ClCompile Include="CAttBlkJig.cpp" />
+    <ClCompile Include="CBlockJig.cpp" />
+    <ClCompile Include="CCellSelectableListCtrl.cpp" />
+    <ClCompile Include="CCurveToPline.cpp" />
+    <ClCompile Include="CDimSeekCombCtrl.cpp" />
+    <ClCompile Include="CEditableListCtrl.cpp" />
+    <ClCompile Include="CFiltrateYxk.cpp" />
+    <ClCompile Include="CPhdListCtrl.cpp" />
+    <ClCompile Include="CPhdPersistReactor.cpp" />
+    <ClCompile Include="CPhdPlot.cpp" />
+    <ClCompile Include="CPhdReactor.cpp" />
+    <ClCompile Include="CPhdTreeCtrl.cpp" />
+    <ClCompile Include="DocData.cpp" />
+    <ClCompile Include="PhdBlock.cpp" />
+    <ClCompile Include="PhdCommand.cpp" />
+    <ClCompile Include="PhdConver.cpp" />
+    <ClCompile Include="PhdDatabase.cpp" />
+    <ClCompile Include="PhdDimStyle.cpp" />
+    <ClCompile Include="PhdEntity.cpp" />
+    <ClCompile Include="PhdGroup.cpp" />
+    <ClCompile Include="PhdInline.cpp" />
+    <ClCompile Include="PhdLayer.cpp" />
+    <ClCompile Include="PhdLinetype.cpp" />
+    <ClCompile Include="PhdMethod.cpp" />
+    <ClCompile Include="PhdSelSet.cpp" />
+    <ClCompile Include="PhdSysDlg.cpp" />
+    <ClCompile Include="PhdSysVar.cpp" />
+    <ClCompile Include="PhdTextStyle.cpp" />
+    <ClCompile Include="PhdUiPr.cpp" />
+    <ClCompile Include="PhdUtility.cpp" />
+    <ClCompile Include="PhdView.cpp" />
+    <ClCompile Include="PhdViewport.cpp" />
+    <ClCompile Include="PhdXData.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PhdObjectArx.cpp" />
+    <ClCompile Include="ZrxProductUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlockViewListCtrl\AcadVistualDeclare.h" />
+    <ClInclude Include="BlockViewListCtrl\GraphBlockViewWnd.h" />
+    <ClInclude Include="BlockViewListCtrl\GraphButton.h" />
+    <ClInclude Include="BlockViewListCtrl\GraphListCtrl.h" />
+    <ClInclude Include="BlockViewListCtrl\GraphTitleTip.h" />
+    <ClInclude Include="BlockViewListCtrl\GsMPCtrl.h" />
+    <ClInclude Include="BlockViewListCtrl\Icon2.h" />
+    <ClInclude Include="BlockViewListCtrl\Resize2.h" />
+    <ClInclude Include="BlockViewListCtrl\resource.h" />
+    <ClInclude Include="BlockViewListCtrl\rxdebug.h" />
+    <ClInclude Include="CAjmdlxJig.h" />
+    <ClInclude Include="CAttBlkJig.h" />
+    <ClInclude Include="CBlockJig.h" />
+    <ClInclude Include="CCellSelectableListCtrl.h" />
+    <ClInclude Include="CCurveToPline.h" />
+    <ClInclude Include="CDimSeekCombCtrl.h" />
+    <ClInclude Include="CEditableListCtrl.h" />
+    <ClInclude Include="CFiltrateYxk.h" />
+    <ClInclude Include="CPhdListCtrl.h" />
+    <ClInclude Include="CPhdPersistReactor.h" />
+    <ClInclude Include="CPhdPlot.h" />
+    <ClInclude Include="CPhdReactor.h" />
+    <ClInclude Include="CPhdTreeCtrl.h" />
+    <ClInclude Include="DocData.h" />
+    <ClInclude Include="PhdBlock.h" />
+    <ClInclude Include="PhdCommand.h" />
+    <ClInclude Include="PhdConver.h" />
+    <ClInclude Include="PhdDatabase.h" />
+    <ClInclude Include="PhdDimStyle.h" />
+    <ClInclude Include="PhdEntity.h" />
+    <ClInclude Include="PhdGroup.h" />
+    <ClInclude Include="PhdInline.h" />
+    <ClInclude Include="PhdLayer.h" />
+    <ClInclude Include="PhdLinetype.h" />
+    <ClInclude Include="PhdMethod.h" />
+    <ClInclude Include="PhdObjectArxDynamicLink.h" />
+    <ClInclude Include="PhdSelSet.h" />
+    <ClInclude Include="PhdSysDlg.h" />
+    <ClInclude Include="PhdSysVar.h" />
+    <ClInclude Include="PhdTextStyle.h" />
+    <ClInclude Include="PhdUiPr.h" />
+    <ClInclude Include="PhdUtility.h" />
+    <ClInclude Include="PhdView.h" />
+    <ClInclude Include="PhdViewport.h" />
+    <ClInclude Include="PhdXData.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ZrxProductUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PhdObjectArx.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

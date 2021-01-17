@@ -1,0 +1,41 @@
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+    object,
+#if !defined(_WIN64) && !defined (_ZC64)
+    uuid(EC9230A6-5A17-11E7-B72E-BC5FF42AC839),
+#else
+    uuid(EC9230DE-5A17-11E7-B72E-BC5FF42AC839),
+#endif
+    helpstring("IZcPostDrop Interface"),
+    pointer_default(unique)
+]
+
+interface IZcPostDrop : IUnknown
+{
+    [helpstring ("method QueryDoDrop")]
+    HRESULT QueryDoDrop (
+			[out, retval] boolean *pbHandleDrop 	
+	);
+	
+    [helpstring ("method PreparePostDrop")]
+    HRESULT PreparePostDrop (
+			[out, retval] boolean *pbContinue	
+	);
+
+    [helpstring ("method QueryContextMenu")]
+    HRESULT QueryContextMenu (
+			[out] INT_PTR *phMenu					
+	);
+
+    [helpstring ("method InvokeCommand")]
+    HRESULT InvokeCommand (
+	        [in] int nMenuItemID,					
+			[out, retval] boolean *pbCancelled		
+	);
+
+    [helpstring ("method EndPostDrop")]
+    HRESULT EndPostDrop ();
+}

@@ -1,0 +1,1608 @@
+
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231C7-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcBoolean
+    {
+        
+        zcFalse = 0,
+        zcTrue = 1
+    } ZcBoolean;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230BD-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcOnOff
+    {
+        
+        zcOff = 0,
+        zcOn = 1
+    } ZcOnOff;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923190-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcEntityName
+    {
+        
+        zc3dFace = 1,
+        zc3dPolyline = 2,
+        zc3dSolid = 3,
+        zcArc = 4,
+        zcAttribute = 5,
+        zcAttributeReference = 6,
+        zcBlockReference = 7,
+        zcCircle = 8,
+        zcDimAligned = 9,
+        zcDimAngular = 10,
+
+        zcDimDiametric = 12,
+        zcDimOrdinate = 13,
+        zcDimRadial = 14,
+        zcDimRotated = 15,
+        zcEllipse = 16,
+        zcHatch = 17,
+        zcLeader = 18,
+        zcLine = 19,
+
+        zcMtext = 21,
+        zcPoint = 22,
+        zcPolyline = 23,
+        zcPolylineLight = 24,
+        zcPolymesh = 25,
+        zcRaster = 26,
+        zcRay = 27,
+        zcRegion = 28,
+        zcShape = 29,
+        zcSolid = 30,
+        zcSpline = 31,
+        zcText = 32,
+        zcTolerance = 33,
+        zcTrace = 34,
+        zcPViewport = 35,
+        zcXline = 36,
+        zcGroup = 37,
+        zcMInsertBlock = 38,
+        zcPolyfaceMesh = 39,
+        zcMLine = 40,
+        zcDim3PointAngular = 41,
+        zcExternalReference = 42,
+        zcTable = 43,
+        zcDimArcLength = 44,
+		zcDimRadialLarge = 45,
+        zcDwfUnderlay = 46,
+        zcDgnUnderlay = 47,
+        zcMLeader = 48
+    } ZcEntityName;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92310A-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcActiveSpace
+    {
+        
+        zcPaperSpace = 0,
+        zcModelSpace = 1
+    } ZcActiveSpace;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923122-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcKeyboardAccelerator
+    {
+        
+        zcPreferenceClassic = 0,
+        zcPreferenceCustom = 1
+    } ZcKeyboardAccelerator;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923074-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotOrientation
+    {
+        
+        zcPlotOrientationPortrait = 0,
+        zcPlotOrientationLandscape = 1
+    } ZcPlotOrientation;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923109-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcColor
+    {
+        
+        [helpstring("Color Byblock.")]
+        zcByBlock = 0,
+        [helpstring("Color Red.")]
+        zcRed = 1,
+        [helpstring("Color Yellow.")]
+        zcYellow = 2,
+        [helpstring("Color Green.")]
+        zcGreen = 3,
+        [helpstring("Color Cyan.")]
+        zcCyan = 4,
+        [helpstring("Color Blue.")]
+        zcBlue = 5,
+        [helpstring("Color Magenta.")]
+        zcMagenta = 6,
+        [helpstring("Color White.")]
+        zcWhite = 7,
+        [helpstring("Color Bylayer.")]
+        zcByLayer = 256
+    } ZcColor;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230A2-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcAttachmentPoint
+    {
+        
+        zcAttachmentPointTopLeft = 1,
+        zcAttachmentPointTopCenter = 2,
+        zcAttachmentPointTopRight = 3,
+        zcAttachmentPointMiddleLeft = 4,
+        zcAttachmentPointMiddleCenter = 5,
+        zcAttachmentPointMiddleRight = 6,
+        zcAttachmentPointBottomLeft = 7,
+        zcAttachmentPointBottomCenter = 8,
+        zcAttachmentPointBottomRight = 9
+    } ZcAttachmentPoint;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923021-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawingDirection
+    {
+        
+        zcLeftToRight = 1,
+        zcRightToLeft = 2,
+        zcTopToBottom = 3,
+        zcBottomToTop = 4,
+        zcByStyle     = 5
+    } ZcDrawingDirection;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230CE-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLeaderType
+    {
+        
+        zcLineNoArrow = 0,
+        zcSplineNoArrow = 1,
+        zcLineWithArrow = 2,
+        zcSplineWithArrow = 3
+    } ZcLeaderType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92306F-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcAttributeMode
+    {
+        
+        zcAttributeModeNormal = 0,
+        zcAttributeModeInvisible = 1,
+        zcAttributeModeConstant = 2,
+        zcAttributeModeVerify = 4,
+        zcAttributeModePreset = 8,
+        zcAttributeModeLockPosition = 16,
+        zcAttributeModeMultipleLine = 32
+    } ZcAttributeMode;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923025-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcHorizontalAlignment
+    {
+        
+        zcHorizontalAlignmentLeft = 0,
+        zcHorizontalAlignmentCenter = 1,
+        zcHorizontalAlignmentRight = 2,
+        zcHorizontalAlignmentAligned = 3,
+        zcHorizontalAlignmentMiddle = 4,
+        zcHorizontalAlignmentFit = 5
+    } ZcHorizontalAlignment;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230AE-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcVerticalAlignment
+    {
+        
+        zcVerticalAlignmentBaseline = 0,
+        zcVerticalAlignmentBottom = 1,
+        zcVerticalAlignmentMiddle = 2,
+        zcVerticalAlignmentTop = 3
+    } ZcVerticalAlignment;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923134-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTextGenerationFlag
+    {
+        
+        zcTextFlagBackward = 2,
+        zcTextFlagUpsideDown = 4
+    } ZcTextGenerationFlag;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231E1-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSelect
+    {
+        
+        zcSelectionSetWindow = 0,
+        zcSelectionSetCrossing = 1,
+        zcSelectionSetFence = 2,
+        zcSelectionSetPrevious = 3,
+        zcSelectionSetLast = 4,
+        zcSelectionSetAll = 5,
+        zcSelectionSetWindowPolygon = 6,
+        zcSelectionSetCrossingPolygon = 7
+    } ZcSelect;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92307F-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPatternType
+    {
+
+        zcHatchPatternTypeUserDefined = 0,
+        zcHatchPatternTypePreDefined = 1,
+        zcHatchPatternTypeCustomDefined = 2
+    } ZcPatternType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923049-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLoopType
+    {
+        
+        zcHatchLoopTypeDefault = 0,
+        zcHatchLoopTypeExternal = 1,
+        zcHatchLoopTypePolyline = 2,
+        zcHatchLoopTypeDerived = 4,
+        zcHatchLoopTypeTextbox = 8
+    } ZcLoopType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230AA-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcHatchStyle
+    {
+        zcHatchStyleNormal = 0,
+        zcHatchStyleOuter = 1,
+        zcHatchStyleIgnore = 2 
+    } ZcHatchStyle;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230C8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPolylineType
+    {
+        
+        zcSimplePoly = 0,
+        zcFitCurvePoly = 1,
+        zcQuadSplinePoly = 2,
+        zcCubicSplinePoly = 3
+    } ZcPolylineType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FD7-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum Zc3DPolylineType
+    {
+        
+        zcSimple3DPoly = 0,
+        zcQuadSpline3DPoly = 1,
+        zcCubicSpline3DPoly = 2
+    } Zc3DPolylineType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92301A-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcViewportSplitType
+    {
+        
+        zcViewport2Horizontal = 0,
+        zcViewport2Vertical = 1,
+        zcViewport3Left = 2,
+        zcViewport3Right = 3,
+        zcViewport3Horizontal = 4,
+        zcViewport3Vertical = 5,
+        zcViewport3Above = 6,
+        zcViewport3Below = 7,
+        zcViewport4 = 8
+    } ZcViewportSplitType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231E2-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcRegenType
+    {
+        
+        zcActiveViewport = 0,
+        zcAllViewports = 1
+    } ZcRegenType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923011-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcBooleanType
+    {
+        
+        zcUnion = 0,
+        zcIntersection = 1,
+        zcSubtraction = 2
+    } ZcBooleanType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92311C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcExtendOption
+    {
+        
+        zcExtendNone = 0,
+        zcExtendThisEntity = 1,
+        zcExtendOtherEntity = 2,
+        zcExtendBoth = 3
+    } ZcExtendOption;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231C1-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcAngleUnits
+    {
+        
+        zcDegrees = 0,
+        zcDegreeMinuteSeconds = 1,
+        zcGrads = 2,
+        zcRadians = 3
+    } ZcAngleUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923178-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcUnits
+    {
+        
+        zcDefaultUnits = -1,
+        zcScientific = 1,
+        zcDecimal = 2,
+        zcEngineering = 3,
+        zcArchitectural = 4,
+        zcFractional = 5
+    } ZcUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FC8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCoordinateSystem
+    {
+        
+        zcWorld = 0,
+        zcUCS = 1,
+        zcDisplayDCS = 2,
+        zcPaperSpaceDCS = 3,
+        zcOCS = 4,
+    } ZcCoordinateSystem;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92317C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMeasurementUnits
+    {
+        
+        zcEnglish = 0,
+        zcMetric = 1,
+    } ZcMeasurementUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923170-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcXRefDemandLoad
+    {
+        
+        zcDemandLoadDisabled = 0,
+        zcDemandLoadEnabled = 1,
+        zcDemandLoadEnabledWithCopy = 2
+    } ZcXRefDemandLoad;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FCF-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPreviewMode
+    {
+        
+        zcPartialPreview = 0,
+        zcFullPreview = 1
+    } ZcPreviewMode;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230D3-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPolymeshType
+    {
+        
+        zcSimpleMesh = 0,
+        zcQuadSurfaceMesh = 5,
+        zcCubicSurfaceMesh = 6,
+        zcBezierSurfaceMesh = 8
+    } ZcPolymeshType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231A9-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcZoomScaleType
+    {
+        
+        zcZoomScaledAbsolute =  0,
+        zcZoomScaledRelative =  1,
+        zcZoomScaledRelativePSpace =  2
+    } ZcZoomScaleType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92305D-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDragDisplayMode
+    {
+        
+        zcDragDoNotDisplay = 0,
+        zcDragDisplayOnRequest = 1,
+        zcDragDisplayAutomatically = 2
+    } ZcDragDisplayMode;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923163-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcZRXDemandLoad
+    {
+        
+        zcDemanLoadDisable = 0,
+        zcDemandLoadOnObjectDetect = 1,
+        zcDemandLoadCmdInvoke    = 2
+    } ZcZRXDemandLoad;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231BC-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTextFontStyle
+    {
+        zcFontRegular = 0,
+        zcFontItalic = 1,
+        zcFontBold = 2,
+        zcFontBoldItalic = 3
+    } ZcTextFontStyle;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230F9-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcProxyImage
+    {
+        zcProxyNotShow = 0,
+        zcProxyShow = 1,
+        zcProxyBoundingBox = 2
+    } ZcProxyImage;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230D9-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcKeyboardPriority
+    {
+        zcKeyboardRunningObjSnap = 0,
+        zcKeyboardEntry = 1,
+        zcKeyboardEntryExceptScripts = 2
+    } ZcKeyboardPriority;
+
+    const LPSTR zcAmericanEnglish = "enu";
+    const LPSTR zcAustralianEnglish = "ena";
+    const LPSTR zcBritishEnglishIse = "ens";
+    const LPSTR zcBritishEnglishIze = "enz";
+    const LPSTR zcCatalan = "ca";
+    const LPSTR zcCzech = "cs";
+    const LPSTR zcDanish = "da";
+    const LPSTR zcDutchPrim = "nl";
+    const LPSTR zcDutchSec = "nls";
+    const LPSTR zcFinnish = "fi";
+    const LPSTR zcFrenchUnaccentCap = "fr";
+    const LPSTR zcFrenchAccentCap = "fra";
+    const LPSTR zcGermanScharfesS = "de";
+    const LPSTR zcGermanDoppleS = "ded";
+    const LPSTR zcItalian = "it";
+    const LPSTR zcNorwegianBokmal = "no";
+    const LPSTR zcNorwegianNynorsk = "non";
+    const LPSTR zcPortugueseIberian = "pt";
+    const LPSTR zcPortugueseBrazilian = "ptb";
+    const LPSTR zcRussianInfrequentIo = "ru";
+    const LPSTR zcRussianFrequentIo = "rui";
+    const LPSTR zcSpanishUnaccentCap = "es";
+    const LPSTR zcSpanishAccentCap = "esa";
+    const LPSTR zcSwedish = "sv";
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923059-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMenuGroupType
+    {
+        zcBaseMenuGroup = 0,
+        zcPartialMenuGroup = 1
+    } ZcMenuGroupType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923183-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMenuFileType
+    {
+        zcMenuFileCompiled = 0,
+        zcMenuFileSource = 1
+    } ZcMenuFileType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230FF-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMenuItemType
+    {
+        zcMenuItem = 0,
+        zcMenuSeparator = 1,
+        zcMenuSubMenu = 2
+    } ZcMenuItemType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923184-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcToolbarItemType
+    {
+        zcToolbarButton = 0,
+        zcToolbarSeparator = 1,
+        zcToolbarControl = 2,
+        zcToolbarFlyout = 3
+    } ZcToolbarItemType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230CB-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcToolbarDockStatus
+    {
+        zcToolbarDockTop = 0,
+        zcToolbarDockBottom = 1,
+        zcToolbarDockLeft = 2,
+        zcToolbarDockRight = 3,
+        zcToolbarFloating = 4
+    } ZcToolbarDockStatus;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92305F-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLineWeight
+    { 
+        zcLnWt000          =   0,
+        zcLnWt005          =   5,
+        zcLnWt009          =   9,
+        zcLnWt013          =  13,
+        zcLnWt015          =  15,
+        zcLnWt018          =  18,
+        zcLnWt020          =  20,
+        zcLnWt025          =  25,
+        zcLnWt030          =  30,
+        zcLnWt035          =  35,
+        zcLnWt040          =  40,
+        zcLnWt050          =  50,
+        zcLnWt053          =  53,
+        zcLnWt060          =  60,
+        zcLnWt070          =  70,
+        zcLnWt080          =  80,
+        zcLnWt090          =  90,
+        zcLnWt100          = 100,
+        zcLnWt106          = 106,
+        zcLnWt120          = 120,
+        zcLnWt140          = 140,
+        zcLnWt158          = 158,
+        zcLnWt200          = 200,
+        zcLnWt211          = 211,
+        zcLnWtByLayer      = -1,
+        zcLnWtByBlock      = -2,
+        zcLnWtByLwDefault  = -3
+    } ZcLineWeight;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231EF-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcWindowState
+    {
+        zcNorm = 1,
+        zcMin,
+        zcMax
+    } ZcWindowState;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923141-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotPaperUnits
+    {
+        zcInches = 0,
+        zcMillimeters,
+        zcPixels
+    } ZcPlotPaperUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923041-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotRotation
+    {
+        zc0degrees = 0,
+        zc90degrees,
+        zc180degrees,
+        zc270degrees
+    } ZcPlotRotation;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92302E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotType
+    {
+        zcDisplay = 0,
+        zcExtents,
+        zcLimits,
+        zcView,
+        zcWindow,
+        zcLayout
+    } ZcPlotType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923010-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotScale
+    {
+        zcScaleToFit = 0,              
+        zc1_128in_1ft,                 
+        zc1_64in_1ft,                  
+        zc1_32in_1ft,                  
+        zc1_16in_1ft,                  
+        zc3_32in_1ft,                  
+        zc1_8in_1ft,                   
+        zc3_16in_1ft,                  
+        zc1_4in_1ft,                   
+        zc3_8in_1ft,                   
+        zc1_2in_1ft,                   
+        zc3_4in_1ft,                   
+        zc1in_1ft,                     
+        zc3in_1ft,                     
+        zc6in_1ft,                     
+        zc1ft_1ft,                     
+        zc1_1,                         
+        zc1_2,                         
+        zc1_4,
+		zc1_5,
+        zc1_8,                         
+        zc1_10,                        
+        zc1_16,                        
+        zc1_20,                        
+        zc1_30,                        
+        zc1_40,                        
+        zc1_50,                        
+        zc1_100,                       
+        zc2_1,                         
+        zc4_1,                         
+        zc8_1,                         
+        zc10_1,                        
+        zc100_1,                       
+    } ZcPlotScale;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231B5-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcAlignment
+    {
+        zcAlignmentLeft = 0,
+        zcAlignmentCenter,
+        zcAlignmentRight,
+        zcAlignmentAligned,
+        zcAlignmentMiddle,
+        zcAlignmentFit,
+        zcAlignmentTopLeft,
+        zcAlignmentTopCenter,
+        zcAlignmentTopRight,
+        zcAlignmentMiddleLeft,
+        zcAlignmentMiddleCenter,
+        zcAlignmentMiddleRight,
+        zcAlignmentBottomLeft,
+        zcAlignmentBottomCenter,
+        zcAlignmentBottomRight
+    } ZcAlignment;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230FC-5A17-11E7-B72E-BC5FF42AC839)] [public] ZcColor       ZCAD_COLOR;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FFA-5A17-11E7-B72E-BC5FF42AC839)] [public] BSTR          ZCAD_LAYER;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923104-5A17-11E7-B72E-BC5FF42AC839)] [public] BSTR          ZCAD_LTYPE;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923197-5A17-11E7-B72E-BC5FF42AC839)] [public] long          ZCAD_NULL;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92311F-5A17-11E7-B72E-BC5FF42AC839)] [public] double        ZCAD_DISTANCE;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230BE-5A17-11E7-B72E-BC5FF42AC839)] [public] double        ZCAD_ANGLE;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231C6-5A17-11E7-B72E-BC5FF42AC839)] [public] ZcLineWeight  ZCAD_LWEIGHT;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FD5-5A17-11E7-B72E-BC5FF42AC839)] [public] double        ZCAD_NOUNITS;
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923037-5A17-11E7-B72E-BC5FF42AC839)] [public] VARIANT       ZCAD_POINT;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FFD-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLineSpacingStyle
+    {
+        
+        zcLineSpacingStyleAtLeast = 1,
+        zcLineSpacingStyleExactly = 2,
+    } ZcLineSpacingStyle;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230FA-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimPrecision
+    {
+        
+        zcDimPrecisionZero = 0,
+        zcDimPrecisionOne,
+        zcDimPrecisionTwo,
+        zcDimPrecisionThree,
+        zcDimPrecisionFour,
+        zcDimPrecisionFive,
+        zcDimPrecisionSix,
+        zcDimPrecisionSeven,
+        zcDimPrecisionEight
+    } ZcDimPrecision;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92300E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimUnits
+    {
+        
+        zcDimScientific = 1,
+        zcDimDecimal,
+        zcDimEngineering,
+        zcDimArchitecturalStacked,
+        zcDimFractionalStacked,
+        zcDimArchitectural,
+        zcDimFractional,
+        zcDimWindowsDesktop
+    } ZcDimUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FE7-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimLUnits
+    {
+        
+        zcDimLScientific = 1,
+        zcDimLDecimal,
+        zcDimLEngineering,
+        zcDimLArchitectural,
+        zcDimLFractional,
+        zcDimLWindowsDesktop
+    } ZcDimLUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923080-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimArrowheadType
+    {
+        
+        zcArrowDefault       = 0,
+        zcArrowClosedBlank   = 1,
+        zcArrowClosed        = 2,
+        zcArrowDot           = 3,
+        zcArrowArchTick      = 4,
+        zcArrowOblique       = 5,    
+        zcArrowOpen          = 6,
+        zcArrowOrigin        = 7,
+        zcArrowOrigin2       = 8,
+        zcArrowOpen90        = 9,    
+        zcArrowOpen30        = 10,
+        zcArrowDotSmall      = 11,
+        zcArrowDotBlank      = 12,
+        zcArrowSmall         = 13,
+        zcArrowBoxBlank      = 14,
+        zcArrowBoxFilled     = 15,
+        zcArrowDatumBlank    = 16,
+        zcArrowDatumFilled   = 17,
+        zcArrowIntegral      = 18,
+        zcArrowNone          = 19,
+        zcArrowUserDefined   = 20
+    } ZcDimArrowheadType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923001-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimCenterType
+    {
+        
+        zcCenterMark = 0,
+        zcCenterLine,
+        zcCenterNone
+    } ZcDimCenterType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923057-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimFit
+    {
+        
+        zcTextAndArrows = 0,
+        zcArrowsOnly,
+        zcTextOnly,
+        zcBestFit
+    } ZcDimFit;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231EA-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimFractionType
+    {
+        
+        zcHorizontal = 0,
+        zcDiagonal,
+        zcNotStacked
+    } ZcDimFractionType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923135-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimArcLengthSymbol
+    {
+        zcSymInFront = 0,
+        zcSymAbove,
+        zcSymNone
+    } ZcDimArcLengthSymbol;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92315C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimHorizontalJustification
+    {
+        
+        zcHorzCentered = 0,
+        zcFirstExtensionLine,
+        zcSecondExtensionLine,
+        zcOverFirstExtension,
+        zcOverSecondExtension
+    } ZcDimHorizontalJustification;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231DA-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimVerticalJustification
+    {
+        
+        zcVertCentered = 0,
+        zcAbove,
+        zcOutside,
+        zcJIS,
+        zcUnder
+    } ZcDimVerticalJustification;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923054-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimTextMovement
+    {
+        
+        zcDimLineWithText = 0,
+        zcMoveTextAddLeader,
+        zcMoveTextNoLeader
+    } ZcDimTextMovement;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230B6-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimToleranceMethod
+    {
+        
+        zcTolNone = 0,
+        zcTolSymmetrical,
+        zcTolDeviation,
+        zcTolLimits,
+        zcTolBasic
+    } ZcDimToleranceMethod;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923031-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDimToleranceJustify
+    {
+        
+        zcTolBottom = 0,
+        zcTolMiddle,
+        zcTolTop
+    } ZcDimToleranceJustify;
+    
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FD8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcViewportScale
+    {
+        zcVpScaleToFit = 0,                 
+        zcVpCustomScale,                 
+        zcVp1,
+        zcVp2,
+        zcVp3,
+        zcVp4,
+        zcVp5,
+        zcVp6,
+        zcVp7,
+        zcVp8,
+        zcVp9,
+        zcVp10,
+        zcVp11,
+        zcVp12,
+        zcVp13,
+        zcVp14,
+        zcVp15,
+        zcVp16,
+        zcVp17,
+        zcVp18,
+        zcVp19,
+        zcVp20,
+        zcVp21,
+        zcVp22,
+        zcVp23,
+        zcVp24,
+        zcVp25,
+        zcVp26,
+        zcVp27,
+        zcVp28,
+        zcVp29,
+        zcVp30,
+        zcVp31,
+        zcVp32,
+        zcVp33,
+        zcVp34,
+        zcVp35,
+        zcVp36,
+        zcVp37,
+        zcVp38,
+        zcVp39,
+        zcVp40,
+        zcVp41,
+        zcVp42,
+        zcVp43,
+        zcVp44,
+        zcVp45,
+        zcVp46,
+        zcVp47,
+        zcVp48,
+        zcVp49,
+        zcVp50,
+        zcVp51,
+        zcVp52,
+        zcVp53,
+        zcVp54,
+        zcVp55,
+        zcVp56,
+        zcVp57,
+        zcVp58,
+        zcVp59,
+        zcVp60,
+        zcVp61,
+        zcVp62,
+        zcVp63,
+        zcVp64,
+        zcVp65,
+        zcVp66,
+        zcVp67,
+        zcVp68,
+        zcVp69,
+        zcVp70,
+        zcVp71,
+        zcVp72,
+        zcVp73,
+        zcVp74,
+        zcVp75,
+        zcVp76,
+        zcVp77,
+        zcVp78,
+        zcVp79,
+        zcVp80,
+        zcVp81,
+        zcVp82,
+        zcVp83,
+        zcVp84,
+        zcVp85,
+        zcVp86,
+        zcVp87,
+        zcVp88,
+        zcVp89,
+        zcVp90,
+        zcVp91,
+        zcVp92,
+        zcVp93,
+        zcVp94,
+        zcVp95,
+        zcVp96,
+        zcVp97,
+        zcVp98,
+        zcVp99,
+        zcVp100,
+
+        zcVp1_1 = zcVpCustomScale +1,
+        zcVp1_2,                         
+        zcVp1_4,
+		zcVp1_5,
+        zcVp1_8,                         
+        zcVp1_10,                        
+        zcVp1_16,                        
+        zcVp1_20,                        
+        zcVp1_30,                        
+        zcVp1_40,                        
+        zcVp1_50,                        
+        zcVp1_100,                       
+        zcVp2_1,                         
+        zcVp4_1,                         
+        zcVp8_1,                         
+        zcVp10_1,                        
+        zcVp100_1,                       
+        zcVp1_128in_1ft,                 
+        zcVp1_64in_1ft,                  
+        zcVp1_32in_1ft,                  
+        zcVp1_16in_1ft,                  
+        zcVp3_32in_1ft,                  
+        zcVp1_8in_1ft,                   
+        zcVp3_16in_1ft,                  
+        zcVp1_4in_1ft,                   
+        zcVp3_8in_1ft,                   
+        zcVp1_2in_1ft,                   
+        zcVp3_4in_1ft,                   
+        zcVp1in_1ft,                     
+        zcVp1and1_2in_1ft,               
+        zcVp3in_1ft,                     
+        zcVp6in_1ft,                     
+        zcVp1ft_1ft,                     
+    } ZcViewportScale;     
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923022-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcISOPenWidth
+    {
+        zcPenWidth013 =  13,
+        zcPenWidth018 =  18,
+        zcPenWidth025 =  25,
+        zcPenWidth035 =  35,
+        zcPenWidth050 =  50,
+        zcPenWidth070 =  70,
+        zcPenWidth100 = 100,
+        zcPenWidth140 = 140,
+        zcPenWidth200 = 200,
+        zcPenWidthUnk =  -1
+    } ZcISOPenWidth;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92301E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSaveAsType
+    {
+        zcUnknown = -1,
+        zcR12_dxf = 1,
+        zcR13_dwg = 4,
+        zcR13_dxf = 5,
+        zcR14_dwg = 8,
+        zcR14_dxf = 9,
+        zc2000_dwg = 12,
+        zc2000_dxf = 13,
+        zc2000_Template = 14,
+        zc2004_dwg = 24,
+        zc2004_dxf = 25,
+        zc2004_Template = 26,
+        zc2007_dwg = 36,
+        zc2007_dxf = 37,
+        zc2007_Template = 38,
+		zc2010_dwg = 48,
+		zc2010_dxf = 49,
+		zc2010_Template = 50,
+		zc2013_dwg = 60,
+		zc2013_dxf = 61,
+		zc2013_Template = 62,
+		zc2018_dwg = 64,
+		zc2018_dxf = 65,
+		zc2018_Template = 66,
+        zcNative = zc2018_dwg,
+
+        zcR15_dwg = zc2000_dwg,
+        zcR15_dxf = zc2000_dxf,
+        zcR15_Template = zc2000_Template,
+        zcR18_dwg = zc2004_dwg,
+        zcR18_dxf = zc2004_dxf,
+        zcR18_Template = zc2004_Template
+    } ZcSaveAsType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92314C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPrinterSpoolAlert
+    {
+        zcPrinterAlwaysAlert = 0,
+        zcPrinterAlertOnce,
+        zcPrinterNeverAlertLogOnce,
+        zcPrinterNeverAlert
+    } ZcPrinterSpoolAlert;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92314E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotPolicyForNewDwgs
+    {
+        zcPolicyNewDefault = 0,
+        zcPolicyNewLegacy
+    } ZcPlotPolicyForNewDwgs;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FE8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotPolicyForLegacyDwgs
+    {
+        zcPolicyLegacyDefault = 0,
+        zcPolicyLegacyQuery,
+        zcPolicyLegacyLegacy
+    } ZcPlotPolicyForLegacyDwgs;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231BA-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcOleQuality
+    {
+        zcOQLineArt = 0,
+        zcOQText,
+        zcOQGraphics,
+        zcOQPhoto,
+        zcOQHighPhoto
+    } ZcOleQuality;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923169-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLoadPalette
+    {
+        zcPaletteByDrawing = 0,
+        zcPaletteBySession
+    } ZcLoadPalette;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923121-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcInsertUnits
+    {
+        zcInsertUnitsUnitless = 0,
+        zcInsertUnitsInches,
+        zcInsertUnitsFeet,
+        zcInsertUnitsMiles,
+        zcInsertUnitsMillimeters,
+        zcInsertUnitsCentimeters,
+        zcInsertUnitsMeters,
+        zcInsertUnitsKilometers,
+        zcInsertUnitsMicroinches,
+        zcInsertUnitsMils,
+        zcInsertUnitsYards,
+        zcInsertUnitsAngstroms,
+        zcInsertUnitsNanometers,
+        zcInsertUnitsMicrons,
+        zcInsertUnitsDecimeters,
+        zcInsertUnitsDecameters,
+        zcInsertUnitsHectometers,
+        zcInsertUnitsGigameters,
+        zcInsertUnitsAstronomicalUnits,
+        zcInsertUnitsLightYears,
+        zcInsertUnitsParsecs
+    } ZcInsertUnits;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923168-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcAlignmentPointAcquisition
+    {
+        zcAlignPntAcquisitionAutomatic = 0,
+        zcAlignPntAcquisitionShiftToAcquire
+    } ZcAlignmentPointAcquisition;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230EA-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcInsertUnitsAction
+    {
+        zcInsertUnitsPrompt = 0,
+        zcInsertUnitsAutoAssign
+    } ZcInsertUnitsAction;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923132-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPlotPolicy
+    {
+        zcPolicyNamed = 0,
+        zcPolicyLegacy
+    } ZcPlotPolicy;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923076-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawingAreaShortCutMenu
+    {
+        zcNoDrawingAreaShortCutMenu = 0,
+        zcUseDefaultDrawingAreaShortCutMenu
+    } ZcDrawingAreaShortCutMenu;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923161-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawingAreaSCMDefault
+    {
+        zcRepeatLastCommand = 0,
+        zcSCM
+    } ZcDrawingAreaSCMDefault;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923083-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawingAreaSCMEdit
+    {
+        zcEdRepeatLastCommand = 0,
+        zcEdSCM
+    } ZcDrawingAreaSCMEdit;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230E0-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawingAreaSCMCommand
+    {
+        zcEnter = 0,
+        zcEnableSCMOptions,
+        zcEnableSCM
+    } ZcDrawingAreaSCMCommand;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230C7-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLayerStateMask
+    {
+        zcLsNone           = 0x0000,
+        zcLsOn             = 0x0001,
+        zcLsFrozen         = 0x0002,
+        zcLsLocked         = 0x0004,
+        zcLsPlot           = 0x0008,
+        zcLsNewViewport    = 0x0010,
+        zcLsColor          = 0x0020,
+        zcLsLineType       = 0x0040,
+        zcLsLineWeight     = 0x0080,
+        zcLsPlotStyle      = 0x0100,
+        zcLsAll            = 0xFFFF
+    } ZcLayerStateMask;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92317B-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcShadePlot
+    {
+        zcShadePlotAsDisplayed = 0,
+        zcShadePlotWireframe,
+        zcShadePlotHidden,
+        zcShadePlotRendered
+    } ZcShadePlot;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92309E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcHatchObjectType
+    {
+        zcHatchObject = 0,
+        zcGradientObject = 1
+    } ZcHatchObjectType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92318A-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcGradientPatternType
+    {
+        zcPreDefinedGradient  = 0,
+        zcUserDefinedGradient = 1
+    } ZcGradientPatternType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231C9-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTableDirection
+    {
+        zcTableTopToBottom  = 0,
+        zcTableBottomToTop = 1
+    } ZcTableDirection;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230ED-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellAlignment
+    {
+        zcTopLeft        = 1,
+        zcTopCenter      = 2,
+        zcTopRight       = 3,
+        zcMiddleLeft     = 4,
+        zcMiddleCenter   = 5,
+        zcMiddleRight    = 6,
+        zcBottomLeft     = 7,
+        zcBottomCenter   = 8,
+        zcBottomRight    = 9
+    } ZcCellAlignment;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230F4-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcRowType
+    {
+        zcUnknownRow     = 0,
+        zcDataRow        = 1,
+        zcTitleRow       = 2,
+        zcHeaderRow      = 4
+    } ZcRowType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231A4-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcValueDataType
+    {
+
+        zcUnknownDataType   = 0,
+        zcLong              = (0x1 << 0),
+        zcDouble            = (0x1 << 1),
+        zcString            = (0x1 << 2),
+        zcDate              = (0x1 << 3),
+        zcPoint2d           = (0x1 << 4),
+        zcPoint3d           = (0x1 << 5),
+        zcObjectId          = (0x1 << 6),
+        zcBuffer            = (0x1 << 7),
+        zcResbuf            = (0x1 << 8),
+        zcGeneral           = (0x1 << 9),
+
+    } ZcValueDataType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FF2-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcValueUnitType
+    {
+
+        zcUnitless      = 0,
+        zcUnitDistance  = (0x1 << 0),
+        zcUnitAngle     = (0x1 << 1),
+        zcUnitArea      = (0x1 << 2),
+        zcUnitVolume    = (0x1 << 3),
+
+    } ZcValueUnitType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923070-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcParseOption
+    {
+
+        zcParseOptionNone       = 0,
+        zcSetDefaultFormat      = (0x1 << 0),
+        zcPreserveMtextFormat   = (0x1 << 1),
+
+    } ZcParseOption;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92313E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcFormatOption
+    {
+
+        kFormatOptionNone       = 0,
+        zcForEditing            = (0x1 << 0),
+        zcForExpression         = (0x1 << 1),
+        zcUseMaximumPrecision   = (0x1 << 2),
+        zcIgnoreMtextFormat     = (0x1 << 3),
+
+    } ZcFormatOption;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92311A-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcGridLineType
+    {
+        zcInvalidGridLine = 0,
+        zcHorzTop        = 1,
+        zcHorzInside     = 2,
+        zcHorzBottom     = 4,
+        zcVertLeft       = 8,
+        zcVertInside     = 0x10,
+        zcVertRight      = 0x20 
+
+    } ZcGridLineType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231C2-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellType
+    {
+        zcUnknownCell = 0,
+        zcTextCell= 1,
+        zcBlockCell= 2,
+
+    } ZcCellType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230AD-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellEdgeMask
+    {
+        zcTopMask= 1,
+        zcRightMask= 2,
+        zcBottomMask= 4,
+        zcLeftMask= 8,
+
+    } ZcCellEdgeMask;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FF5-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcRotationAngle
+    {
+        zcDegreesUnknown = -1,
+        zcDegrees000     = 0,
+        zcDegrees090     = 1,
+        zcDegrees180     = 2,
+        zcDegrees270     = 3,
+
+    } ZcRotationAngle;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230EE-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMergeCellStyleOption
+    {
+        zcMergeCellStyleNone                         = 0,
+        zcMergeCellStyleCopyDuplicates               = 0x1,
+        zcMergeCellStyleOverwriteDuplicates          = 0x2,
+        zcMergeCellStyleConvertDuplicatesToOverrides = 0x4,
+        zcMergeCellStyleIgnoreNewStyles              = 0x8,
+
+    } ZcMergeCellStyleOption;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92318E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSelectType
+    {
+        zcTableSelectWindow= 1,
+        zcTableSelectCrossing= 2,
+
+    } ZcSelectType;
+
+	typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92314A-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcOleType
+    {
+		zcOTLink = 1,
+		zcOTEmbedded = 2,
+		zcOTStatic = 3
+	} ZcOleType;
+
+	typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923084-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcOlePlotQuality
+    {
+        zcOPQMonochrome = 0,
+        zcOPQLowGraphics,
+        zcOPQHighGraphics
+    } ZcOlePlotQuality;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230D8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTableStyleOverrides
+    {
+        
+        zcTitleSuppressed             = 1,
+        zcHeaderSuppressed            = 2,
+        zcFlowDirection               = 3,
+        zcHorzCellMargin              = 4,
+        zcVertCellMargin              = 5,
+        zcTitleRowColor               = 6,
+        zcHeaderRowColor              = 7,
+        zcDataRowColor                = 8,
+        zcTitleRowFillNone            = 9,
+        zcHeaderRowFillNone           = 10,
+        zcDataRowFillNone             = 11,
+        zcTitleRowFillColor           = 12,
+        zcHeaderRowFillColor          = 13,
+        zcDataRowFillColor            = 14,
+        zcTitleRowAlignment           = 15,
+        zcHeaderRowAlignment          = 16,
+        zcDataRowAlignment            = 17,
+        zcTitleRowTextStyle           = 18,
+        zcHeaderRowTextStyle          = 19,
+        zcDataRowTextStyle            = 20,
+        zcTitleRowTextHeight          = 21,
+        zcHeaderRowTextHeight         = 22,
+        zcDataRowTextHeight           = 23,
+        zcTitleRowDataType            = 24,
+        zcHeaderRowDataType           = 25,
+        zcDataRowDataType             = 26,
+
+        zcTitleHorzTopColor           = 40,
+        zcTitleHorzInsideColor        = 41,
+        zcTitleHorzBottomColor        = 42,
+        zcTitleVertLeftColor          = 43,
+        zcTitleVertInsideColor        = 44,
+        zcTitleVertRightColor         = 45,
+        zcHeaderHorzTopColor          = 46,
+        zcHeaderHorzInsideColor       = 47,
+        zcHeaderHorzBottomColor       = 48,
+        zcHeaderVertLeftColor         = 49,
+        zcHeaderVertInsideColor       = 50,
+        zcHeaderVertRightColor        = 51,
+        zcDataHorzTopColor            = 52,
+        zcDataHorzInsideColor         = 53,
+        zcDataHorzBottomColor         = 54,
+        zcDataVertLeftColor           = 55,
+        zcDataVertInsideColor         = 56,
+        zcDataVertRightColor          = 57,
+
+        zcTitleHorzTopLineWeight      = 70,
+        zcTitleHorzInsideLineWeight   = 71,
+        zcTitleHorzBottomLineWeight   = 72,
+        zcTitleVertLeftLineWeight     = 73,
+        zcTitleVertInsideLineWeight   = 74,
+        zcTitleVertRightLineWeight    = 75,
+        zcHeaderHorzTopLineWeight     = 76,
+        zcHeaderHorzInsideLineWeight  = 77,
+        zcHeaderHorzBottomLineWeight  = 78,
+        zcHeaderVertLeftLineWeight    = 79,
+        zcHeaderVertInsideLineWeight  = 80,
+        zcHeaderVertRightLineWeight   = 81,
+        zcDataHorzTopLineWeight       = 82,
+        zcDataHorzInsideLineWeight    = 83,
+        zcDataHorzBottomLineWeight    = 84,
+        zcDataVertLeftLineWeight      = 85,
+        zcDataVertInsideLineWeight    = 86,
+        zcDataVertRightLineWeight     = 87,
+
+        zcTitleHorzTopVisibility      = 100,
+        zcTitleHorzInsideVisibility   = 101,
+        zcTitleHorzBottomVisibility   = 102,
+        zcTitleVertLeftVisibility     = 103,
+        zcTitleVertInsideVisibility   = 104,
+        zcTitleVertRightVisibility    = 105,
+        zcHeaderHorzTopVisibility     = 106,
+        zcHeaderHorzInsideVisibility  = 107,
+        zcHeaderHorzBottomVisibility  = 108,
+        zcHeaderVertLeftVisibility    = 109,
+        zcHeaderVertInsideVisibility  = 110,
+        zcHeaderVertRightVisibility   = 111,
+        zcDataHorzTopVisibility       = 112,
+        zcDataHorzInsideVisibility    = 113,
+        zcDataHorzBottomVisibility    = 114,
+        zcDataVertLeftVisibility      = 115,
+        zcDataVertInsideVisibility    = 116,
+        zcDataVertRightVisibility     = 117,
+
+        zcCellAlign                   = 130,
+        zcCellBackgroundFillNone      = 131,
+        zcCellBackgroundColor         = 132,
+        zcCellContentColor            = 133,
+        zcCellTextStyle               = 134,
+        zcCellTextHeight              = 135,
+        zcCellTopGridColor            = 136,
+        zcCellRightGridColor          = 137,
+        zcCellBottomGridColor         = 138,
+        zcCellLeftGridColor           = 139,
+        zcCellTopGridLineWeight       = 140,
+        zcCellRightGridLineWeight     = 141,
+        zcCellBottomGridLineWeight    = 142,
+        zcCellLeftGridLineWeight      = 143,
+        zcCellTopVisibility           = 144,
+        zcCellRightVisibility         = 145,
+        zcCellBottomVisibility        = 146,
+        zcCellLeftVisibility          = 147,
+        zcCellDataType                = 148,
+
+    } ZcTableStyleOverrides;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92302C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMLineJustification
+    {
+        zcTop        = 0,
+        zcZero       = 1,
+        zcBottom     = 2
+    } ZcMLineJustification;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FC4-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcBlockScaling
+    {
+        zcAny       = 0,
+        zcUniform   = 1
+    } ZcBlockScaling;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92316F-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDynamicBlockReferencePropertyUnitsType
+    {
+            zcNoUnits  = 0,
+            zcAngular  = 1,
+            zcDistance = 2,
+            zcArea     = 3
+    } ZcDynamicBlockReferencePropertyUnitsType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92301F-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSectionState
+    {
+
+        zcSectionStatePlane     = (0x1 << 0),
+        zcSectionStateBoundary  = (0x1 << 1),
+        zcSectionStateVolume    = (0x1 << 2),
+
+    } ZcSectionState;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231D8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSectionSubItem
+    {
+
+        zcSectionSubItemkNone              = 0,
+        zcSectionSubItemSectionLine        = (0x1 << 0),
+        zcSectionSubItemSectionLineTop     = (0x1 << 1),
+        zcSectionSubItemSectionLineBottom  = (0x1 << 2),
+        zcSectionSubItemBackLine           = (0x1 << 3),
+        zcSectionSubItemBackLineTop        = (0x1 << 4),
+        zcSectionSubItemBackLineBottom     = (0x1 << 5),
+        zcSectionSubItemVerticalLineTop    = (0x1 << 6),
+        zcSectionSubItemVerticalLineBottom = (0x1 << 7),
+
+    } ZcSectionSubItem;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92305C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSectionType
+    {
+
+        zcSectionTypeLiveSection   = (0x1 << 0),
+        zcSectionType2dSection     = (0x1 << 1),
+        zcSectionType3dSection     = (0x1 << 2),
+
+    } ZcSectionType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230DB-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSectionGeneration
+    {
+
+        zcSectionGenerationSourceAllObjects          = (0x1 << 0),
+        zcSectionGenerationSourceSelectedObjects     = (0x1 << 1),
+        zcSectionGenerationDestinationNewBlock       = (0x1 << 4),
+        zcSectionGenerationDestinationReplaceBlock   = (0x1 << 5),
+        zcSectionGenerationDestinationFile           = (0x1 << 6),
+
+    } ZcSectionGeneration;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231C8-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcHelixConstrainType
+    {
+        zcTurnHeight  = 0,
+        zcTurns       = 1,
+        zcHeight      = 2
+
+    } ZcHelixConstrainType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923154-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcShadowDisplayType
+    {
+        zcCastsAndReceivesShadows = 0,
+        zcCastsShadows = 1,
+        zcReceivesShadows = 2,
+        zcIgnoreShadows = 3
+    } ZcShadowDisplayType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230E2-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcLoftedSurfaceNormalType
+    {
+        zcRuled = 0,
+        zcSmooth = 1,
+        zcFirstNormal = 2,
+        zcLastNormal = 3,
+        zcEndsNormal = 4,
+        zcAllNormal = 5,
+        zcUseDraftAngles = 6
+    } ZcLoftedSurfaceNormalType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9231A6-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcHelixTwistType
+    {
+        zcCCW = 0,
+        zcCW = 1
+    } ZcHelixTwistType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92303B-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcUnderlayLayerOverrideType
+    {
+        zcNoOverrides = 0,
+        zcApplied = 1
+    } ZcUnderlayLayerOverrideType;
+
+    typedef [uuid(EC9230CC-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTableFlowDirection
+    {
+        zcTableFlowRight     = 0x1,
+        zcTableFlowDownOrUp = 0x2,
+        zcTableFlowLeft= 0x4,
+    } ZcTableFlowDirection;
+
+    typedef [uuid(EC922FE6-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellMargin
+    {
+        zcCellMarginTop     = 0x1,
+        zcCellMarginLeft    = 0x2,
+        zcCellMarginBottom  = 0x4,
+        zcCellMarginRight   = 0x8,
+        zcCellMarginHorzSpacing = 0x10,
+        zcCellMarginVertSpacing = 0x20,
+    } ZcCellMargin;
+
+    typedef [uuid(EC923033-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellContentLayout
+    {
+        zcCellContentLayoutFlow              = 0x1,
+        zcCellContentLayoutStackedHorizontal = 0x2,
+        zcCellContentLayoutStackedVertical   = 0x4,
+    } ZcCellContentLayout;
+
+    typedef [uuid(EC923071-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellProperty
+    {
+
+           zcInvalidCellProperty     = 0,
+           zcLock                    = (0x1 << 0),
+           zcDataType                = (0x1 << 1),
+           zcDataFormat              = (0x1 << 2),
+           zcRotation                = (0x1 << 3),
+           zcScale                   = (0x1 << 4),
+           zcAlignmentProperty       = (0x1 << 5),
+           zcContentColor            = (0x1 << 6),
+           zcBackgroundColor         = (0x1 << 7),
+           zcTextStyle               = (0x1 << 8),
+           zcTextHeight              = (0x1 << 9),
+           zcMarginLeft              = (0x1 << 10),
+           zcMarginTop               = (0x1 << 11),
+           zcMarginRight             = (0x1 << 12),
+           zcMarginBottom            = (0x1 << 13),
+           zcEnableBackgroundColor   = (0x1 << 14),
+           zcAutoScale               = (0x1 << 15),
+           zcMergeAll                = (0x1 << 16),
+           zcFlowDirBtoT             = (0x1 << 17),
+           zcContentLayout           = (0x1 << 18),
+           zcDataTypeAndFormat       = (zcDataType | zcDataFormat),
+           zcContentProperties       = (zcDataType | zcDataFormat | zcRotation |
+                                       zcScale | zcAlignmentProperty | zcContentColor |
+                                       zcTextStyle | zcTextHeight | zcAutoScale),
+
+           zcBitProperties           = (zcEnableBackgroundColor | zcAutoScale | zcMergeAll | zcFlowDirBtoT),
+
+           zcAllCellProperties       = (zcLock | zcDataType | zcDataFormat | zcRotation |
+                                       zcScale | zcAlignmentProperty | zcContentColor | zcBackgroundColor |
+                                       zcTextStyle | zcTextHeight | zcMarginLeft | zcMarginTop |
+                                       zcMarginRight | zcMarginBottom | zcEnableBackgroundColor |
+                                       zcAutoScale | zcMergeAll | zcFlowDirBtoT | zcContentLayout),
+
+    } ZcCellProperty;
+
+    typedef [uuid(EC9231EE-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcGridLineStyle
+    {
+        zcGridLineStyleSingle = 1,
+        zcGridLineStyleDouble = 2,
+    } ZcGridLineStyle;
+
+    typedef [uuid(EC9231F5-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDataLinkUpdateDirection
+    {
+        zcUpdateDataFromSource   = 0x1,
+        zcUpdateSourceFromData   = 0x2,
+    } ZcDataLinkUpdateDirection;
+
+    typedef [uuid(EC922FEB-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDataLinkUpdateOption
+    {
+        zcUpdateOptionNone                                  = 0,
+        zcUpdateOptionOverwriteContentModifiedAfterUpdate   = 0x20000,
+        zcUpdateOptionOverwriteFormatModifiedAfterUpdate    = 0x40000,
+        zcUpdateOptionUpdateFullSourceRange                 = 0x80000,
+        zcUpdateOptionIncludeXrefs                          = 0x100000,
+    } ZcDataLinkUpdateOption;
+
+    typedef [uuid(EC923026-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcCellContentType
+    {
+        zcCellContentTypeUnknown = 0,
+        zcCellContentTypeValue   = (0x1 << 0),
+        zcCellContentTypeField   = (0x1 << 1),
+        zcCellContentTypeBlock   = (0x1 << 2),
+    } ZcCellContentType;
+
+    typedef [uuid(EC923130-5A17-11E7-B72E-BC5FF42AC839)][v1_enum] enum ZcCellState
+    {
+        zcCellStateNone             = 0,
+        zcCellStateContentLocked    = 0x1,
+        zcCellStateContentReadOnly  = 0x2,
+        zcCellStateFormatLocked     = 0x4,
+        zcCellStateFormatReadOnly   = 0x8,
+        zcCellStateLinked           = 0x10,
+        zcCellStateContentModified  = 0x20,
+        zcCellStateFormatModified   = 0x40,
+    } ZcCellState;
+
+    typedef [uuid(EC9231A0-5A17-11E7-B72E-BC5FF42AC839)][v1_enum] enum ZcCellOption
+    {
+        kCellOptionNone    = 0,
+        kInheritCellFormat = 0x1,
+    } ZcCellOption;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230DC-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTextAttachmentType
+    {
+        zcAttachmentTopOfTop        = 0,
+        zcAttachmentMiddleOfTop     = 1,
+        zcAttachmentBottomOfTop     = 2,
+        zcAttachmentBottomOfTopLine = 3,
+        zcAttachmentMiddle          = 4,
+        zcAttachmentMiddleOfBottom  = 5,
+        zcAttachmentBottomOfBottom  = 6,
+        zcAttachmentBottomLine      = 7,
+        zcAttachmentAllLine         = 8
+    } ZcTextAttachmentType;
+
+	typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92310D-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTextAttachmentDirection
+	{
+        zcAttachmentHorizontal = 0,
+        zcAttachmentVertical = 1
+    } ZcTextAttachmentDirection;
+
+	typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923198-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcVerticalTextAttachmentType
+	{
+        zcAttachmentCenter = 0,
+        zcAttachmentLinedCenter = 1
+    } ZcVerticalTextAttachmentType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC9230BB-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMLeaderType
+    {
+        zcStraightLeader            = 1,
+        zcSplineLeader              = 2,
+        zcInVisibleLeader           = 0
+    } ZcMLeaderType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923143-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcMLeaderContentType
+    {
+        zcNoneContent                = 0,
+        zcBlockContent               = 1,
+        zcMTextContent               = 2
+    } ZcMLeaderContentType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC922FD1-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTextAlignmentType
+    {
+        zcLeftAlignment             = 0,
+        zcCenterAlignment           = 1,
+        zcRightAlignment            = 2
+    } ZcTextAlignmentType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923082-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcTextAngleType
+    {
+        zcInsertAngle               = 0,
+        zcHorizontalAngle           = 1,
+        zcAlwaysRightReadingAngle   = 2
+    } ZcTextAngleType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92312E-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcBlockConnectionType {
+        zcConnectExtents            = 0,
+        zcConnectBase               = 1
+    } ZcBlockConnectionType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923018-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcPredefBlockType
+    {
+        zcBlockImperial      =  0,
+        zcBlockSlot          =  1,
+        zcBlockCircle        =  2,
+        zcBlockBox           =  3,
+        zcBlockHexagon       =  4,
+        zcBlockTriangle      =  5,
+        zcBlockUserDefined   =  6
+    } ZcPredefBlockType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923062-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawLeaderOrderType {
+        zcDrawLeaderHeadFirst            = 0,
+        zcDrawLeaderTailFirst            = 1
+    } ZcDrawLeaderOrderType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC923051-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcDrawMLeaderOrderType {
+        zcDrawContentFirst            = 0,
+        zcDrawLeaderFirst            = 1
+    } ZcDrawMLeaderOrderType;
+
+    typedef [helpcontext(IDH_ENUMTYPES), uuid(EC92303C-5A17-11E7-B72E-BC5FF42AC839)] [v1_enum] enum ZcSegmentAngleType {
+        zcDegreesAny            = 0,
+        zcDegrees15            = 1,
+        zcDegrees30            = 2,
+        zcDegrees45            = 3,
+        zcDegrees60            = 4,
+        zcDegrees90            = 6,
+        zcDegreesHorz            = 12
+    } ZcSegmentAngleType;

@@ -1,0 +1,7 @@
+
+#ifndef __DCCONST_IDL__
+#define __DCCONST_IDL__
+
+#include "../inc/zdcconst.idl"
+
+#endif //#ifndef __DCCONST_IDL__

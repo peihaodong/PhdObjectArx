@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Platform Condition="'$(Platform)' == ''">x64</Platform>
+    <Configuration Condition="'$(Configuration)' == ''">Release</Configuration>
+    <SlnDir>$(MsBuildThisFileDirectory)</SlnDir>
+  </PropertyGroup>
+
+  <Target Name="Build">
+    <PropertyGroup>
+      <Sln>$(SlnDir)..\PhdObjectArx.sln</Sln>
+    </PropertyGroup>
+    
+    <MsBuild Projects="$(Sln)" Properties="Configuration=$(Configuration);Platform=$(Platform)" Targets="Rebuild"/>
+	
+  </Target>
+
+
+</Project>
