@@ -1,10 +1,10 @@
 #include "StdAfx.h"
 #include "CFiltrateYxk.h"
-#include "../../PhdNotes/NameSpace/PhdUiPr.h"
-#include "../../PhdNotes/NameSpace/PhdUtility.h"
-#include "../../PhdNotes/NameSpace/PhdSelSet.h"
-#include "../../PhdNotes/NameSpace/PhdConver.h"
-#include "../../PhdNotes/NameSpace/PhdEntity.h"
+#include "PhdUiPr.h"
+#include "PhdUtility.h"
+#include "PhdSelSet.h"
+#include "PhdConver.h"
+#include "PhdEntity.h"
 
 
 

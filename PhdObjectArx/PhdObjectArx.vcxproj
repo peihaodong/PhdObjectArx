@@ -22,6 +22,7 @@
     <ProjectGuid>{6D075AFE-0189-4AF8-8ED5-71074C4B8694}</ProjectGuid>
     <RootNamespace>PhdObjectArx</RootNamespace>
     <Keyword>MFCDLLProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -96,8 +97,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
-xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -120,8 +121,8 @@ xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_Ph
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
-xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -146,8 +147,8 @@ xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.lib" "$(Soluti
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PostBuildEvent>
-      <Command>xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
-xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -172,8 +173,8 @@ xcopy /Y "$(SolutionDir)$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_Ph
       <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <PostBuildEvent>
-      <Command>xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.zrx" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\bin-$(Platform)\"
-xcopy /Y "$(SolutionDir)$(Platform)\$(Configuration)\PhdObjectArx.lib" "$(SolutionDir)API_PhdObjectArx\$(Configuration)\lib-$(Platform)\"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

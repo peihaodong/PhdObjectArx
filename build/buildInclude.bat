@@ -1,4 +1,6 @@
 rem 拷贝.h文件
+call :FileCopy PhdObjectArxDynamicLink
+
 call :FileCopy CCurveToPline
 call :FileCopy CFiltrateYxk
 call :FileCopy CPhdPlot
