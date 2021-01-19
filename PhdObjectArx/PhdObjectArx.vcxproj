@@ -223,6 +223,7 @@
     <ClCompile Include="PhdArxView.cpp" />
     <ClCompile Include="PhdArxViewport.cpp" />
     <ClCompile Include="PhdArxXData.cpp" />
+    <ClCompile Include="PhdArxXRecord.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -269,6 +270,7 @@
     <ClInclude Include="PhdArxLayer.h" />
     <ClInclude Include="PhdArxLinetype.h" />
     <ClInclude Include="PhdArxMethod.h" />
+    <ClInclude Include="PhdArxXRecord.h" />
     <ClInclude Include="PhdObjectArxDynamicLink.h" />
     <ClInclude Include="PhdArxSelSet.h" />
     <ClInclude Include="PhdArxSysDlg.h" />

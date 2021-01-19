@@ -21,13 +21,13 @@
 #include "PhdArxTextStyle.h"
 #include "PhdArxUiPr.h"
 #include "PhdArxUtility.h"
-#include "PhdArxEntity.h"
 #include "PhdArxView.h"
 #include "PhdArxViewport.h"
 #include "PhdArxXData.h"
 #include "PhdArxDatabase.h"
 #include "PhdArxBlock.h"
 #include "PhdArxCommand.h"
+#include "PhdArxXRecord.h"
 
 #include "CArxPreviewCtrl.h"
 
