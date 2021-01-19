@@ -1,11 +1,10 @@
 #include "StdAfx.h"
 #include "CAttBlkJig.h"
-#include "PhdBlock.h"
-#include "PhdInline.h"
 
 
 CAttBlkJig::CAttBlkJig()
 	:m_pEntDrag(NULL), m_nSection(0),  m_ptBase(AcGePoint3d::kOrigin)
+	,m_apPhdArxBlock(std::make_shared<Phd::PhdArxBlock>())
 {
 }
 
@@ -15,7 +14,7 @@ CAttBlkJig::~CAttBlkJig()
 
 bool CAttBlkJig::BeginDrag(const AcDbObjectId& idBlkDef, AcDbBlockReference*& pEntDrag)
 {
-	m_pEntDrag = PhdBlock::CreateAttBlkRef(idBlkDef, AcGePoint3d::kOrigin);
+	m_pEntDrag = m_apPhdArxBlock->CreateAttBlkRef(idBlkDef, AcGePoint3d::kOrigin);
 
 	DragStatus st = kNormal;
 	while (kNormal == st && m_nSection < 1)

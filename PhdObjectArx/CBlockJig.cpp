@@ -1,14 +1,15 @@
 #include "StdAfx.h"
 #include "CBlockJig.h"
-#include "PhdUtility.h"
-#include "PhdInline.h"
+
 
 
 CBlockJig::CBlockJig()
-	:m_pEntDrag(NULL),m_nSection(0),m_dAngle(0)
-	,m_ptBase(AcGePoint3d::kOrigin)
-	,m_nType(2)
+	:m_pEntDrag(NULL), m_nSection(0), m_dAngle(0)
+	, m_ptBase(AcGePoint3d::kOrigin)
+	, m_nType(2)
 	, m_dScale(1)
+	, m_apPhdArxInline(std::make_shared<Phd::PhdArxInline>())
+	, m_apPhdArxUtility(std::make_shared<Phd::PhdArxUtility>())
 {
 }
 
@@ -32,7 +33,7 @@ bool CBlockJig::BeginDrag(const AcDbObjectId& idBlkDef, AcDbBlockReference*& pEn
 	m_pEntDrag = new AcDbBlockReference(AcGePoint3d::kOrigin,idBlkDef);
 	if (m_dScale != 1)
 	{
-		PhdUtility::ModifyEntByScale(m_pEntDrag,m_dScale,AcGePoint3d::kOrigin);
+		m_apPhdArxUtility->ModifyEntByScale(m_pEntDrag,m_dScale,AcGePoint3d::kOrigin);
 	}
 
 	DragStatus st = kNormal;
@@ -92,7 +93,7 @@ ZcEdJig::DragStatus CBlockJig::sampler()
 		st = acquireAngle(dAngle, m_ptBase);
 		if (kNormal == st)
 		{
-			if (PhdInline::IsEqual(dAngle, m_dAngle))
+			if (m_apPhdArxInline->IsEqual(dAngle, m_dAngle))
 				st = kNoChange;
 			else
 				m_dAngle = dAngle;

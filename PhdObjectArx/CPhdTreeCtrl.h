@@ -107,7 +107,7 @@ protected:
 	//************************************
 	void GetAllItems(AcArray<HTREEITEM>& arrItem, HTREEITEM hItem) const;
 private:
-
+	std::shared_ptr<Phd::PhdArxMethod> m_apPhdArxMethod;
 
 	//////////////////////////////////////////////////////////////////////////
 public:

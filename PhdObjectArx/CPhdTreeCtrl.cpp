@@ -1,11 +1,11 @@
 #include "StdAfx.h"
 #include "CPhdTreeCtrl.h"
-#include "PhdMethod.h"
 
 
 IMPLEMENT_DYNAMIC(CPhdTreeCtrl, CTreeCtrl)
 
 CPhdTreeCtrl::CPhdTreeCtrl()
+	:m_apPhdArxMethod(std::make_shared<Phd::PhdArxMethod>())
 {
 }
 
@@ -250,7 +250,7 @@ BOOL CPhdTreeCtrl::OnTvnEndlabeledit(NMHDR *pNMHDR, LRESULT *pResult)
 		CString strTemp = LabelStr;
 		while (true)
 		{
-			strNewText = PhdMethod::GetUniqueName(strTemp);
+			strNewText = m_apPhdArxMethod->GetUniqueName(strTemp);
 			if (!arrText.contains(strNewText))
 			{
 				SetItemText(curItem, strNewText);

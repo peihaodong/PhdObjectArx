@@ -1,6 +1,5 @@
 #include "StdAfx.h"
 #include "CPhdPersistReactor.h"
-#include "PhdInline.h"
 
 
 ACRX_DXF_DEFINE_MEMBERS(CPhdPersistReactor, AcDbObject,

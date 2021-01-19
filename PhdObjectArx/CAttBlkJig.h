@@ -19,4 +19,7 @@ protected:
 	AcGePoint3d m_ptBase;	//»ùµã
 	int m_nSection;			//½×¶Î
 
+private:
+	std::shared_ptr<Phd::PhdArxBlock> m_apPhdArxBlock;
+
 };

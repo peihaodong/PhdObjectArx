@@ -1,8 +1,5 @@
 #include "StdAfx.h"
 #include "CAjmdlxJig.h"
-#include "PhdInline.h"
-#include "PhdUtility.h"
-#include "PhdEntity.h"
 
 
 CAjmdlxCsm::CAjmdlxCsm(const AcGePoint3d& pt, double dT1, double dT2, double dR,
@@ -14,6 +11,8 @@ CAjmdlxCsm::CAjmdlxCsm(const AcGePoint3d& pt, double dT1, double dT2, double dR,
 	,m_dR(dR)
 	,m_dAdd(dAdd)
 	,m_pPolyline(NULL)
+	, m_apPhdArxUtility(std::make_shared<Phd::PhdArxUtility>())
+	,m_apPhdArxEntity(std::make_shared<Phd::PhdArxEntity>())
 {
 	
 }
@@ -59,7 +58,7 @@ void CAjmdlxCsm::SetAdd(double dAdd)
 AcDbObjectId CAjmdlxCsm::Append()
 {
 	m_bAppend = true;
-	AcDbObjectId idPolyline = PhdUtility::PostToModelSpace(m_pPolyline);
+	AcDbObjectId idPolyline = m_apPhdArxUtility->PostToModelSpace(m_pPolyline);
 	return idPolyline;
 }
 
@@ -93,7 +92,7 @@ Adesk::Boolean CAjmdlxCsm::worldDraw(AcGiWorldDraw* mode)
 	ptEnd.z = m_ptBase.z;
 	arrpt.append(ptEnd);
 
-	m_pPolyline = PhdEntity::CreatePolyline(arrpt);
+	m_pPolyline = m_apPhdArxEntity->CreatePolyline(arrpt);
 	mode->geometry().draw(m_pPolyline);
 
 	return Adesk::kTrue;

@@ -78,5 +78,13 @@ private:
 	double m_dDiameter;	//Ö±¾¶
 
 	AcDbObjectIdArray m_arridFiltrate;
+
+private:
+	std::shared_ptr<Phd::PhdArxUiPr> m_apPhdArxUiPr;
+	std::shared_ptr<Phd::PhdArxUtility> m_apPhdArxUtility;
+	std::shared_ptr<Phd::PhdArxSelSet> m_apPhdArxSelSet;
+	std::shared_ptr<Phd::PhdArxInline> m_apPhdArxInline;
+	std::shared_ptr<Phd::PhdArxConver> m_apPhdArxConver;
+	std::shared_ptr<Phd::PhdArxEntity> m_apPhdArxEntity;
 };
 

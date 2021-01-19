@@ -34,6 +34,10 @@ private:
 	AcDbPolyline* m_pPolyline;
 
 	bool m_bAppend;			//是否添加到模型空间
+
+private:
+	std::shared_ptr<Phd::PhdArxUtility> m_apPhdArxUtility;
+	std::shared_ptr<Phd::PhdArxEntity> m_apPhdArxEntity;
 };
 
 class CAjmdlxJig :public AcEdJig

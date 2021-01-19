@@ -1,16 +1,17 @@
 #include "StdAfx.h"
 #include "CFiltrateYxk.h"
-#include "PhdUiPr.h"
-#include "PhdUtility.h"
-#include "PhdSelSet.h"
-#include "PhdConver.h"
-#include "PhdEntity.h"
 
 
 
 CFiltrateYxk::CFiltrateYxk()
 	:m_nEntType(-1)
 	,m_dDiameter(0)
+	, m_apPhdArxUiPr(std::make_shared<Phd::PhdArxUiPr>())
+	, m_apPhdArxUtility(std::make_shared<Phd::PhdArxUtility>())
+	, m_apPhdArxSelSet(std::make_shared<Phd::PhdArxSelSet>())
+	, m_apPhdArxInline(std::make_shared<Phd::PhdArxInline>())
+	, m_apPhdArxConver(std::make_shared<Phd::PhdArxConver>())
+	, m_apPhdArxEntity(std::make_shared<Phd::PhdArxEntity>())
 {
 }
 
@@ -32,7 +33,7 @@ bool CFiltrateYxk::Start()
 	if (0 == m_nEntType)
 	{//圆
 		int initFlag = RSG_NOZERO + RSG_NONEG;	//非零非负
-		if (!PhdUiPr::GetDouble(_T("输入圆直径"), m_dDiameter,
+		if (!m_apPhdArxUiPr->GetDouble(_T("输入圆直径"), m_dDiameter,
 			m_dDiameter, initFlag))
 			return false;
 		if (!FiltrateCircle())
@@ -50,7 +51,7 @@ bool CFiltrateYxk::Start()
 	}
 
 	ShowCount();//显示数量
-	PhdUtility::SetEntSelected(m_arridFiltrate);//设置实体被选中
+	m_apPhdArxUtility->SetEntSelected(m_arridFiltrate);//设置实体被选中
 
 	return true;
 }
@@ -79,7 +80,7 @@ bool CFiltrateYxk::SelEnts()
 	resbuf* pRb = acutBuildList(-4, _T("<OR"), 
 		RTDXF0, _T("CIRCLE"), RTDXF0, _T("LWPOLYLINE"),RTDXF0,_T("ELLIPSE"),
 		-4, _T("OR>"),RTNONE);
-	if (!PhdSelSet::SelEnts(_T("选取筛选范围"),pRb, m_arridSelled))
+	if (!m_apPhdArxSelSet->SelEnts(_T("选取筛选范围"),pRb, m_arridSelled))
 		return false;
 	
 	return true;
@@ -92,7 +93,7 @@ bool CFiltrateYxk::SelSingleEnt()
 	arrclassType.append(AcDbPolyline::desc());
 	arrclassType.append(AcDbEllipse::desc());
 	AcGePoint3d pt;
-	if (!PhdUiPr::SelEnt(_T("选取要筛选的异形孔"), arrclassType, m_idEnt, pt))
+	if (!m_apPhdArxUiPr->SelEnt(_T("选取要筛选的异形孔"), arrclassType, m_idEnt, pt))
 		return false;
 
 	AcDbEntityPointer pEnt(m_idEnt,AcDb::kForRead);
@@ -128,7 +129,7 @@ void CFiltrateYxk::ShowCount() const
 bool CFiltrateYxk::FiltrateCircle()
 {
 	//进度条
-	PhdUtility::ShowProgressBar(_T("筛选异形孔"), true);
+	m_apPhdArxUtility->ShowProgressBar(_T("筛选异形孔"), true);
 
 	SCircleInfo info = AnalyzeCircle(m_idEnt);
 
@@ -143,7 +144,7 @@ bool CFiltrateYxk::FiltrateCircle()
 		if (IsEqual(info,infoTemp))
 			vecInfo.push_back(infoTemp);
 
-		PhdUtility::SetProgressBar(i, nCount);
+		m_apPhdArxUtility->SetProgressBar(i, nCount);
 	}
 	vecInfo.push_back(info);
 
@@ -151,7 +152,7 @@ bool CFiltrateYxk::FiltrateCircle()
 
 	GetEntId(vecInfo);
 
-	PhdUtility::ShowProgressBar(_T("筛选异形孔"), false);
+	m_apPhdArxUtility->ShowProgressBar(_T("筛选异形孔"), false);
 
 	return true;
 }
@@ -174,7 +175,7 @@ bool CFiltrateYxk::IsEqual(const SCircleInfo& circle1, const SCircleInfo& circle
 // 	else
 // 		return false;
 
-	if (PhdInline::IsEqual(circle1.m_dRadius, circle2.m_dRadius))
+	if (m_apPhdArxInline->IsEqual(circle1.m_dRadius, circle2.m_dRadius))
 		return true;
 	else
 		return false;
@@ -188,8 +189,8 @@ bool CFiltrateYxk::IsEqual(const SEllipseInfo& ellipse1, const SEllipseInfo& ell
 // 	else
 // 		return false;
 
-	if (PhdInline::IsEqual(ellipse1.m_dMajorRadius, ellipse2.m_dMajorRadius) &&
-		PhdInline::IsEqual(ellipse1.m_dMinorRadius, ellipse2.m_dMinorRadius))
+	if (m_apPhdArxInline->IsEqual(ellipse1.m_dMajorRadius, ellipse2.m_dMajorRadius) &&
+		m_apPhdArxInline->IsEqual(ellipse1.m_dMinorRadius, ellipse2.m_dMinorRadius))
 		return true;
 	else
 		return false;
@@ -197,9 +198,9 @@ bool CFiltrateYxk::IsEqual(const SEllipseInfo& ellipse1, const SEllipseInfo& ell
 
 bool CFiltrateYxk::IsEqual(const SPlineInfo& pline1, const SPlineInfo& pline2) const
 {
-	if (!PhdInline::IsEqual(pline1.m_dPerimeter, pline2.m_dPerimeter) ||
-		!PhdInline::IsEqual(pline1.m_dArea, pline2.m_dArea) ||
-		!PhdInline::IsEqual(pline1.m_nSegCount, pline2.m_nSegCount) )
+	if (!m_apPhdArxInline->IsEqual(pline1.m_dPerimeter, pline2.m_dPerimeter) ||
+		!m_apPhdArxInline->IsEqual(pline1.m_dArea, pline2.m_dArea) ||
+		!m_apPhdArxInline->IsEqual(pline1.m_nSegCount, pline2.m_nSegCount) )
 	{
 		return false;
 	}
@@ -211,7 +212,7 @@ bool CFiltrateYxk::IsEqual(const SPlineInfo& pline1, const SPlineInfo& pline2) c
 // 	{
 // 		double dBulge1 = pline1.m_arrBulge[i];
 // 		double dBulge2 = pline2.m_arrBulge[i];
-// 		if (!PhdInline::IsEqual(dBulge1, dBulge2))
+// 		if (!m_apPhdArxInline->IsEqual(dBulge1, dBulge2))
 // 			return false;
 // 	}
 
@@ -221,17 +222,17 @@ bool CFiltrateYxk::IsEqual(const SPlineInfo& pline1, const SPlineInfo& pline2) c
 bool CFiltrateYxk::IsEqualShow(const SPlineInfo& pline1, const SPlineInfo& pline2) const
 {
 	CString str;
-	if (!PhdInline::IsEqual(pline1.m_dPerimeter, pline2.m_dPerimeter))
+	if (!m_apPhdArxInline->IsEqual(pline1.m_dPerimeter, pline2.m_dPerimeter))
 	{
 		str.Format(_T("\n图形1的周长：%lf，图形2的周长：%lf"), pline1.m_dPerimeter, pline2.m_dPerimeter);
 		acutPrintf(str);
 	}
-	if (!PhdInline::IsEqual(pline1.m_dArea, pline2.m_dArea))
+	if (!m_apPhdArxInline->IsEqual(pline1.m_dArea, pline2.m_dArea))
 	{
 		str.Format(_T("\n图形1的面积：%lf，图形2的面积：%lf"), pline1.m_dArea, pline2.m_dArea);
 		acutPrintf(str);
 	}
-	if (!PhdInline::IsEqual(pline1.m_nSegCount, pline2.m_nSegCount))
+	if (!m_apPhdArxInline->IsEqual(pline1.m_nSegCount, pline2.m_nSegCount))
 	{
 		str.Format(_T("\n图形1的段数：%d，图形2的段数：%d"), pline1.m_nSegCount, pline2.m_nSegCount);
 		acutPrintf(str);
@@ -239,7 +240,7 @@ bool CFiltrateYxk::IsEqualShow(const SPlineInfo& pline1, const SPlineInfo& pline
 	if (pline1.m_firstNormal != pline2.m_firstNormal)
 	{
 		str.Format(_T("\n图形1的法向量：%s，图形2的法向量：%s"),
-			PhdConver::VecToStr(pline1.m_firstNormal), PhdConver::VecToStr(pline2.m_firstNormal));
+			m_apPhdArxConver->VecToStr(pline1.m_firstNormal), m_apPhdArxConver->VecToStr(pline2.m_firstNormal));
 		acutPrintf(str);
 	}
 
@@ -248,7 +249,7 @@ bool CFiltrateYxk::IsEqualShow(const SPlineInfo& pline1, const SPlineInfo& pline
 // 	{
 // 		double dBulge1 = pline1.m_arrBulge[i];
 // 		double dBulge2 = pline2.m_arrBulge[i];
-// 		if (!PhdInline::IsEqual(dBulge1, dBulge2))
+// 		if (!m_apPhdArxInline->IsEqual(dBulge1, dBulge2))
 // 		{
 // 			str.Format(_T("\n图形1的第%d段凸度：%lf，图形2的第%d段凸度：%lf"),
 // 				dBulge1, dBulge2);
@@ -305,7 +306,7 @@ bool CFiltrateYxk::FiltratePline()
 	}
 
 	//进度条
-	PhdUtility::ShowProgressBar(_T("筛选异形孔"), true);
+	m_apPhdArxUtility->ShowProgressBar(_T("筛选异形孔"), true);
 
 	SPlineInfo info = AnalyzePline(m_idEnt);
 
@@ -323,13 +324,13 @@ bool CFiltrateYxk::FiltratePline()
 		if (IsEqual(info, infoTemp))
 			vecInfo.push_back(infoTemp);
 
-		PhdUtility::SetProgressBar(i,nCount);
+		m_apPhdArxUtility->SetProgressBar(i,nCount);
 	}
 	vecInfo.push_back(info);
 
 	GetEntId(vecInfo);
 
-	PhdUtility::ShowProgressBar(_T("筛选异形孔"), false);
+	m_apPhdArxUtility->ShowProgressBar(_T("筛选异形孔"), false);
 
 	return true;
 }
@@ -367,7 +368,7 @@ double CFiltrateYxk::GetPlineArea(AcDbPolyline* pPline) const
 	arrpEnt.append(pPline);
 	AcArray<AcDbRegion*> arrpRegion;
 	
-	if (!PhdEntity::CreateRegion(arrpEnt, arrpRegion))
+	if (!m_apPhdArxEntity->CreateRegion(arrpEnt, arrpRegion))
 		return 0;
 
 	int nCount = arrpRegion.length();
@@ -436,7 +437,7 @@ bool CFiltrateYxk::IsHole(const AcDbObjectId& idEnt) const
 	AcArray<AcDbEntity*> arrpEnt;
 	arrpEnt.append(pPline);
 	AcArray<AcDbRegion*> arrpRegion;
-	if (!PhdEntity::CreateRegion(arrpEnt, arrpRegion))
+	if (!m_apPhdArxEntity->CreateRegion(arrpEnt, arrpRegion))
 		return false;
 	int nCount = arrpRegion.length();
 	for (int i = 0; i < nCount; i++)
@@ -450,13 +451,13 @@ bool CFiltrateYxk::IsHole(const AcDbObjectId& idEnt) const
 
 double CFiltrateYxk::GetPlinePerimeter(AcDbPolyline* pPline) const
 {
-	return PhdUtility::GetCurveLength(pPline);
+	return m_apPhdArxUtility->GetCurveLength(pPline);
 }
 
 bool CFiltrateYxk::FiltrateEllipse()
 {
 	//进度条
-	PhdUtility::ShowProgressBar(_T("筛选异形孔"), true);
+	m_apPhdArxUtility->ShowProgressBar(_T("筛选异形孔"), true);
 
 	SEllipseInfo info = AnalyzeEllipse(m_idEnt);
 
@@ -471,13 +472,13 @@ bool CFiltrateYxk::FiltrateEllipse()
 		if (IsEqual(info, infoTemp))
 			vecInfo.push_back(infoTemp);
 
-		PhdUtility::SetProgressBar(i, nCount);
+		m_apPhdArxUtility->SetProgressBar(i, nCount);
 	}
 	vecInfo.push_back(info);
 
 	GetEntId(vecInfo);
 
-	PhdUtility::ShowProgressBar(_T("筛选异形孔"), false);
+	m_apPhdArxUtility->ShowProgressBar(_T("筛选异形孔"), false);
 
 	return true;
 }

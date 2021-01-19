@@ -25,5 +25,9 @@ protected:
 	int m_nType;//
 
 	double m_dScale;
+
+private:
+	std::shared_ptr<Phd::PhdArxInline> m_apPhdArxInline;
+	std::shared_ptr<Phd::PhdArxUtility> m_apPhdArxUtility;
 };
 
